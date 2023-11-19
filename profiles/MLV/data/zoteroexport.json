@@ -1,0 +1,893 @@
+[
+  {
+    "key": "5QKYG2BS",
+    "version": 1496,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/5QKYG2BS",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/5QKYG2BS",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "L\u00f3pez Mendiz\u00e1bal",
+      "parsedDate": "1943",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "5QKYG2BS",
+      "version": 1496,
+      "itemType": "book",
+      "title": "La lengua vasca: gram\u00e1tica, conversaci\u00f3n, diccionario",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Isaac",
+          "lastName": "L\u00f3pez Mendiz\u00e1bal"
+        }
+      ],
+      "abstractNote": "",
+      "series": "Biblioteca de cultura vasca",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Buenos Aires",
+      "publisher": "Aunamendi Argitaldoria",
+      "date": "1943",
+      "numPages": "",
+      "language": "spa",
+      "ISBN": "",
+      "shortTitle": "La lengua vasca",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q343\nOCLC: 605965265",
+      "tags": [
+        {
+          "tag": ":period Q652"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "VC2E25V9"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/YUQEDCJD"
+      },
+      "dateAdded": "2023-09-02T13:44:40Z",
+      "dateModified": "2023-11-17T16:30:27Z"
+    },
+    "wikibase_entity": "Q343"
+  },
+  {
+    "key": "EVT48LVX",
+    "version": 1496,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/EVT48LVX",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/EVT48LVX",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Fern\u00e1ndez Amador de los R\u00edos",
+      "parsedDate": "1909",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "EVT48LVX",
+      "version": 1496,
+      "itemType": "book",
+      "title": "Diccionario vasco-caldaico-castellano",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Juan",
+          "lastName": "Fern\u00e1ndez Amador de los R\u00edos"
+        }
+      ],
+      "abstractNote": "T. I.: A-ATS (210, 558 p.)",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Pamplona",
+      "publisher": "Nemesio Aramburu",
+      "date": "1909",
+      "numPages": "1",
+      "language": "spa",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "https://bvpb.mcu.es/es/consulta/registro.do?id=443393",
+      "accessDate": "2023-08-22T16:04:24Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q364\nOCLC: 818340944",
+      "tags": [
+        {
+          "tag": ":period Q652"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "VC2E25V9"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/H7SQWLBJ"
+      },
+      "dateAdded": "2023-09-02T13:44:40Z",
+      "dateModified": "2023-11-17T16:30:27Z"
+    },
+    "wikibase_entity": "Q364"
+  },
+  {
+    "key": "SWATSL7V",
+    "version": 1496,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/SWATSL7V",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/SWATSL7V",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Michelena Elissalt",
+      "parsedDate": "1953",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "SWATSL7V",
+      "version": 1496,
+      "itemType": "book",
+      "title": "Apellidos vascos",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Luis",
+          "lastName": "Michelena Elissalt"
+        }
+      ],
+      "abstractNote": "",
+      "series": "Biblioteca Vascongada de los Amigos del Pa\u00eds",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "San Sebasti\u00e1n",
+      "publisher": "Biblioteca Vascongada de los Amigos del Pa\u00eds",
+      "date": "1953",
+      "numPages": "158",
+      "language": "spa",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q386\nOCLC: 850915451",
+      "tags": [
+        {
+          "tag": ":period Q652"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "VC2E25V9"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/9SMKRSYQ"
+      },
+      "dateAdded": "2023-09-02T13:44:40Z",
+      "dateModified": "2023-11-17T16:30:27Z"
+    },
+    "wikibase_entity": "Q386"
+  },
+  {
+    "key": "44VQID3U",
+    "version": 1496,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/44VQID3U",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/44VQID3U",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "L\u00e9cluse",
+      "parsedDate": "1826",
+      "numChildren": 4
+    },
+    "data": {
+      "key": "44VQID3U",
+      "version": 1496,
+      "itemType": "bookSection",
+      "title": "Vocabulaire basque",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Fleury de",
+          "lastName": "L\u00e9cluse"
+        }
+      ],
+      "abstractNote": "",
+      "bookTitle": "Manuel de la langue Basque",
+      "series": "",
+      "seriesNumber": "2",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Toulouse; Bayonne",
+      "publisher": "Douladoure; Cluzeau",
+      "date": "1826",
+      "pages": "113-212",
+      "language": "fra",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "https://hdl.handle.net/2027/loc.ark:/13960/t20c67p9m",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q262\nOCLC: 257580898",
+      "tags": [
+        {
+          "tag": ":period Q651"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "GAEDNEYN"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/4ML67XVP"
+      },
+      "dateAdded": "2023-09-02T13:44:14Z",
+      "dateModified": "2023-11-17T16:30:27Z"
+    },
+    "wikibase_entity": "Q262"
+  },
+  {
+    "key": "HIAFS9BQ",
+    "version": 1496,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/HIAFS9BQ",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/HIAFS9BQ",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/YYS3KSWI",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 4029630
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Lhande",
+      "parsedDate": "1926",
+      "numChildren": 14
+    },
+    "data": {
+      "key": "HIAFS9BQ",
+      "version": 1496,
+      "itemType": "book",
+      "title": "Dictionnaire basque-fran\u00e7ais et fran\u00e7ais-basque: dialectes Labourdin, Bas-Navarrais et Souletin",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Pierre",
+          "lastName": "Lhande"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Paris",
+      "publisher": "Gabriel Beauchesne",
+      "date": "1926",
+      "numPages": "1117",
+      "language": "fra",
+      "ISBN": "",
+      "shortTitle": "Dictionnaire basque-fran\u00e7ais et fran\u00e7ais-basque",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q295",
+      "tags": [
+        {
+          "tag": ":period Q652"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "VC2E25V9"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/B3B8Z2H5"
+      },
+      "dateAdded": "2023-09-02T13:44:14Z",
+      "dateModified": "2023-11-17T16:30:27Z"
+    },
+    "wikibase_entity": "Q295"
+  },
+  {
+    "key": "AFH78LTK",
+    "version": 1496,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/AFH78LTK",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/AFH78LTK",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/9I7PM62I",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 333993
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Bera",
+      "parsedDate": "1909",
+      "numChildren": 14
+    },
+    "data": {
+      "key": "AFH78LTK",
+      "version": 1496,
+      "itemType": "book",
+      "title": "Euzkel-iztegitxua",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Erroman",
+          "lastName": "Bera"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Iru\u00f1a",
+      "publisher": "",
+      "date": "1909",
+      "numPages": "",
+      "language": "eus",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "http://hdl.handle.net/10690/1391",
+      "accessDate": "2014-12-11T14:42:43Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q285",
+      "tags": [
+        {
+          "tag": ":period Q652"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "VC2E25V9"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/RNY5JKDL"
+      },
+      "dateAdded": "2023-09-02T13:44:14Z",
+      "dateModified": "2023-11-17T16:30:27Z"
+    },
+    "wikibase_entity": "Q285"
+  },
+  {
+    "key": "UNHH2GEP",
+    "version": 1496,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/UNHH2GEP",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/UNHH2GEP",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/D3CDTTHB",
+        "type": "application/json",
+        "attachmentType": "text/plain"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Eys",
+      "parsedDate": "1873",
+      "numChildren": 4
+    },
+    "data": {
+      "key": "UNHH2GEP",
+      "version": 1496,
+      "itemType": "book",
+      "title": "Dictionnaire basque-fran\u00e7ais",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Willem J. van",
+          "lastName": "Eys"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Paris; London",
+      "publisher": "Maisonneuve; Williams & Norgate",
+      "date": "1873",
+      "numPages": "415",
+      "language": "fra",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "http://archive.org/details/dictionnairebasq00eyswuoft",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q296\nOCLC: 38888113",
+      "tags": [
+        {
+          "tag": ":period Q651"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "GAEDNEYN"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/PN4G5CCT"
+      },
+      "dateAdded": "2023-09-02T13:44:14Z",
+      "dateModified": "2023-11-17T16:30:27Z"
+    },
+    "wikibase_entity": "Q296"
+  },
+  {
+    "key": "NLHEWDPK",
+    "version": 1495,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/NLHEWDPK",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/NLHEWDPK",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "L\u00e9cluse and Cluzeau",
+      "parsedDate": "1826",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "NLHEWDPK",
+      "version": 1495,
+      "itemType": "book",
+      "title": "Examen critique du manuel de la langue basque",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Fleury de",
+          "lastName": "L\u00e9cluse"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "L\u00e9on-Martin",
+          "lastName": "Cluzeau"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Bayonne; Maul\u00e9on",
+      "publisher": "L.-M. Cluzeau; Roch Daguerre Fils",
+      "date": "1826",
+      "numPages": "31",
+      "language": "fra",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q420\nOCLC: 1350149699",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "S9QUAFB8"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/IVE9MD68"
+      },
+      "dateAdded": "2023-09-02T22:12:20Z",
+      "dateModified": "2023-11-17T16:30:27Z"
+    },
+    "wikibase_entity": "Q420"
+  },
+  {
+    "key": "IVFAEBBF",
+    "version": 1495,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/IVFAEBBF",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/IVFAEBBF",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Landuchius",
+      "parsedDate": "1958",
+      "numChildren": 3
+    },
+    "data": {
+      "key": "IVFAEBBF",
+      "version": 1495,
+      "itemType": "book",
+      "title": "Dictionarium Linguae Cantabricae",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Nicholaus",
+          "lastName": "Landuchius"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Koldo",
+          "lastName": "Mitxelena"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Manuel",
+          "lastName": "Agud"
+        }
+      ],
+      "abstractNote": "",
+      "series": "Publicaciones del Seminario de Filolog\u00eda Vasca \"Julio de Urquijo\"",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Donostia",
+      "publisher": "Imprenta de la Diputaci\u00f3n de Guip\u00fazcoa",
+      "date": "1958",
+      "numPages": "190",
+      "language": "",
+      "ISBN": "",
+      "shortTitle": "Dictionarium Linguae Cantabricae",
+      "url": "https://www.kmliburutegia.eus/Record/42529",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q252\nOCLC: 246143537",
+      "tags": [
+        {
+          "tag": ":period Q650"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "ZB2FKHLK"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/G2I4JUNJ"
+      },
+      "dateAdded": "2023-08-31T20:59:58Z",
+      "dateModified": "2023-11-17T16:29:51Z"
+    },
+    "wikibase_entity": "Q252"
+  }
+]
