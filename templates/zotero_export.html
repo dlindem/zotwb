@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<link href="static/favicon.ico" rel="shortcut icon"/>
+    <title>Zotero Export - ZotWb</title>
+</head>
+<body>
+<h1><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> ZotWb Zotero Export</h1>
+{% for message in messages %}<p style = "{{ msgcolor }}">{{ message|safe }}<p>{% endfor %}
+<small>(Back to <a href="/">start page</a>)</small>
+<p>This page lets you get records from <a href="https://zotero.org/groups/{{ zotero_group_id }}/items", target="_blank">{{ zotero_name }} Zotero Group</a>, and upload them to <a href="{{ wikibase_url }}" target="_blank">{{ wikibase_name }} Wikibase</a>.</p>
+<p><b>The currently loaded Zotero dataset contains {{ zotero_len }} items.</b> The titles of these items are listed below.</br>That dataset was stored in your zotwb app folder as <code><b>data/zoteroexport.json</b></code> on {{ zotero_when }}.</p>
+<h2>Ingest Zotero records</h2>
+<form style="display: inline;" method="POST">
+    <button name="get_export" type="submit"><b>Get records</b> from <b>Zotero</b></button>
+</form> to get max. 100 items with the tag '{{ export_tag }}'.</br><small>If you have used your local Zotero for setting the export tag, remember to sync with Zotero cloud.</br><b>This will overwrite the currently loaded dataset.</b></small>
+</p>
+<form style="display: inline;" method="POST">
+    <button name="delete_export_tag" type="submit">Delete export tag</button>
+</form> '{{ export_tag }}' from all items.</br><small>This resets the list of items to be exported and the currently loaded dataset to zero.</small>
+
+
+<h3>Currently loaded dataset: property mapping check</h3>
+<p>The configurations listed in this section are missing for processing this dataset.</br>
+<small>Configure the missing mappings, and refresh this page.</br>Otherwise, unmapped item types and unmapped fields or creator types will be ignored in the upload.</small></p>
+<ul>
+{% for message in zotero_check_messages %}
+    <li>{{ message|safe }}</li>
+{% endfor %}
+</ul>
+<h3>Currently loaded dataset: language field value check</h3>
+{% if language_check_messages['nullitemlen'] > 0 or language_check_messages['nomapslen'] > 0 %}
+<p>If the 'language' fields of the ingested items present problems, these are listed in this section.</br>
+<small>Solve the listed problems by hand in your Zotero data and fetch the items again, or fix them <b>on Zotero</b> using a batch edit proposed here (be careful what you do), and <a href="/zotero_export">refresh the page</a>.
+    </br>Otherwise, empty or problematic values will be ignored in the upload.</small></p>
+{% else %}
+<p>No problems detected in the 'language' fields of the loaded items. All could be mapped.</p>
+{% endif %}
+<p>The following languages have been identified in this dataset: {% for language in language_check_messages['languages'] %}
+    <b>{{ language|safe }} </b>
+{% endfor %}</p>
+<ul>{% if language_check_messages['nullitemlen'] > 0 %}
+    <li>The following items have empty 'language' fields: <small>{% for itemlink in language_check_messages['nullitems'] %}</small>{{ itemlink|safe }} {% endfor %}</li>
+    <ul><li><small>Write the same three-letter <a href="https://en.wikipedia.org/wiki/ISO_639-3" target="_blank">ISO-639-3</a> code to <b>all empty 'language' fields</b> (batch-edit current dataset <b>on Zotero</b>):
+        <form method="POST"><input name="batchedit_empty" type="text" style="width: 40px;" />
+    <input type="submit" value="&#10071; Write this to all empty fields &#10071;"/></form></small></li></ul>
+{% endif %}
+{% if language_check_messages['nomapslen'] > 0 %}
+    {% for literal in language_check_messages['nomaps'] %}
+    <li><b>'{{ literal }}'</b>: Could not be matched to a language. <small>Items: {% for itemlink in language_check_messages['nomaps'][literal] %}{{ itemlink|safe }} {% endfor %}</small>
+    <ul><li><small><b>Permanently</b> associate a three-letter <a href="https://en.wikipedia.org/wiki/ISO_639-3" target="_blank">ISO-639-3</a> code to this language literal and batch-edit <b>on Zotero</b> (items in the current dataset):
+        <form method="POST"><input name="litmap_{{ literal }}" type="text" style="width: 40px;" />
+    <input type="submit" value="&#10071; Write this to all &#10071;"/></form></small>
+    </li></ul>
+    </li>
+{% endfor %}
+{% endif %}
+</ul>
+<h2>Upload to Wikibase</h2>
+<form style="display: inline;" method="POST">
+    <button name="do_upload" type="submit"><b>Upload all data</b></button>
+</form> to upload the currently loaded dataset.</br>
+<form style="display: inline;" method="POST">
+    <button name="do_upload_new" type="submit">Upload only new items</button>
+</form> to upload only those items that are not on wikibase.
+</br><small>Successfully uploaded items will be tagged '{{ onwiki_tag }}', and the tag '{{ export_tag }}' will be removed from them.</small>
+<h3>Currently loaded dataset: content</h3>
+<p>The currently loaded set of Zotero records contains the following titles:</p>
+<ul>
+    {% for zotitem in zoterodata %}
+    <li>
+        <code><a href="{{ zotitem['links']['alternate']['href'] }}/item-details", target="_blank">{{ zotitem['key'] }}</a></code> <i>{{ zotitem['data']['itemType'] }}</i>: <b>{{ zotitem['data']['title'] }}</b>
+        {%if zotitem['wikibase_entity'] %} - <span style="color:green">Already on wikibase</span> as <a href="{{ wikibase_entity_ns }}{{ zotitem['wikibase_entity'] }}" target="_blank">{{ zotitem['wikibase_entity'] }}</a>.
+        {% else %} - <span style="color:red">Never uploaded</span>{% endif %}
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "filename": "language-literals.json",
+  "comment": "These are language literals associated by the user to ISO-639-3 language codes.",
+  "mapping": {
+    "English": "eng",
+    "Spanish": "spa",
+    "German": "deu",
+    "Basque": "eus"
+  }
+}

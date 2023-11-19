@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<link href="static/favicon.ico" rel="shortcut icon"/>
+    <title>Creators Reconciliation - ZotWb</title>
+</head>
+<body>
+<h1><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> ZotWb Open Refine creators reconciliation</h1>
+{% for message in messages %}<p style = "{{ msgcolor }}">{{ message|safe }}<br>{% endfor %}
+<p> <small>(Back to <a href="/">start page</a>)</small></p>
+<p>On this page, you can produce CSV for loading into Open Refine, and import reconciliation result CSV produced in Open Refine back to {{ wikibase_name }}.</p>
+<h2>Export creator literals (unreconciled creator data)</h2>
+<p><form style="display: inline;" method="POST">
+    <button name="export_creators_unreconciled" type="submit">Produce CSV</button>
+</form> to save a CSV containing unreconciled creator literals to <code><b>profiles/{{ profile }}/data/creators_unreconciled</b></code> folder.</br><small>Start Open Refine and create a new project using that file.</small></p>
+<h2>Import creator entities (reconciled creator data)</h2>
+<p><a href="./openrefine_creators">Refresh this page</a> to load the most recent CSV exported from Open Refine in <code><b>data/creators_reconciled</b></code> folder.</p>
+The currently loaded file, <code><b>{{ filename }}</b></code>, contains:
+<ul>
+    <li><b>{{ recon_all }}</b> rows in total</li>
+    <li><b>{{ recon_wd }} of {{ recon_all }}</b> creator statements are linked to Wikidata items</li>
+    <li><b>{{ recon_wb }} of {{ recon_all }}</b> creator statements are linked to {{ wikibase_name }} items</li>
+    <li><b>{{ recon_unrecon }} of {{ recon_all }}</b> creator statements are not linked to any existing entity</li>
+</ul>
+<p><form style="display: inline;" method="POST">
+    <button name="import_reconciled_wikidata" type="submit">Use Wikidata alignment</button>
+</form> to import {{ recon_wd }} creators from Wikidata to Wikibase, and set their Wikibase item as creatorstatement value.</br><small>If the creator is known to {{ wikibase_name }}, because the same CSV row contains a Wikibase-Qid, or a creator linked to the same Wikidata Qid exists on {{ wikibase_name }}, no duplicate will be created.</small></p>
+<p><form style="display: inline;" method="POST">
+    <button name="import_reconciled_wikibase" type="submit">Use Wikibase items</button>
+</form> to set {{ recon_wb }} links to existing Wikibase items.</br><small>This simply updates the unknown value to the Wikibase Qid found in the CSV row, without interfering Wikidata.</small> </p>
+    <p><form style="display: inline;" method="POST">
+    <button name="import_unreconciled" type="submit">Create new items</button>
+</form> to create a new item for each unreconciled creator cluster.</br><small>This processes CSV rows with no values for Wikidata or Wikibase Qid.</br>Rows with identical values in the <code>fullName_clusters</code> column will be treated as clusters; that will lead to the creation of one single item.</br>Name literals of all rows in a cluster will be written to that item; the values in the first row of the cluster will be regarded the preferred.</small></p>
+<h2>Start {{ wikibase_name }} reconciliation service</h2>
+<p>To start the reconciliation service, open a new terminal in your zotwb folder, and type:
+<p><code>source zotwbenv/bin/activate</br>cd reconciliator</br>python3 -m reconciliator</code></p>
+The service should then display a page with instructions at <a href="http://0.0.0.0:8000" target="_blank">0.0.0.0:8000</a>.</p>
+<h3>Start Open Refine</h3>
+<p>To start Open Refine, open a new terminal in the Open Refine folder (named e.g. <code><b>openrefine-3.7.6</b></code>), and type:
+    <p><code>./refine</code></p>
+Open Refine should then be accessible at <a href="http://127.0.0.1:3333" target="_blank">127.0.0.1:3333</a>.</p>
+
+</body>
+</html>

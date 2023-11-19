@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<link href="static/favicon.ico" rel="shortcut icon"/>
+    <title>Index - ZotWb</title>
+</head>
+<body>
+<h1><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> Welcome to ZotWb</h1>
+{% if profile == "profile.template" %}
+<p><a href="/change_profile">Create a profile</a></small></p></p>
+{% else %}
+<p>The currently active ZotWb profile named <b>{{ profile }}</b> connects <a href="https://zotero.org/groups/{{ zotero_group_id }}/items", target="_blank">{{ zotero_name }} Zotero Group</a> to <a href="{{ wikibase_url }}" target="_blank">{{ wikibase_name }} Wikibase</a>.</br>
+<small>You can have several profiles, e.g. to connect different Zotero groups to different Wikibases, or have different configurations for the same combination.</br>
+<a href="/change_profile">Change active profile or create new</a></small></p>
+<h2>Basic configuration</h2>
+<p>To edit the basic configuration for this profile, access the <a href="./basic_config">basic configuration page</a>.</p>
+{% for message in config_check['message'] %}
+<span style="{{ config_check['color'] }}">{{ message }}</span>
+{% endfor %}
+<h2>Zotero datafields and creator types mapping</h2>
+<p>Access these pages for configuring how the Zotero datafields and creator types are mapped to Wikibase properties.</br>
+    <small>You can define mappings for all Zotero item types at once, or for single item types (which allows you to treat the same datafield differently, according to the item type).</br>
+    It is not necessary to map all fields before exporting Zotero items; the Zotero export function will report on missing mappings.</small><p>
+<p>{% for itemtype in zoteromapping %}
+    {% if itemtype == all_types %}
+<b><a href="./zoterofields/{{ itemtype }}">EDIT ALL TYPES AT ONCE</a></b>
+    {% else %}
+    | <a href="./zoterofields/{{ itemtype }}">{{ itemtype }}</a>
+    {% endif %}
+    {% endfor %}
+</p>
+<h2>Wikidata alignment</h2>
+Access the <a href="./wikidata_alignment">Wikidata alignment page</a> for configuring how your Wikibase properties map to Wikidata.
+<h2>Zotero records export to Wikibase</h2>
+Access the <a href="./zotero_export">Zotero export page</a>.
+<h2>Creators entity reconciliation: Export to and import from Open Refine</h2>
+Access the <a href="./openrefine_creators">Creators reconciliation page</a>.
+<h2>Any string entity reconciliation: Export to and import from Open Refine</h2>
+Access the <a href="./openrefine_anystring">String reconciliation page</a>.
+<h2>ZotWb little helpers</h2>
+Access the <a href="./little_helpers">Helper functions page</a>.
+{% endif %}
+</body>
+</html>

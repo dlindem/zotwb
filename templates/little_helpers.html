@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<link href="static/favicon.ico" rel="shortcut icon"/>
+    <title>Little helpers - ZotWb</title>
+</head>
+<body>
+<h1><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> ZotWb Helper functions</h1>
+{% for message in messages %}<p style = "{{ msgcolor }}">{{ message|safe }}<p>{% endfor %}
+<small>(Back to <a href="/">start page</a>)</small>
+<h2>Functions for {{ zoterogrp_name }} Zotero Group</h2>
+<h3>Batch edit Zotero fields</h3>
+<p>Specify a Zotero tag for max. 100 items to batch edit and fetch these items.</br><small>You can batch edit any field, except creators.</small></p>
+<form method="POST"><input placeholder="{{ batch_tag }}"  name="specify_batch_tag" type="text" style="width: 100px;" />
+    <input type="submit" value="Load items with this tag"/></form>
+{% if datafields %}
+<p>What you enter as a value below and submit will be written to all datafields with that name in <b>{{ batchlen }}</b> items tagged <b>'{{ batch_tag }}'</b>.</p>
+<table>
+{% for fieldname in datafields %}
+<tr><td> &#10026; <b>{{ fieldname }}</b> &#129054;</td>
+<td><form style="display: inline;" method="POST"><input name="batchedit_leavetag_{{ fieldname }}_" type="text" style="width: 100px;" />
+    <input type="submit" value="Write and leave tag"/></form></td>
+<td><form style="display: inline;" method="POST"><input name="batchedit_removetag_{{ fieldname }}_{{ batch_tag }}" type="text" style="width: 100px;" />
+    <input type="submit" value="Write and remove tag"/></form></br></td></tr>
+{% endfor %}
+</table>
+{% endif %}
+
+<h3>Remove tags from Zotero items</h3>
+<p>Specify a Zotero tag to remove from max. 100 items.</br><small>For deleting the tag from more items, repeat the operation.</small></p>
+<form method="POST"><input name="specify_remove_tag" type="text" style="width: 100px;" />
+    <input type="submit" value="Remove tag from items"/></form>
+
+<h2>Functions for {{ wikibase_name }} Wikibase</h2>
+<h3>DOI Wikidata lookup</h3>
+<p>For items with a DOI but not linked to any Wikidata item, this function tries to find the item on Wikidata using its DOI.</p>
+<form style="display: inline;" method="POST">
+    <button name= {{ 'doi_lookup' }} type="submit">Do DOI lookup</button>
+</form></p>
+<h3>ISSN Wikidata lookup</h3>
+<p>For items with a ISSN statement not qualified with any Wikidata item representing the journal, this function tries to find the journal on Wikidata using its ISSN.</p>
+<form style="display: inline;" method="POST">
+    <button name= {{ 'issn_lookup' }} type="submit">Do ISSN lookup</button>
+</form></p>
+<h3>Link chapters to their containers</h3>
+<p>Try to link book chapters and conference papers with a ISBN statement to their container item (a book); that works if the container item appears with the same ISBN as the chapter.</p>
+<form style="display: inline;" method="POST">
+    <button name= {{ 'link_chapters' }} type="submit">Do chapter linking</button>
+</form></p>
+</body></html>

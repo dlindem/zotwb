@@ -1,0 +1,155 @@
+[
+  {
+    "key": "ZH93KEK8",
+    "version": 1492,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/ZH93KEK8",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/ZH93KEK8",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/L9X6WFJ4",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 407303
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Stankovi\u0107 et al.",
+      "parsedDate": "2023-09",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "ZH93KEK8",
+      "version": 1492,
+      "itemType": "conferencePaper",
+      "title": "Towards ELTeC-LLOD: European Literary Text Collection Linguistic Linked Open Data",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Ranka",
+          "lastName": "Stankovi\u0107"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Christian",
+          "lastName": "Chiarcos"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Milo\u0161",
+          "lastName": "Utvi\u0107"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Olivera",
+          "lastName": "Kitanovi\u0107"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Sara",
+          "lastName": "Carvalho"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Anas Fahad",
+          "lastName": "Khan"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Ana Ostro\u0161ki",
+          "lastName": "Ani\u0107"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Blerina",
+          "lastName": "Spahiu"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Jorge",
+          "lastName": "Gracia"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "John P.",
+          "lastName": "McCrae"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Dagmar",
+          "lastName": "Gromann"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Barbara",
+          "lastName": "Heinisch"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Ana",
+          "lastName": "Salgado"
+        }
+      ],
+      "abstractNote": "",
+      "date": "2023-09",
+      "proceedingsTitle": "Proceedings of the 4th Conference on Language, Data and Knowledge",
+      "conferenceName": "LDK 2023",
+      "place": "Vienna, Austria",
+      "publisher": "NOVA CLUNL, Portugal",
+      "volume": "",
+      "pages": "180\u2013191",
+      "series": "",
+      "language": "eng",
+      "DOI": "",
+      "ISBN": "",
+      "shortTitle": "Towards ELTeC-LLOD",
+      "url": "https://aclanthology.org/2023.ldk-1.16",
+      "accessDate": "2023-11-16T16:23:54Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "ACLWeb",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q1260\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "S9QUAFB8"
+      ],
+      "relations": {},
+      "dateAdded": "2023-11-16T16:23:54Z",
+      "dateModified": "2023-11-16T16:33:33Z"
+    },
+    "wikibase_entity": "Q1260"
+  }
+]
