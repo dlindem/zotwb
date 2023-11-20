@@ -11,6 +11,8 @@ Creator names, or any 'string' (literal string value) property you specify are p
 
 Identifiers (the Zotero Item ID, ISBN, ISSN, OCLC, and what you specify that my occur in the EXTRA field) are normalized and linked using 'external-id' properties.
 
+A detailed documentation is given in the chapters in the [doc folder](doc), and also [on SSHOC Marketplace](https://marketplace.sshopencloud.eu/workflow/P0siWJ).
+
 # Installation
 
 This section explains what is necessary to start using ZotWb: 

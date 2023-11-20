@@ -4,8 +4,13 @@ import os, re, json
 from datetime import datetime
 
 # load active profile
-with open('profiles.json', 'r', encoding='utf-8') as file:
-    profile = json.load(file)['last_profile']
+try:
+    with open('profiles.json', 'r', encoding='utf-8') as file:
+        profile = json.load(file)['last_profile']
+except OSError:
+    profile = "profile.template"
+    with open('profiles.json', 'w', encoding='utf-8') as file:
+        json.dump({'profiles_list':[],'last_profile':'profile.template'}, file)
 
 # from flask_wtf import FlaskForm
 app = Flask(__name__)
