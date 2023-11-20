@@ -1,8 +1,8 @@
 import os, re, json
 
-with open(os.path.realpath(os.path.pardir)+f"/bots/profiles.json", 'r', encoding='utf-8') as jsonfile:
+with open(os.path.realpath(os.path.pardir)+f"/profiles.json", 'r', encoding='utf-8') as jsonfile:
     profile = json.load(jsonfile)['active_profile']
-with open(os.path.realpath(os.path.pardir)+f"/bots/profiles/{profile}/config.json", 'r', encoding='utf-8') as jsonfile:
+with open(os.path.realpath(os.path.pardir)+f"/profiles/{profile}/config.json", 'r', encoding='utf-8') as jsonfile:
     configdata = json.load(jsonfile)
 
 """
