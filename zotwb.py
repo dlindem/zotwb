@@ -162,13 +162,28 @@ def basic_config():
 
     elif request.method == 'POST':
         if request.form:
+            regexpattern = None
+            regexprop = None
             for key in request.form:
                 if key.startswith('private_'):
                     command = key.replace('private_', '')
                     config_private[command] = request.form.get(key)
                     with open(f"profiles/{profile}/config_private.json", 'w', encoding="utf-8") as jsonfile:
                         json.dump(config_private, jsonfile, indent=2)
-                if key.startswith('wikibase') or key.startswith('zotero'):
+                elif key == "wikimedia_languages":
+                    configdata['mapping']['wikibase_label_languages'] = []
+                    for lang in request.form.get(key).split(","):
+                        configdata['mapping']['wikibase_label_languages'].append(lang.strip())
+                    command = f"wikimedia languages {request.form.get(key).split(',')}"
+                elif key.startswith('regexdelete_'):
+                    pattern = key.replace('regexdelete_','')
+                    del configdata['mapping']['identifier_patterns'][pattern]
+                    command = f"delete pattern"
+                elif key == 'regex_pattern':
+                    regexpattern = request.form.get(key)
+                elif key == 'regex_property':
+                    regexprop = request.form.get(key)
+                elif key.startswith('wikibase') or key.startswith('zotero'):
                     configdata['mapping'][key] = request.form.get(key)
                     if key == 'wikibase_url': # update configs that depend on the wikibase URL
                         configdata = zotwb_functions.build_depconfig(configdata)
@@ -214,8 +229,11 @@ def basic_config():
                     else: # user has manually chosen a value
                         configdata['mapping'][key]['wikibase'] = request.form.get(key)
                         command = 'Update '+key.replace('_',' ')
-                message = f"Successfully performed operation: '{command}' update."
-                msgcolor = "background:limegreen"
+                if regexpattern and regexprop:
+                    configdata['mapping']['identifier_patterns'][regexpattern] = regexprop.strip()
+                    command = f"Add regex pattern {regexpattern} - {regexprop}"
+            message = f"Successfully performed operation: '{command}'."
+            msgcolor = "background:limegreen"
         botconfig.dump_mapping(configdata)
         return render_template("basic_config.html", profile=profile, wb_username=config_private['wb_bot_user'], wb_password=config_private['wb_bot_pwd'], zotero_api_key=config_private['zotero_api_key'], configdata=configdata['mapping'], message=message, msgcolor=msgcolor)
 
@@ -537,6 +555,28 @@ def little_helpers():
                                zoterogrp_name=configdata['mapping']['zotero_group_name'], batch_tag=batch_tag,
                                datafields=datafields, batchlen=batchlen,
                                messages=messages, msgcolor=msgcolor)
+
+@app.route('/wikidata_import', methods= ['GET', 'POST'])
+def wikidata_import():
+    configdata = botconfig.load_mapping('config')
+    properties = botconfig.load_mapping('properties')
+    allowed_datatypes = ['ExternalId', 'String', 'Url']
+    # zoteromapping = botconfig.load_mapping('zotero')
+    message = None
+    msgcolor = "background:limegreen"
+    if request.method == 'GET':
+        return render_template("wikidata_import.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                               instanceof=configdata['mapping']['prop_instanceof']['wikibase'],
+                               message=message, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes)
+    if request.method == "POST":
+        if request.form:
+            message = zotwb_functions.batchimport_wikidata(request.form)
+        return render_template("wikidata_import.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                               instanceof=configdata['mapping']['prop_instanceof']['wikibase'],
+                               message=message, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -68,13 +68,35 @@ After setting these three values, restart the app in the terminal, and check the
     <input type="submit" value="Update this">
 </form>
 </p>
-
+<h2>Language settings</h2>
+<p>Specify the all the languages you want Wikibase entity labels, aliases and descriptions to be created when importing entities from Wikidata.</br>
+<small>Use <a href="https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all", target="_blank">wikimedia language codes</a> here, separated by comma (e.g. 'en,es,ga' for English, Spanish and Irish).</small></p>
+<form method="POST">
+    &#129054; <input type="text" name="wikimedia_languages" value="{{ ",".join(configdata['wikibase_label_languages']) }}" style="width: 300px;">
+    <input type="submit" value="Update this">
+</form>
+<h2>Zotero EXTRA field regex patterns</h2>
+<p>You can specify regex patterns; the first match for each pattern is saved as value to the 'ExternalID' property you specify.</br>
+<small>The Zotero EXTRA field is widely used for storing identifiers for the bibliographic record from different sources.</br>
+For example, OCLC identifiers from <a href="https://worldcat.org"> target="_blank">worldcat</a> are stored by the worldcat import translator in EXTRA.</small>
+</p>
+<form method="POST">
+    &#129054; regex pattern <input type="text" name="regex_pattern" value="" style="width: 300px;"> &#11020;
+     property <input type="text" name="regex_property" value="" style="width: 100px;">
+    <input type="submit" value="Add this">
+</form>
+<h3>Currently active regex patterns</h3>
+<ul>{% for pattern in configdata['identifier_patterns'] %}
+<li><form method="POST"> {{ pattern }} &#11020; {{ configdata['identifier_patterns'][pattern] }}
+    <button name="regexdelete_{{ pattern }}" type="submit"> Delete this pattern </button>
+</form></li>
+{% endfor %}</ul>
 <h2>Basic properties and classes on your Wikibase</h2>
 <p>If you change the value manually, press the "Update this" button for saving.</br>
     Otherwise use the "Create new" button to create a new property or class, and use that from now on.</br>
     If the property is aligned to Wikidata, the Wikidata property will be imported.</br>
     Be careful creating new items, you might create duplicates.</br>
-    Your can also import labels and descriptions from Wikidata to the proposed existing Wikibase entity.</p>
+    You can also import labels and descriptions from Wikidata to the existing Wikibase entity proposed on the button.</p>
 {% for key in configdata %}
 
 {% if key.startswith('prop') or key.startswith('class') %}
