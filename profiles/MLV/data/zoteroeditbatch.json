@@ -1,0 +1,94 @@
+[
+  {
+    "key": "PMV2QKCZ",
+    "version": 1406,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/PMV2QKCZ",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/PMV2QKCZ",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/IX8LDBVF",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 117008
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Bostak Bat Kultur Elkartea",
+      "parsedDate": "2013",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "PMV2QKCZ",
+      "version": 1406,
+      "itemType": "webpage",
+      "title": "5000 Hiztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "Bostak Bat Kultur Elkartea"
+        }
+      ],
+      "abstractNote": "",
+      "websiteTitle": "Azkue Fundazioa",
+      "websiteType": "",
+      "date": "2013",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "language": "",
+      "rights": "Hellooo!!!",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": ":type online-dict"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "testtag"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/TCN3Z5LG"
+      },
+      "dateAdded": "2023-09-02T13:46:16Z",
+      "dateModified": "2023-11-08T16:18:06Z"
+    },
+    "wikibase_entity": false
+  }
+]
