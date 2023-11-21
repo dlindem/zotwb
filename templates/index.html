@@ -23,22 +23,23 @@
     It is not necessary to map all fields before exporting Zotero items; the Zotero export function will report on missing mappings.</small><p>
 <p>{% for itemtype in zoteromapping %}
     {% if itemtype == all_types %}
-<b><a href="./zoterofields/{{ itemtype }}">EDIT ALL TYPES AT ONCE</a></b>
+&#129054; <b><a href="./zoterofields/{{ itemtype }}">EDIT ALL TYPES AT ONCE</a></b>
     {% else %}
     | <a href="./zoterofields/{{ itemtype }}">{{ itemtype }}</a>
     {% endif %}
     {% endfor %}
 </p>
-<h2>Wikidata alignment</h2>
-Access the <a href="./wikidata_alignment">Wikidata alignment page</a> for configuring how your Wikibase properties map to Wikidata.
+<h2>Wikidata alignment and Wikidata import</h2>
+&#129054; Access the <a href="./wikidata_alignment">Wikidata alignment page</a> for configuring how your existing Wikibase properties map to Wikidata.<br/>
+&#129054; Access the <a href="./wikidata_import">Wikidata import page</a> for batch importing Wikidata entities to {{ wikibase_name }}.
 <h2>Zotero records export to Wikibase</h2>
-Access the <a href="./zotero_export">Zotero export page</a>.
+&#129054; Access the <a href="./zotero_export">Zotero export page</a>.
 <h2>Creators entity reconciliation: Export to and import from Open Refine</h2>
-Access the <a href="./openrefine_creators">Creators reconciliation page</a>.
+&#129054; Access the <a href="./openrefine_creators">Creators reconciliation page</a>.
 <h2>Any string entity reconciliation: Export to and import from Open Refine</h2>
-Access the <a href="./openrefine_anystring">String reconciliation page</a>.
+&#129054; Access the <a href="./openrefine_anystring">String reconciliation page</a>.
 <h2>ZotWb little helpers</h2>
-Access the <a href="./little_helpers">Helper functions page</a>.
+&#129054; Access the <a href="./little_helpers">Helper functions page</a>.
 {% endif %}
 </body>
 </html>
