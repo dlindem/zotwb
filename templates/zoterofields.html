@@ -2,7 +2,7 @@
 <html>
 <head>
 <link href="static/favicon.ico" rel="shortcut icon"/>
-    <title><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> Zotero Fields mapping - ZotWb</title>
+    <title>Index - ZotWb</title>
 </head>
 <body>
 <h1><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> Mapping configuration for Zotero item type '{{ itemtype }}'</h1>
@@ -48,7 +48,7 @@ To define mappings for a single bibitem type (so that fields with the same name 
 {% if zoteromapping[itemtype]['fields'][fieldname]['wbprop'] %}
     <a href="{{ wikibase_entity_ns }}{{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }}" target="_blank">wb:{{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }}</a>
 {% endif %}
-    <input type="text" placeholder={{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }} name = {{ 'fields@' + fieldname }} style="width: 40px;" />
+    <input type="text" value={{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }} name = {{ 'fields@' + fieldname }} style="width: 40px;" />
     <input type="submit" value="Update this">
 </form> or <form style="display: inline;" method="POST">
     <button name= {{ 'fields@' + fieldname + '_create' }} type="submit">&#10071; Create new &#10071;</button>
@@ -93,7 +93,7 @@ target="_blank">wd:{{ wikidata_suggestions[fieldname] }}</a></small>
 {% if zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop'] %}
     <a href="{{ wikibase_entity_ns }}{{ zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop'] }}" target="_blank">wb:{{ zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop'] }}</a>
 {% endif %}
-    <input type="text" placeholder={{ zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop'] }} name = {{ 'creatorTypes@' + creatortype }} style="width: 40px;" />
+    <input type="text" value={{ zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop'] }} name = {{ 'creatorTypes@' + creatortype }} style="width: 40px;" />
     <input type="submit" value="Update this">
 </form> or <form style="display: inline;" method="POST">
     <button name= {{ 'creatorTypes@' + creatortype + '_create' }} type="submit">&#10071; Create new &#10071;</button>
