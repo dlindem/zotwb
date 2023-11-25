@@ -91,8 +91,7 @@ def rewrite_properties_mapping():
 
     print('\nSuccessfully stored properties mapping.')
 
-def batchimport_wikidata(form):
-    config = botconfig.load_mapping('config')
+def batchimport_wikidata(form, config={}, properties={}):
     print(f"Batch wikidata import started. Will get existing mappings (query for {config['mapping']['prop_wikidata_entity']['wikibase']})")
     query = """select ?wb_entity ?wd_entity where {?wb_entity xdp:"""+config['mapping']['prop_wikidata_entity']['wikibase']+""" ?wd_entity.  }"""
     print("Waiting for SPARQL...")
@@ -105,15 +104,28 @@ def batchimport_wikidata(form):
         wd_to_wb[row['wd_entity']['value'].replace('http://www.wikidata.org/entity/','')] = row['wb_entity']['value'].replace(config['mapping']['wikibase_entity_ns'],'')
     import_entities = re.findall(r'Q[0-9]+', form.get('qids'))
     if not import_entities:
-        return "No entities to import."
+        return {'message':"No entities to import.", 'msgcolor': 'background:orangered'}
     imports = {}
     for import_entity in import_entities:
         if import_entity in wd_to_wb:
             imports[import_entity] = wd_to_wb[import_entity] # existing entity
         else:
             imports[import_entity] = False # new wikibase entity to create
+    if 'statement_prop' in form and 'statement_value' in form:
+        if form.get('statement_prop').strip() not in properties['mapping']:
+            return {'message': f"Bad value for 'statement property': {form.get('statement_prop')}.", 'msgcolor': 'background:orangered'}
+        elif properties['mapping'][form.get('statement_prop').strip()]['type'] != "WikibaseItem":
+            return {'message':f"Property {form.get('statement_prop')} is not of datatype 'WikibaseItem'.", 'msgcolor': 'background:orangered'}
+        elif not re.search('^Q[0-9]+$', form.get('statement_value').strip()):
+            return {'message':f"Bad value for 'statement value': {form.get('statement_value')}.", 'msgcolor': 'background:orangered'}
+        extra_statement = {'prop_nr': form.get('statement_prop').strip(), 'value':form.get('statement_value').strip()}
+    else:
+        extra_statement = None
     if 'instance_of_statement' in form:
-        classqid = form.get('instance_of_statement')
+        if not re.search('^Q[0-9]+$', form.get('instance_of_statement').strip()):
+            return {'message': f"Bad value for 'instance-of-statement value': {form.get('instance_of_statement')}.",
+                    'msgcolor': 'background:orangered'}
+        classqid = form.get('instance_of_statement').strip()
     else:
         classqid = None
     if 'labels_check' in form:
@@ -143,14 +155,20 @@ def batchimport_wikidata(form):
                                            process_descriptions=process_descriptions,
                                            process_sitelinks=process_sitelinks,
                                            wbprops_to_import=wbprops_to_import,
-                                           classqid=classqid)
-    return f"Successfully created or updated wb:{wb_entity} importing {wd_entity}."
+                                           classqid=classqid,
+                                           config=config, properties=properties)
+        if extra_statement:
+            xwbi.itemwrite({'qid': wb_entity, 'statements':[{'prop_nr': extra_statement['prop_nr'], 'type':'WikibaseItem', 'value':extra_statement['value']}]})
+
+    return {'message': f"Successfully created or updated wb:{wb_entity} importing {wd_entity}.", 'msgcolor': 'background:limegreen'}
 
 
 
-def import_wikidata_entity(wdid, wbid=False, process_labels=True, process_aliases=True, process_descriptions=True, process_sitelinks=False, wbprops_to_import=[], classqid=None, entitytype="Item"):
-    config = botconfig.load_mapping('config')
-    properties = botconfig.load_mapping('properties')
+def import_wikidata_entity(wdid, wbid=False, process_labels=True, process_aliases=True, process_descriptions=True, process_sitelinks=False, wbprops_to_import=[], classqid=None, config=None, properties=None):
+    if not config:
+        config = botconfig.load_mapping('config')
+    if not properties:
+        properties = botconfig.load_mapping('properties')
     languages_to_consider = config['mapping']['wikibase_label_languages']
     print('Will import ' + wdid + ' from wikidata... to existing wikibase entity: '+str(wbid))
     apiurl = 'https://www.wikidata.org/w/api.php?action=wbgetentities&ids=' + wdid + '&format=json'
@@ -368,7 +386,7 @@ def check_language(zoterodata=[]):
                 f"No item defined for this language on your Wikibase. This language is {languagewdqid} on Wikidata. I'll import that and use it from now on.")
             languageqid = import_wikidata_entity(languagewdqid,
                                                  classqid=configdata['mapping']['class_language'][
-                                                     'wikibase'])
+                                                     'wikibase'], config=configdata)
             iso3mapping['mapping'][langval]['wbqid'] = languageqid
             botconfig.dump_mapping(iso3mapping)
             print(f"Imported wd:{languagewdqid} to wb:{languageqid}.")
