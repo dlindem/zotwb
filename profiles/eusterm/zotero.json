@@ -1,0 +1,3361 @@
+{
+  "filename": "zotero.json",
+  "comment": "Item types, fields, and creatorTypes are based on the Zotero API scheme as of August 2023. wbprop value null/null means undefined, value False means this zotero field is excluded by the user from being mapped.",
+  "mapping": {
+    "all_types": {
+      "fields": {
+        "DOI": {
+          "wbprop": null,
+          "dtype": "ExternalId",
+          "name": "DOI"
+        },
+        "ISSN": {
+          "wbprop": null,
+          "dtype": "ExternalId",
+          "name": "ISSN"
+        },
+        "abstractNote": {
+          "wbprop": false,
+          "dtype": "String",
+          "name": "Abstract"
+        },
+        "applicationNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Application Number"
+        },
+        "archive": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Archive"
+        },
+        "archiveID": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Archive ID"
+        },
+        "archiveLocation": {
+          "wbprop": false,
+          "dtype": "String",
+          "name": "Loc. in Archive"
+        },
+        "artworkMedium": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Medium"
+        },
+        "artworkSize": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Artwork Size"
+        },
+        "assignee": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Assignee"
+        },
+        "audioFileType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "File Type"
+        },
+        "audioRecordingFormat": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Format"
+        },
+        "billNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Bill Number"
+        },
+        "blogTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Blog Title"
+        },
+        "bookTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Book Title"
+        },
+        "callNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Call Number"
+        },
+        "caseName": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Case Name"
+        },
+        "citationKey": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Citation Key"
+        },
+        "code": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Code"
+        },
+        "codeNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Code Number"
+        },
+        "codePages": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Code Pages"
+        },
+        "codeVolume": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Code Volume"
+        },
+        "committee": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Committee"
+        },
+        "company": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Company"
+        },
+        "conferenceName": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Conference Name"
+        },
+        "country": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Country"
+        },
+        "court": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Court"
+        },
+        "date": {
+          "wbprop": null,
+          "dtype": "Time",
+          "name": "Date"
+        },
+        "dateDecided": {
+          "wbprop": null,
+          "dtype": "Time",
+          "name": "Date Decided"
+        },
+        "dateEnacted": {
+          "wbprop": null,
+          "dtype": "Time",
+          "name": "Date Enacted"
+        },
+        "dictionaryTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Dictionary Title"
+        },
+        "distributor": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Distributor"
+        },
+        "docketNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Docket Number"
+        },
+        "documentNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Document Number"
+        },
+        "edition": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Edition"
+        },
+        "encyclopediaTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Encyclopedia Title"
+        },
+        "episodeNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Episode Number"
+        },
+        "filingDate": {
+          "wbprop": null,
+          "dtype": "Time",
+          "name": "Filing Date"
+        },
+        "firstPage": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "First Page"
+        },
+        "format": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Format"
+        },
+        "forumTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Forum/Listserv Title"
+        },
+        "genre": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Genre"
+        },
+        "history": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "History"
+        },
+        "identifier": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Identifier"
+        },
+        "institution": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Institution"
+        },
+        "interviewMedium": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Medium"
+        },
+        "issue": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Issue"
+        },
+        "issueDate": {
+          "wbprop": null,
+          "dtype": "Time",
+          "name": "Issue Date"
+        },
+        "issuingAuthority": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Issuing Authority"
+        },
+        "journalAbbreviation": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Journal Abbr"
+        },
+        "label": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Label"
+        },
+        "legalStatus": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Legal Status"
+        },
+        "legislativeBody": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Legislative Body"
+        },
+        "letterType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Type"
+        },
+        "libraryCatalog": {
+          "wbprop": false,
+          "dtype": "String",
+          "name": "Library Catalogue"
+        },
+        "manuscriptType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Type"
+        },
+        "mapType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Type"
+        },
+        "meetingName": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Meeting Name"
+        },
+        "nameOfAct": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Name of Act"
+        },
+        "network": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Network"
+        },
+        "numPages": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "# of Pages"
+        },
+        "number": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Number"
+        },
+        "numberOfVolumes": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "# of Volumes"
+        },
+        "organization": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Organization"
+        },
+        "pages": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Pages"
+        },
+        "patentNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Patent Number"
+        },
+        "place": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Place"
+        },
+        "postType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Post Type"
+        },
+        "presentationType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Type"
+        },
+        "priorityNumbers": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Priority Numbers"
+        },
+        "proceedingsTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Proceedings Title"
+        },
+        "programTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Program Title"
+        },
+        "programmingLanguage": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Prog. Language"
+        },
+        "publicLawNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Public Law Number"
+        },
+        "publicationTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Publication"
+        },
+        "publisher": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Publisher"
+        },
+        "references": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "References"
+        },
+        "reportNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Report Number"
+        },
+        "reportType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Report Type"
+        },
+        "reporter": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Reporter"
+        },
+        "reporterVolume": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Reporter Volume"
+        },
+        "repository": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Repository"
+        },
+        "repositoryLocation": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Repo. Location"
+        },
+        "rights": {
+          "wbprop": false,
+          "dtype": "String",
+          "name": "Rights"
+        },
+        "runningTime": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Running Time"
+        },
+        "scale": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Scale"
+        },
+        "section": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Section"
+        },
+        "series": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Series"
+        },
+        "seriesNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Series Number"
+        },
+        "seriesText": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Series Text"
+        },
+        "seriesTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Series Title"
+        },
+        "session": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Session"
+        },
+        "shortTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Short Title"
+        },
+        "status": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Status"
+        },
+        "studio": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Studio"
+        },
+        "subject": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Subject"
+        },
+        "system": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "System"
+        },
+        "thesisType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Type"
+        },
+        "title": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Title"
+        },
+        "type": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Type"
+        },
+        "university": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "University"
+        },
+        "url": {
+          "wbprop": null,
+          "dtype": "URL",
+          "name": "URL"
+        },
+        "versionNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Version"
+        },
+        "videoRecordingFormat": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Format"
+        },
+        "volume": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Volume"
+        },
+        "websiteTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Website Title"
+        },
+        "websiteType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Website Type"
+        }
+      },
+      "creatorTypes": {
+        "artist": {
+          "name": "Artist",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "attorneyAgent": {
+          "name": "Attorney/Agent",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "author": {
+          "name": "Author",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "bookAuthor": {
+          "name": "Book Author",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "cartographer": {
+          "name": "Cartographer",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "castMember": {
+          "name": "Cast Member",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "commenter": {
+          "name": "Commenter",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "composer": {
+          "name": "Composer",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "contributor": {
+          "name": "Contributor",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "cosponsor": {
+          "name": "Cosponsor",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "counsel": {
+          "name": "Counsel",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "director": {
+          "name": "Director",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "editor": {
+          "name": "Editor",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "guest": {
+          "name": "Guest",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "interviewee": {
+          "name": "Interview With",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "interviewer": {
+          "name": "Interviewer",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "inventor": {
+          "name": "Inventor",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "performer": {
+          "name": "Performer",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "podcaster": {
+          "name": "Podcaster",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "presenter": {
+          "name": "Presenter",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "producer": {
+          "name": "Producer",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "programmer": {
+          "name": "Programmer",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "recipient": {
+          "name": "Recipient",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "reviewedAuthor": {
+          "name": "Reviewed Author",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "scriptwriter": {
+          "name": "Scriptwriter",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "seriesEditor": {
+          "name": "Series Editor",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "sponsor": {
+          "name": "Sponsor",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "translator": {
+          "name": "Translator",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "wordsBy": {
+          "name": "Words By",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        }
+      }
+    },
+    "artwork": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "artworkMedium": {
+          "wbprop": null,
+          "baseField": "medium"
+        },
+        "artworkSize": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "artist": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        }
+      }
+    },
+    "audioRecording": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "audioRecordingFormat": {
+          "wbprop": null,
+          "baseField": "medium"
+        },
+        "seriesTitle": {
+          "wbprop": null
+        },
+        "volume": {
+          "wbprop": null
+        },
+        "numberOfVolumes": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "label": {
+          "wbprop": null,
+          "baseField": "publisher"
+        },
+        "date": {
+          "wbprop": null
+        },
+        "runningTime": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "ISBN": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "performer": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "composer": {
+          "wbprop": null
+        },
+        "wordsBy": {
+          "wbprop": null
+        }
+      }
+    },
+    "bill": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "billNumber": {
+          "wbprop": null,
+          "baseField": "number"
+        },
+        "code": {
+          "wbprop": null
+        },
+        "codeVolume": {
+          "wbprop": null,
+          "baseField": "volume"
+        },
+        "section": {
+          "wbprop": null
+        },
+        "codePages": {
+          "wbprop": null,
+          "baseField": "pages"
+        },
+        "legislativeBody": {
+          "wbprop": null,
+          "baseField": "authority"
+        },
+        "session": {
+          "wbprop": null
+        },
+        "history": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        }
+      },
+      "creatorTypes": {
+        "sponsor": {
+          "wbprop": null,
+          "primary": true
+        },
+        "cosponsor": {
+          "wbprop": null
+        },
+        "contributor": {
+          "wbprop": null
+        }
+      }
+    },
+    "blogPost": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "blogTitle": {
+          "wbprop": null,
+          "baseField": "publicationTitle"
+        },
+        "websiteType": {
+          "wbprop": null,
+          "baseField": "type"
+        },
+        "date": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "commenter": {
+          "wbprop": null
+        },
+        "contributor": {
+          "wbprop": null
+        }
+      }
+    },
+    "book": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "series": {
+          "wbprop": null
+        },
+        "seriesNumber": {
+          "wbprop": null
+        },
+        "volume": {
+          "wbprop": null
+        },
+        "numberOfVolumes": {
+          "wbprop": null
+        },
+        "edition": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "publisher": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "numPages": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": false
+        },
+        "url": {
+          "wbprop": null
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "editor": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        },
+        "seriesEditor": {
+          "wbprop": null
+        }
+      }
+    },
+    "bookSection": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "bookTitle": {
+          "wbprop": null,
+          "baseField": "publicationTitle"
+        },
+        "series": {
+          "wbprop": null
+        },
+        "seriesNumber": {
+          "wbprop": null
+        },
+        "volume": {
+          "wbprop": null
+        },
+        "numberOfVolumes": {
+          "wbprop": null
+        },
+        "edition": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "publisher": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "pages": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "ISBN": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "editor": {
+          "wbprop": null
+        },
+        "bookAuthor": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        },
+        "seriesEditor": {
+          "wbprop": null
+        }
+      }
+    },
+    "case": {
+      "bibtypeqid": null,
+      "fields": {
+        "caseName": {
+          "wbprop": null,
+          "baseField": "title"
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "court": {
+          "wbprop": null,
+          "baseField": "authority"
+        },
+        "dateDecided": {
+          "wbprop": null,
+          "baseField": "date"
+        },
+        "docketNumber": {
+          "wbprop": null,
+          "baseField": "number"
+        },
+        "reporter": {
+          "wbprop": null
+        },
+        "reporterVolume": {
+          "wbprop": null,
+          "baseField": "volume"
+        },
+        "firstPage": {
+          "wbprop": null,
+          "baseField": "pages"
+        },
+        "history": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "counsel": {
+          "wbprop": null
+        },
+        "contributor": {
+          "wbprop": null
+        }
+      }
+    },
+    "computerProgram": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "seriesTitle": {
+          "wbprop": null
+        },
+        "versionNumber": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "system": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "company": {
+          "wbprop": null,
+          "baseField": "publisher"
+        },
+        "programmingLanguage": {
+          "wbprop": null
+        },
+        "ISBN": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "programmer": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        }
+      }
+    },
+    "conferencePaper": {
+      "bibtypeqid": null,
+      "exactmatches": [
+        "http://purl.org/spar/fabio/ProceedingsPaper"
+      ],
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "date": {
+          "wbprop": null
+        },
+        "proceedingsTitle": {
+          "wbprop": null,
+          "baseField": "publicationTitle"
+        },
+        "conferenceName": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "publisher": {
+          "wbprop": null
+        },
+        "volume": {
+          "wbprop": null
+        },
+        "pages": {
+          "wbprop": null
+        },
+        "series": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "DOI": {
+          "wbprop": null
+        },
+        "ISBN": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "editor": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        },
+        "seriesEditor": {
+          "wbprop": null
+        }
+      }
+    },
+    "dataset": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "identifier": {
+          "wbprop": null,
+          "baseField": "number"
+        },
+        "type": {
+          "wbprop": null
+        },
+        "versionNumber": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "repository": {
+          "wbprop": null,
+          "baseField": "publisher"
+        },
+        "repositoryLocation": {
+          "wbprop": null,
+          "baseField": "place"
+        },
+        "format": {
+          "wbprop": null,
+          "baseField": "medium"
+        },
+        "DOI": {
+          "wbprop": null
+        },
+        "citationKey": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        }
+      }
+    },
+    "dictionaryEntry": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "dictionaryTitle": {
+          "wbprop": null,
+          "baseField": "publicationTitle"
+        },
+        "series": {
+          "wbprop": null
+        },
+        "seriesNumber": {
+          "wbprop": null
+        },
+        "volume": {
+          "wbprop": null
+        },
+        "numberOfVolumes": {
+          "wbprop": null
+        },
+        "edition": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "publisher": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "pages": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "ISBN": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "editor": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        },
+        "seriesEditor": {
+          "wbprop": null
+        }
+      }
+    },
+    "document": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "publisher": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "editor": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        },
+        "reviewedAuthor": {
+          "wbprop": null
+        }
+      }
+    },
+    "email": {
+      "bibtypeqid": null,
+      "fields": {
+        "subject": {
+          "wbprop": null,
+          "baseField": "title"
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "date": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "language": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "recipient": {
+          "wbprop": null
+        }
+      }
+    },
+    "encyclopediaArticle": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "encyclopediaTitle": {
+          "wbprop": null,
+          "baseField": "publicationTitle"
+        },
+        "series": {
+          "wbprop": null
+        },
+        "seriesNumber": {
+          "wbprop": null
+        },
+        "volume": {
+          "wbprop": null
+        },
+        "numberOfVolumes": {
+          "wbprop": null
+        },
+        "edition": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "publisher": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "pages": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "editor": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        },
+        "seriesEditor": {
+          "wbprop": null
+        }
+      }
+    },
+    "film": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "distributor": {
+          "wbprop": null,
+          "baseField": "publisher"
+        },
+        "date": {
+          "wbprop": null
+        },
+        "genre": {
+          "wbprop": null,
+          "baseField": "type"
+        },
+        "videoRecordingFormat": {
+          "wbprop": null,
+          "baseField": "medium"
+        },
+        "runningTime": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "director": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "scriptwriter": {
+          "wbprop": null
+        },
+        "producer": {
+          "wbprop": null
+        }
+      }
+    },
+    "forumPost": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "forumTitle": {
+          "wbprop": null,
+          "baseField": "publicationTitle"
+        },
+        "postType": {
+          "wbprop": null,
+          "baseField": "type"
+        },
+        "date": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        }
+      }
+    },
+    "hearing": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "committee": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "publisher": {
+          "wbprop": null
+        },
+        "numberOfVolumes": {
+          "wbprop": null
+        },
+        "documentNumber": {
+          "wbprop": null,
+          "baseField": "number"
+        },
+        "pages": {
+          "wbprop": null
+        },
+        "legislativeBody": {
+          "wbprop": null,
+          "baseField": "authority"
+        },
+        "session": {
+          "wbprop": null
+        },
+        "history": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "contributor": {
+          "wbprop": null,
+          "primary": true
+        }
+      }
+    },
+    "instantMessage": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "date": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "recipient": {
+          "wbprop": null
+        }
+      }
+    },
+    "interview": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "date": {
+          "wbprop": null
+        },
+        "interviewMedium": {
+          "wbprop": null,
+          "baseField": "medium"
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "interviewee": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "interviewer": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        }
+      }
+    },
+    "journalArticle": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "publicationTitle": {
+          "wbprop": null
+        },
+        "volume": {
+          "wbprop": null
+        },
+        "issue": {
+          "wbprop": null
+        },
+        "pages": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "series": {
+          "wbprop": null
+        },
+        "seriesTitle": {
+          "wbprop": null
+        },
+        "seriesText": {
+          "wbprop": null
+        },
+        "journalAbbreviation": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "DOI": {
+          "wbprop": null
+        },
+        "ISSN": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "editor": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        },
+        "reviewedAuthor": {
+          "wbprop": null
+        }
+      }
+    },
+    "letter": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "letterType": {
+          "wbprop": null,
+          "baseField": "type"
+        },
+        "date": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "recipient": {
+          "wbprop": null
+        }
+      }
+    },
+    "magazineArticle": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "publicationTitle": {
+          "wbprop": null
+        },
+        "volume": {
+          "wbprop": null
+        },
+        "issue": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "pages": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "ISSN": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        },
+        "reviewedAuthor": {
+          "wbprop": null
+        }
+      }
+    },
+    "manuscript": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "manuscriptType": {
+          "wbprop": null,
+          "baseField": "type"
+        },
+        "place": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "numPages": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        }
+      }
+    },
+    "map": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "mapType": {
+          "wbprop": null,
+          "baseField": "type"
+        },
+        "scale": {
+          "wbprop": null
+        },
+        "seriesTitle": {
+          "wbprop": null
+        },
+        "edition": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "publisher": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "ISBN": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "cartographer": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "seriesEditor": {
+          "wbprop": null
+        }
+      }
+    },
+    "newspaperArticle": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "publicationTitle": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "edition": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "section": {
+          "wbprop": null
+        },
+        "pages": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "ISSN": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        },
+        "reviewedAuthor": {
+          "wbprop": null
+        }
+      }
+    },
+    "note": {
+      "bibtypeqid": null,
+      "fields": {},
+      "creatorTypes": {}
+    },
+    "patent": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "place": {
+          "wbprop": null
+        },
+        "country": {
+          "wbprop": null
+        },
+        "assignee": {
+          "wbprop": null
+        },
+        "issuingAuthority": {
+          "wbprop": null,
+          "baseField": "authority"
+        },
+        "patentNumber": {
+          "wbprop": null,
+          "baseField": "number"
+        },
+        "filingDate": {
+          "wbprop": null
+        },
+        "pages": {
+          "wbprop": null
+        },
+        "applicationNumber": {
+          "wbprop": null
+        },
+        "priorityNumbers": {
+          "wbprop": null
+        },
+        "issueDate": {
+          "wbprop": null,
+          "baseField": "date"
+        },
+        "references": {
+          "wbprop": null
+        },
+        "legalStatus": {
+          "wbprop": null,
+          "baseField": "status"
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "inventor": {
+          "wbprop": null,
+          "primary": true
+        },
+        "attorneyAgent": {
+          "wbprop": null
+        },
+        "contributor": {
+          "wbprop": null
+        }
+      }
+    },
+    "podcast": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "seriesTitle": {
+          "wbprop": null
+        },
+        "episodeNumber": {
+          "wbprop": null,
+          "baseField": "number"
+        },
+        "audioFileType": {
+          "wbprop": null,
+          "baseField": "medium"
+        },
+        "runningTime": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "podcaster": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "guest": {
+          "wbprop": null
+        }
+      }
+    },
+    "preprint": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "genre": {
+          "wbprop": null,
+          "baseField": "type"
+        },
+        "repository": {
+          "wbprop": null,
+          "baseField": "publisher"
+        },
+        "archiveID": {
+          "wbprop": null,
+          "baseField": "number"
+        },
+        "place": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "series": {
+          "wbprop": null
+        },
+        "seriesNumber": {
+          "wbprop": null
+        },
+        "DOI": {
+          "wbprop": null
+        },
+        "citationKey": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "editor": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        },
+        "reviewedAuthor": {
+          "wbprop": null
+        }
+      }
+    },
+    "presentation": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "presentationType": {
+          "wbprop": null,
+          "baseField": "type"
+        },
+        "date": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "meetingName": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "presenter": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        }
+      }
+    },
+    "radioBroadcast": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "programTitle": {
+          "wbprop": null,
+          "baseField": "publicationTitle"
+        },
+        "episodeNumber": {
+          "wbprop": null,
+          "baseField": "number"
+        },
+        "audioRecordingFormat": {
+          "wbprop": null,
+          "baseField": "medium"
+        },
+        "place": {
+          "wbprop": null
+        },
+        "network": {
+          "wbprop": null,
+          "baseField": "publisher"
+        },
+        "date": {
+          "wbprop": null
+        },
+        "runningTime": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "director": {
+          "wbprop": null,
+          "primary": true
+        },
+        "scriptwriter": {
+          "wbprop": null
+        },
+        "producer": {
+          "wbprop": null
+        },
+        "castMember": {
+          "wbprop": null
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "guest": {
+          "wbprop": null
+        }
+      }
+    },
+    "report": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "reportNumber": {
+          "wbprop": null,
+          "baseField": "number"
+        },
+        "reportType": {
+          "wbprop": null,
+          "baseField": "type"
+        },
+        "seriesTitle": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "institution": {
+          "wbprop": null,
+          "baseField": "publisher"
+        },
+        "date": {
+          "wbprop": null
+        },
+        "pages": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        },
+        "seriesEditor": {
+          "wbprop": null
+        }
+      }
+    },
+    "standard": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "organization": {
+          "wbprop": null,
+          "baseField": "authority"
+        },
+        "committee": {
+          "wbprop": null
+        },
+        "type": {
+          "wbprop": null
+        },
+        "number": {
+          "wbprop": null
+        },
+        "versionNumber": {
+          "wbprop": null
+        },
+        "status": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "publisher": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "DOI": {
+          "wbprop": null
+        },
+        "citationKey": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "numPages": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        }
+      }
+    },
+    "statute": {
+      "bibtypeqid": null,
+      "fields": {
+        "nameOfAct": {
+          "wbprop": null,
+          "baseField": "title"
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "code": {
+          "wbprop": null
+        },
+        "codeNumber": {
+          "wbprop": null
+        },
+        "publicLawNumber": {
+          "wbprop": null,
+          "baseField": "number"
+        },
+        "dateEnacted": {
+          "wbprop": null,
+          "baseField": "date"
+        },
+        "pages": {
+          "wbprop": null
+        },
+        "section": {
+          "wbprop": null
+        },
+        "session": {
+          "wbprop": null
+        },
+        "history": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        }
+      }
+    },
+    "thesis": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "thesisType": {
+          "wbprop": null,
+          "baseField": "type"
+        },
+        "university": {
+          "wbprop": null,
+          "baseField": "publisher"
+        },
+        "place": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "numPages": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        }
+      }
+    },
+    "tvBroadcast": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "programTitle": {
+          "wbprop": null,
+          "baseField": "publicationTitle"
+        },
+        "episodeNumber": {
+          "wbprop": null,
+          "baseField": "number"
+        },
+        "videoRecordingFormat": {
+          "wbprop": null,
+          "baseField": "medium"
+        },
+        "place": {
+          "wbprop": null
+        },
+        "network": {
+          "wbprop": null,
+          "baseField": "publisher"
+        },
+        "date": {
+          "wbprop": null
+        },
+        "runningTime": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "director": {
+          "wbprop": null,
+          "primary": true
+        },
+        "scriptwriter": {
+          "wbprop": null
+        },
+        "producer": {
+          "wbprop": null
+        },
+        "castMember": {
+          "wbprop": null
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "guest": {
+          "wbprop": null
+        }
+      }
+    },
+    "videoRecording": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "videoRecordingFormat": {
+          "wbprop": null,
+          "baseField": "medium"
+        },
+        "seriesTitle": {
+          "wbprop": null
+        },
+        "volume": {
+          "wbprop": null
+        },
+        "numberOfVolumes": {
+          "wbprop": null
+        },
+        "place": {
+          "wbprop": null
+        },
+        "studio": {
+          "wbprop": null,
+          "baseField": "publisher"
+        },
+        "date": {
+          "wbprop": null
+        },
+        "runningTime": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": null
+        },
+        "ISBN": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": false
+        },
+        "libraryCatalog": {
+          "wbprop": false
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "director": {
+          "wbprop": null,
+          "primary": true
+        },
+        "scriptwriter": {
+          "wbprop": null
+        },
+        "producer": {
+          "wbprop": null
+        },
+        "castMember": {
+          "wbprop": null
+        },
+        "contributor": {
+          "wbprop": null
+        }
+      }
+    },
+    "webpage": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": null
+        },
+        "abstractNote": {
+          "wbprop": false
+        },
+        "websiteTitle": {
+          "wbprop": null,
+          "baseField": "publicationTitle"
+        },
+        "websiteType": {
+          "wbprop": null,
+          "baseField": "type"
+        },
+        "date": {
+          "wbprop": null
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": false
+        },
+        "language": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": false
+        },
+        "extra": {
+          "wbprop": null
+        }
+      },
+      "creatorTypes": {
+        "author": {
+          "wbprop": null,
+          "primary": true
+        },
+        "contributor": {
+          "wbprop": null
+        },
+        "translator": {
+          "wbprop": null
+        }
+      }
+    }
+  }
+}

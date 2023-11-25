@@ -1,0 +1,3898 @@
+{
+  "filename": "iso-639-3.json",
+  "comment": "Keys are ISO-639-3 three-letter codes. This data was got from Wikidata, in August 2\u00df23.",
+  "mapping": {
+    "aar": {
+      "enlabel": "Afar",
+      "iso1": "aa",
+      "wikilang": "aa",
+      "wdqid": "Q27811",
+      "wbqid": null
+    },
+    "abk": {
+      "enlabel": "Abkhaz",
+      "iso1": "ab",
+      "wikilang": "ab",
+      "wdqid": "Q5111",
+      "wbqid": null
+    },
+    "abq": {
+      "enlabel": "Abaza",
+      "iso1": null,
+      "wikilang": "abq",
+      "wdqid": "Q27567",
+      "wbqid": null
+    },
+    "abs": {
+      "enlabel": "Ambonese",
+      "iso1": null,
+      "wikilang": "abs",
+      "wdqid": "Q3124354",
+      "wbqid": null
+    },
+    "ace": {
+      "enlabel": "Acehnese",
+      "iso1": null,
+      "wikilang": "ace",
+      "wdqid": "Q27683",
+      "wbqid": null
+    },
+    "acm": {
+      "enlabel": "Mesopotamian Arabic",
+      "iso1": null,
+      "wikilang": "acm",
+      "wdqid": "Q56232",
+      "wbqid": null
+    },
+    "adx": {
+      "enlabel": "Amdo Tibetan",
+      "iso1": null,
+      "wikilang": "adx",
+      "wdqid": "Q56509",
+      "wbqid": null
+    },
+    "ady": {
+      "enlabel": "Adyghe",
+      "iso1": null,
+      "wikilang": "ady",
+      "wdqid": "Q27776",
+      "wbqid": null
+    },
+    "aeb": {
+      "enlabel": "Tunisian Arabic",
+      "iso1": null,
+      "wikilang": "aeb",
+      "wdqid": "Q56240",
+      "wbqid": null
+    },
+    "afr": {
+      "enlabel": "Afrikaans",
+      "iso1": "af",
+      "wikilang": "af",
+      "wdqid": "Q14196",
+      "wbqid": null
+    },
+    "agq": {
+      "enlabel": "Aghem",
+      "iso1": null,
+      "wikilang": "agq",
+      "wdqid": "Q34737",
+      "wbqid": null
+    },
+    "aka": {
+      "enlabel": "Akan",
+      "iso1": "ak",
+      "wikilang": "ak",
+      "wdqid": "Q28026",
+      "wbqid": null
+    },
+    "akl": {
+      "enlabel": "Aklan",
+      "iso1": null,
+      "wikilang": "akl",
+      "wdqid": "Q8773",
+      "wbqid": null
+    },
+    "akz": {
+      "enlabel": "Alabama",
+      "iso1": null,
+      "wikilang": "akz",
+      "wdqid": "Q1815020",
+      "wbqid": null
+    },
+    "aln": {
+      "enlabel": "Gheg Albanian",
+      "iso1": null,
+      "wikilang": "aln",
+      "wdqid": "Q181037",
+      "wbqid": null
+    },
+    "alt": {
+      "enlabel": "Southern Altai",
+      "iso1": null,
+      "wikilang": "alt",
+      "wdqid": "Q1991779",
+      "wbqid": null
+    },
+    "amh": {
+      "enlabel": "Amharic",
+      "iso1": "am",
+      "wikilang": "am",
+      "wdqid": "Q28244",
+      "wbqid": null
+    },
+    "ami": {
+      "enlabel": "Amis",
+      "iso1": null,
+      "wikilang": "ami",
+      "wdqid": "Q35132",
+      "wbqid": null
+    },
+    "ang": {
+      "enlabel": "Old English",
+      "iso1": null,
+      "wikilang": "ang",
+      "wdqid": "Q42365",
+      "wbqid": null
+    },
+    "anp": {
+      "enlabel": "Angika",
+      "iso1": null,
+      "wikilang": "anp",
+      "wdqid": "Q28378",
+      "wbqid": null
+    },
+    "aoc": {
+      "enlabel": "Pemon",
+      "iso1": null,
+      "wikilang": "aoc",
+      "wdqid": "Q10729616",
+      "wbqid": null
+    },
+    "apc": {
+      "enlabel": "Levantine Arabic",
+      "iso1": null,
+      "wikilang": "apc",
+      "wdqid": "Q56593",
+      "wbqid": null
+    },
+    "ara": {
+      "enlabel": "Arabic",
+      "iso1": "ar",
+      "wikilang": "ar",
+      "wdqid": "Q13955",
+      "wbqid": null
+    },
+    "arg": {
+      "enlabel": "Aragonese",
+      "iso1": "an",
+      "wikilang": "an",
+      "wdqid": "Q8765",
+      "wbqid": null
+    },
+    "arn": {
+      "enlabel": "Mapudungun",
+      "iso1": null,
+      "wikilang": "arn",
+      "wdqid": "Q33730",
+      "wbqid": null
+    },
+    "arq": {
+      "enlabel": "Algerian Arabic",
+      "iso1": null,
+      "wikilang": "arq",
+      "wdqid": "Q56499",
+      "wbqid": null
+    },
+    "ary": {
+      "enlabel": "Moroccan Darija",
+      "iso1": null,
+      "wikilang": "ary",
+      "wdqid": "Q56426",
+      "wbqid": null
+    },
+    "arz": {
+      "enlabel": "Egyptian Arabic",
+      "iso1": null,
+      "wikilang": "arz",
+      "wdqid": "Q29919",
+      "wbqid": null
+    },
+    "ase": {
+      "enlabel": "American Sign Language",
+      "iso1": null,
+      "wikilang": "ase",
+      "wdqid": "Q14759",
+      "wbqid": null
+    },
+    "asm": {
+      "enlabel": "Assamese",
+      "iso1": "as",
+      "wikilang": "as",
+      "wdqid": "Q29401",
+      "wbqid": null
+    },
+    "ast": {
+      "enlabel": "Asturian",
+      "iso1": null,
+      "wikilang": "ast",
+      "wdqid": "Q29507",
+      "wbqid": null
+    },
+    "atj": {
+      "enlabel": "Atikamekw",
+      "iso1": null,
+      "wikilang": "atj",
+      "wdqid": "Q56590",
+      "wbqid": null
+    },
+    "ava": {
+      "enlabel": "Avar",
+      "iso1": "av",
+      "wikilang": "av",
+      "wdqid": "Q29561",
+      "wbqid": null
+    },
+    "avk": {
+      "enlabel": "Kotava",
+      "iso1": null,
+      "wikilang": "avk",
+      "wdqid": "Q1377116",
+      "wbqid": null
+    },
+    "awa": {
+      "enlabel": "Awadhi",
+      "iso1": null,
+      "wikilang": "awa",
+      "wdqid": "Q29579",
+      "wbqid": null
+    },
+    "aym": {
+      "enlabel": "Aymara",
+      "iso1": "ay",
+      "wikilang": "ay",
+      "wdqid": "Q4627",
+      "wbqid": null
+    },
+    "azb": {
+      "enlabel": "South Azerbaijani",
+      "iso1": null,
+      "wikilang": "azb",
+      "wdqid": "Q3449805",
+      "wbqid": null
+    },
+    "aze": {
+      "enlabel": "Azerbaijani",
+      "iso1": "az",
+      "wikilang": "az",
+      "wdqid": "Q9292",
+      "wbqid": null
+    },
+    "bak": {
+      "enlabel": "Bashkir",
+      "iso1": "ba",
+      "wikilang": "ba",
+      "wdqid": "Q13389",
+      "wbqid": null
+    },
+    "bal": {
+      "enlabel": "Balochi",
+      "iso1": null,
+      "wikilang": "bal",
+      "wdqid": "Q33049",
+      "wbqid": null
+    },
+    "bam": {
+      "enlabel": "Bambara",
+      "iso1": "bm",
+      "wikilang": "bm",
+      "wdqid": "Q33243",
+      "wbqid": null
+    },
+    "ban": {
+      "enlabel": "Balinese",
+      "iso1": null,
+      "wikilang": "ban",
+      "wdqid": "Q33070",
+      "wbqid": null
+    },
+    "bar": {
+      "enlabel": "Bavarian",
+      "iso1": null,
+      "wikilang": "bar",
+      "wdqid": "Q29540",
+      "wbqid": null
+    },
+    "bbc": {
+      "enlabel": "Toba Batak",
+      "iso1": null,
+      "wikilang": "bbc",
+      "wdqid": "Q33017",
+      "wbqid": null
+    },
+    "bcc": {
+      "enlabel": "Southern Balochi",
+      "iso1": null,
+      "wikilang": "bcc",
+      "wdqid": "Q12634001",
+      "wbqid": null
+    },
+    "bcl": {
+      "enlabel": "Central Bikol",
+      "iso1": null,
+      "wikilang": "bcl",
+      "wdqid": "Q33284",
+      "wbqid": null
+    },
+    "bdr": {
+      "enlabel": "West Coast Bajau",
+      "iso1": null,
+      "wikilang": "bdr",
+      "wdqid": "Q2880037",
+      "wbqid": null
+    },
+    "bej": {
+      "enlabel": "Beja",
+      "iso1": null,
+      "wikilang": "bej",
+      "wdqid": "Q33025",
+      "wbqid": null
+    },
+    "bel": {
+      "enlabel": "Belarusian",
+      "iso1": "be",
+      "wikilang": "be",
+      "wdqid": "Q9091",
+      "wbqid": null
+    },
+    "ben": {
+      "enlabel": "Bengali",
+      "iso1": "bn",
+      "wikilang": "bn",
+      "wdqid": "Q9610",
+      "wbqid": null
+    },
+    "bfi": {
+      "enlabel": "British Sign Language",
+      "iso1": null,
+      "wikilang": "bfi",
+      "wdqid": "Q33000",
+      "wbqid": null
+    },
+    "bfq": {
+      "enlabel": "Badaga",
+      "iso1": null,
+      "wikilang": "bfq",
+      "wdqid": "Q33205",
+      "wbqid": null
+    },
+    "bgn": {
+      "enlabel": "Western Balochi",
+      "iso1": null,
+      "wikilang": "bgn",
+      "wdqid": "Q12645561",
+      "wbqid": null
+    },
+    "bho": {
+      "enlabel": "Bhojpuri",
+      "iso1": null,
+      "wikilang": "bh",
+      "wdqid": "Q33268",
+      "wbqid": null
+    },
+    "bis": {
+      "enlabel": "Bislama",
+      "iso1": "bi",
+      "wikilang": "bi",
+      "wdqid": "Q35452",
+      "wbqid": null
+    },
+    "bjn": {
+      "enlabel": "Banjar",
+      "iso1": null,
+      "wikilang": "bjn",
+      "wdqid": "Q33151",
+      "wbqid": null
+    },
+    "bla": {
+      "enlabel": "Blackfoot",
+      "iso1": null,
+      "wikilang": "bla",
+      "wdqid": "Q33060",
+      "wbqid": null
+    },
+    "blk": {
+      "enlabel": "Pa'O",
+      "iso1": null,
+      "wikilang": "blk",
+      "wdqid": "Q7121294",
+      "wbqid": null
+    },
+    "bnn": {
+      "enlabel": "Bunun",
+      "iso1": null,
+      "wikilang": "bnn",
+      "wdqid": "Q56505",
+      "wbqid": null
+    },
+    "bod": {
+      "enlabel": "Tibetan",
+      "iso1": "bo",
+      "wikilang": "bo",
+      "wdqid": "Q34271",
+      "wbqid": null
+    },
+    "bos": {
+      "enlabel": "Bosnian",
+      "iso1": "bs",
+      "wikilang": "bs",
+      "wdqid": "Q9303",
+      "wbqid": null
+    },
+    "bpy": {
+      "enlabel": "Bishnupriya Manipuri",
+      "iso1": null,
+      "wikilang": "bpy",
+      "wdqid": "Q37059",
+      "wbqid": null
+    },
+    "bqi": {
+      "enlabel": "Bakhtiari dialect",
+      "iso1": null,
+      "wikilang": "bqi",
+      "wdqid": "Q257829",
+      "wbqid": null
+    },
+    "bre": {
+      "enlabel": "Breton",
+      "iso1": "br",
+      "wikilang": "br",
+      "wdqid": "Q12107",
+      "wbqid": null
+    },
+    "brh": {
+      "enlabel": "Brahui",
+      "iso1": null,
+      "wikilang": "brh",
+      "wdqid": "Q33202",
+      "wbqid": null
+    },
+    "brx": {
+      "enlabel": "Bodo",
+      "iso1": null,
+      "wikilang": "brx",
+      "wdqid": "Q33223",
+      "wbqid": null
+    },
+    "bsa": {
+      "enlabel": "Abinomn",
+      "iso1": null,
+      "wikilang": "bsa",
+      "wdqid": "Q56648",
+      "wbqid": null
+    },
+    "bsk": {
+      "enlabel": "Burushaski",
+      "iso1": null,
+      "wikilang": "bsk",
+      "wdqid": "Q216286",
+      "wbqid": null
+    },
+    "bss": {
+      "enlabel": "Kose",
+      "iso1": null,
+      "wikilang": "bss",
+      "wdqid": "Q34806",
+      "wbqid": null
+    },
+    "btm": {
+      "enlabel": "Mandailing",
+      "iso1": null,
+      "wikilang": "btm",
+      "wdqid": "Q2891049",
+      "wbqid": null
+    },
+    "bto": {
+      "enlabel": "Rinconada Bikol",
+      "iso1": null,
+      "wikilang": "bto",
+      "wdqid": "Q12633026",
+      "wbqid": null
+    },
+    "bua": {
+      "enlabel": "Buryat",
+      "iso1": null,
+      "wikilang": "bxr",
+      "wdqid": "Q33120",
+      "wbqid": null
+    },
+    "bug": {
+      "enlabel": "Bugis",
+      "iso1": null,
+      "wikilang": "bug",
+      "wdqid": "Q33190",
+      "wbqid": null
+    },
+    "bul": {
+      "enlabel": "Bulgarian",
+      "iso1": "bg",
+      "wikilang": "bg",
+      "wdqid": "Q7918",
+      "wbqid": null
+    },
+    "bxr": {
+      "enlabel": "Russia Buriat",
+      "iso1": null,
+      "wikilang": "bxr",
+      "wdqid": "Q16116629",
+      "wbqid": null
+    },
+    "byq": {
+      "enlabel": "Basay",
+      "iso1": null,
+      "wikilang": "byq",
+      "wdqid": "Q716647",
+      "wbqid": null
+    },
+    "bzg": {
+      "enlabel": "Babuza",
+      "iso1": null,
+      "wikilang": "bzg",
+      "wdqid": "Q716615",
+      "wbqid": null
+    },
+    "bzs": {
+      "enlabel": "Brazilian Sign Language",
+      "iso1": null,
+      "wikilang": "bzs",
+      "wdqid": "Q3436689",
+      "wbqid": null
+    },
+    "cak": {
+      "enlabel": "Kaqchikel",
+      "iso1": null,
+      "wikilang": "cak",
+      "wdqid": "Q35115",
+      "wbqid": null
+    },
+    "cal": {
+      "enlabel": "Carolinian",
+      "iso1": null,
+      "wikilang": "cal",
+      "wdqid": "Q28427",
+      "wbqid": null
+    },
+    "cat": {
+      "enlabel": "Catalan",
+      "iso1": "ca",
+      "wikilang": "ca",
+      "wdqid": "Q7026",
+      "wbqid": null
+    },
+    "cbk": {
+      "enlabel": "Chavacano",
+      "iso1": null,
+      "wikilang": "cbk-zam",
+      "wdqid": "Q33281",
+      "wbqid": null
+    },
+    "ccp": {
+      "enlabel": "Chakma",
+      "iso1": null,
+      "wikilang": "ccp",
+      "wdqid": "Q32952",
+      "wbqid": null
+    },
+    "cdo": {
+      "enlabel": "Eastern Min",
+      "iso1": null,
+      "wikilang": "cdo",
+      "wdqid": "Q36455",
+      "wbqid": null
+    },
+    "ceb": {
+      "enlabel": "Cebuano",
+      "iso1": null,
+      "wikilang": "ceb",
+      "wdqid": "Q33239",
+      "wbqid": null
+    },
+    "ces": {
+      "enlabel": "Czech",
+      "iso1": "cs",
+      "wikilang": "cs",
+      "wdqid": "Q9056",
+      "wbqid": null
+    },
+    "cha": {
+      "enlabel": "Chamorro",
+      "iso1": "ch",
+      "wikilang": "ch",
+      "wdqid": "Q33262",
+      "wbqid": null
+    },
+    "che": {
+      "enlabel": "Chechen",
+      "iso1": "ce",
+      "wikilang": "ce",
+      "wdqid": "Q33350",
+      "wbqid": null
+    },
+    "chn": {
+      "enlabel": "Chinook Jargon",
+      "iso1": null,
+      "wikilang": "chn",
+      "wdqid": "Q35173",
+      "wbqid": null
+    },
+    "cho": {
+      "enlabel": "Choctaw",
+      "iso1": null,
+      "wikilang": "cho",
+      "wdqid": "Q32979",
+      "wbqid": null
+    },
+    "chr": {
+      "enlabel": "Cherokee",
+      "iso1": null,
+      "wikilang": "chr",
+      "wdqid": "Q33388",
+      "wbqid": null
+    },
+    "chu": {
+      "enlabel": "Church Slavonic",
+      "iso1": "cu",
+      "wikilang": "cu",
+      "wdqid": "Q33251",
+      "wbqid": null
+    },
+    "chv": {
+      "enlabel": "Chuvash",
+      "iso1": "cv",
+      "wikilang": "cv",
+      "wdqid": "Q33348",
+      "wbqid": null
+    },
+    "chy": {
+      "enlabel": "Cheyenne",
+      "iso1": null,
+      "wikilang": "chy",
+      "wdqid": "Q33265",
+      "wbqid": null
+    },
+    "ckb": {
+      "enlabel": "Sorani",
+      "iso1": null,
+      "wikilang": "ckb",
+      "wdqid": "Q36811",
+      "wbqid": null
+    },
+    "ckt": {
+      "enlabel": "Chukchi",
+      "iso1": null,
+      "wikilang": "ckt",
+      "wdqid": "Q33170",
+      "wbqid": null
+    },
+    "ckv": {
+      "enlabel": "Kavalan",
+      "iso1": null,
+      "wikilang": "ckv",
+      "wdqid": "Q716627",
+      "wbqid": null
+    },
+    "clc": {
+      "enlabel": "Chilcotin",
+      "iso1": null,
+      "wikilang": "clc",
+      "wdqid": "Q28535",
+      "wbqid": null
+    },
+    "cnh": {
+      "enlabel": "Hakha\u2013Chin",
+      "iso1": null,
+      "wikilang": "cnh",
+      "wdqid": "Q3250286",
+      "wbqid": null
+    },
+    "cnr": {
+      "enlabel": "Montenegrin",
+      "iso1": null,
+      "wikilang": "cnr",
+      "wdqid": "Q8821",
+      "wbqid": null
+    },
+    "cop": {
+      "enlabel": "Coptic",
+      "iso1": null,
+      "wikilang": "cop",
+      "wdqid": "Q36155",
+      "wbqid": null
+    },
+    "cor": {
+      "enlabel": "Cornish",
+      "iso1": "kw",
+      "wikilang": "kw",
+      "wdqid": "Q25289",
+      "wbqid": null
+    },
+    "cos": {
+      "enlabel": "Corsican",
+      "iso1": "co",
+      "wikilang": "co",
+      "wdqid": "Q33111",
+      "wbqid": null
+    },
+    "cps": {
+      "enlabel": "Capiznon",
+      "iso1": null,
+      "wikilang": "cps",
+      "wdqid": "Q2937525",
+      "wbqid": null
+    },
+    "cpx": {
+      "enlabel": "Pu-Xian Min",
+      "iso1": null,
+      "wikilang": "cpx",
+      "wdqid": "Q56583",
+      "wbqid": null
+    },
+    "cre": {
+      "enlabel": "Cree",
+      "iso1": "cr",
+      "wikilang": "cr",
+      "wdqid": "Q33390",
+      "wbqid": null
+    },
+    "crh": {
+      "enlabel": "Crimean Tatar",
+      "iso1": null,
+      "wikilang": "crh",
+      "wdqid": "Q33357",
+      "wbqid": null
+    },
+    "crl": {
+      "enlabel": "Northern East Cree",
+      "iso1": null,
+      "wikilang": "crl",
+      "wdqid": "Q12642195",
+      "wbqid": null
+    },
+    "crs": {
+      "enlabel": "Seychellois Creole",
+      "iso1": null,
+      "wikilang": "crs",
+      "wdqid": "Q34015",
+      "wbqid": null
+    },
+    "csb": {
+      "enlabel": "Kashubian",
+      "iso1": null,
+      "wikilang": "csb",
+      "wdqid": "Q33690",
+      "wbqid": null
+    },
+    "ctg": {
+      "enlabel": "Chittagonian",
+      "iso1": null,
+      "wikilang": "ctg",
+      "wdqid": "Q33173",
+      "wbqid": null
+    },
+    "cym": {
+      "enlabel": "Welsh",
+      "iso1": "cy",
+      "wikilang": "cy",
+      "wdqid": "Q9309",
+      "wbqid": null
+    },
+    "dag": {
+      "enlabel": "Dagbani",
+      "iso1": null,
+      "wikilang": "dag",
+      "wdqid": "Q32238",
+      "wbqid": null
+    },
+    "dan": {
+      "enlabel": "Danish",
+      "iso1": "da",
+      "wikilang": "da",
+      "wdqid": "Q9035",
+      "wbqid": null
+    },
+    "dar": {
+      "enlabel": "Dargwa",
+      "iso1": null,
+      "wikilang": "dar",
+      "wdqid": "Q32332",
+      "wbqid": null
+    },
+    "deu": {
+      "enlabel": "German",
+      "iso1": "de",
+      "wikilang": "de",
+      "wdqid": "Q188",
+      "wbqid": "Q214"
+    },
+    "din": {
+      "enlabel": "Dinka",
+      "iso1": null,
+      "wikilang": "din",
+      "wdqid": "Q56466",
+      "wbqid": null
+    },
+    "div": {
+      "enlabel": "Maldivian",
+      "iso1": "dv",
+      "wikilang": "dv",
+      "wdqid": "Q32656",
+      "wbqid": null
+    },
+    "dlm": {
+      "enlabel": "Dalmatian",
+      "iso1": null,
+      "wikilang": "dlm",
+      "wdqid": "Q35527",
+      "wbqid": null
+    },
+    "dru": {
+      "enlabel": "Rukai",
+      "iso1": null,
+      "wikilang": "dru",
+      "wdqid": "Q49232",
+      "wbqid": null
+    },
+    "dsb": {
+      "enlabel": "Lower Sorbian",
+      "iso1": null,
+      "wikilang": "dsb",
+      "wdqid": "Q13286",
+      "wbqid": null
+    },
+    "dtp": {
+      "enlabel": "Kadazandusun",
+      "iso1": null,
+      "wikilang": "dtp",
+      "wdqid": "Q5317225",
+      "wbqid": null
+    },
+    "dty": {
+      "enlabel": "Doteli",
+      "iso1": null,
+      "wikilang": "dty",
+      "wdqid": "Q18415595",
+      "wbqid": null
+    },
+    "dua": {
+      "enlabel": "Duala",
+      "iso1": null,
+      "wikilang": "dua",
+      "wdqid": "Q33013",
+      "wbqid": null
+    },
+    "dzo": {
+      "enlabel": "Dzongkha",
+      "iso1": "dz",
+      "wikilang": "dz",
+      "wdqid": "Q33081",
+      "wbqid": null
+    },
+    "efi": {
+      "enlabel": "Ibibio",
+      "iso1": null,
+      "wikilang": "efi",
+      "wdqid": "Q35377",
+      "wbqid": null
+    },
+    "egl": {
+      "enlabel": "Emilian",
+      "iso1": null,
+      "wikilang": "egl",
+      "wdqid": "Q1057898",
+      "wbqid": null
+    },
+    "ell": {
+      "enlabel": "Modern Greek",
+      "iso1": "el",
+      "wikilang": "el",
+      "wdqid": "Q36510",
+      "wbqid": null
+    },
+    "eng": {
+      "enlabel": "English",
+      "iso1": "en",
+      "wikilang": "en",
+      "wdqid": "Q1860",
+      "wbqid": "Q208"
+    },
+    "enm": {
+      "enlabel": "Middle English",
+      "iso1": null,
+      "wikilang": "enm",
+      "wdqid": "Q36395",
+      "wbqid": null
+    },
+    "epo": {
+      "enlabel": "Esperanto",
+      "iso1": "eo",
+      "wikilang": "eo",
+      "wdqid": "Q143",
+      "wbqid": null
+    },
+    "est": {
+      "enlabel": "Estonian",
+      "iso1": "et",
+      "wikilang": "et",
+      "wdqid": "Q9072",
+      "wbqid": null
+    },
+    "esu": {
+      "enlabel": "Central Alaskan Yup'ik",
+      "iso1": null,
+      "wikilang": "esu",
+      "wdqid": "Q21117",
+      "wbqid": null
+    },
+    "ett": {
+      "enlabel": "Etruscan",
+      "iso1": null,
+      "wikilang": "ett",
+      "wdqid": "Q35726",
+      "wbqid": null
+    },
+    "eus": {
+      "enlabel": "Basque",
+      "iso1": "eu",
+      "wikilang": "eu",
+      "wdqid": "Q8752",
+      "wbqid": "Q207"
+    },
+    "ewe": {
+      "enlabel": "Ewe",
+      "iso1": "ee",
+      "wikilang": "ee",
+      "wdqid": "Q30005",
+      "wbqid": null
+    },
+    "ext": {
+      "enlabel": "Extremaduran",
+      "iso1": null,
+      "wikilang": "ext",
+      "wdqid": "Q30007",
+      "wbqid": null
+    },
+    "eya": {
+      "enlabel": "Eyak",
+      "iso1": null,
+      "wikilang": "eya",
+      "wdqid": "Q27480",
+      "wbqid": null
+    },
+    "fao": {
+      "enlabel": "Faroese",
+      "iso1": "fo",
+      "wikilang": "fo",
+      "wdqid": "Q25258",
+      "wbqid": null
+    },
+    "fas": {
+      "enlabel": "Persian",
+      "iso1": "fa",
+      "wikilang": "fa",
+      "wdqid": "Q9168",
+      "wbqid": null
+    },
+    "fij": {
+      "enlabel": "Fijian",
+      "iso1": "fj",
+      "wikilang": "fj",
+      "wdqid": "Q33295",
+      "wbqid": null
+    },
+    "fin": {
+      "enlabel": "Finnish",
+      "iso1": "fi",
+      "wikilang": "fi",
+      "wdqid": "Q1412",
+      "wbqid": null
+    },
+    "fit": {
+      "enlabel": "Me\u00e4nkieli",
+      "iso1": null,
+      "wikilang": "fit",
+      "wdqid": "Q13357",
+      "wbqid": null
+    },
+    "fkv": {
+      "enlabel": "Kven",
+      "iso1": null,
+      "wikilang": "fkv",
+      "wdqid": "Q165795",
+      "wbqid": null
+    },
+    "fon": {
+      "enlabel": "Fon",
+      "iso1": null,
+      "wikilang": "fon",
+      "wdqid": "Q33291",
+      "wbqid": null
+    },
+    "fos": {
+      "enlabel": "Siraya",
+      "iso1": null,
+      "wikilang": "fos",
+      "wdqid": "Q716604",
+      "wbqid": null
+    },
+    "fra": {
+      "enlabel": "French",
+      "iso1": "fr",
+      "wikilang": "fr",
+      "wdqid": "Q150",
+      "wbqid": "Q206"
+    },
+    "frc": {
+      "enlabel": "Louisiana French",
+      "iso1": null,
+      "wikilang": "frc",
+      "wdqid": "Q3083213",
+      "wbqid": null
+    },
+    "frm": {
+      "enlabel": "Middle French",
+      "iso1": null,
+      "wikilang": "frm",
+      "wdqid": "Q1473289",
+      "wbqid": null
+    },
+    "fro": {
+      "enlabel": "Old French",
+      "iso1": null,
+      "wikilang": "fro",
+      "wdqid": "Q35222",
+      "wbqid": null
+    },
+    "frp": {
+      "enlabel": "Franco-Proven\u00e7al",
+      "iso1": null,
+      "wikilang": "frp",
+      "wdqid": "Q15087",
+      "wbqid": null
+    },
+    "frr": {
+      "enlabel": "North Frisian",
+      "iso1": null,
+      "wikilang": "frr",
+      "wdqid": "Q28224",
+      "wbqid": null
+    },
+    "fry": {
+      "enlabel": "West Frisian",
+      "iso1": "fy",
+      "wikilang": "fy",
+      "wdqid": "Q27175",
+      "wbqid": null
+    },
+    "fuf": {
+      "enlabel": "Pular",
+      "iso1": null,
+      "wikilang": "fuf",
+      "wdqid": "Q3915357",
+      "wbqid": null
+    },
+    "ful": {
+      "enlabel": "Fula",
+      "iso1": "ff",
+      "wikilang": "ff",
+      "wdqid": "Q33454",
+      "wbqid": null
+    },
+    "fur": {
+      "enlabel": "Friulian",
+      "iso1": null,
+      "wikilang": "fur",
+      "wdqid": "Q33441",
+      "wbqid": null
+    },
+    "gaa": {
+      "enlabel": "Ga",
+      "iso1": null,
+      "wikilang": "gaa",
+      "wdqid": "Q33287",
+      "wbqid": null
+    },
+    "gag": {
+      "enlabel": "Gagauz",
+      "iso1": null,
+      "wikilang": "gag",
+      "wdqid": "Q33457",
+      "wbqid": null
+    },
+    "gan": {
+      "enlabel": "Gan",
+      "iso1": null,
+      "wikilang": "gan",
+      "wdqid": "Q33475",
+      "wbqid": null
+    },
+    "gcf": {
+      "enlabel": "Guadeloupean Creole",
+      "iso1": null,
+      "wikilang": "gcf",
+      "wdqid": "Q3006280",
+      "wbqid": null
+    },
+    "gcr": {
+      "enlabel": "Guianan Creole",
+      "iso1": null,
+      "wikilang": "gcr",
+      "wdqid": "Q1363072",
+      "wbqid": null
+    },
+    "gez": {
+      "enlabel": "Ge'ez",
+      "iso1": null,
+      "wikilang": "gez",
+      "wdqid": "Q35667",
+      "wbqid": null
+    },
+    "gil": {
+      "enlabel": "Gilbertese",
+      "iso1": null,
+      "wikilang": "gil",
+      "wdqid": "Q30898",
+      "wbqid": null
+    },
+    "gla": {
+      "enlabel": "Scottish Gaelic",
+      "iso1": "gd",
+      "wikilang": "gd",
+      "wdqid": "Q9314",
+      "wbqid": null
+    },
+    "gle": {
+      "enlabel": "Irish",
+      "iso1": "ga",
+      "wikilang": "ga",
+      "wdqid": "Q9142",
+      "wbqid": null
+    },
+    "glg": {
+      "enlabel": "Galician",
+      "iso1": "gl",
+      "wikilang": "gl",
+      "wdqid": "Q9307",
+      "wbqid": null
+    },
+    "glk": {
+      "enlabel": "Gilaki",
+      "iso1": null,
+      "wikilang": "glk",
+      "wdqid": "Q33657",
+      "wbqid": null
+    },
+    "glv": {
+      "enlabel": "Manx",
+      "iso1": "gv",
+      "wikilang": "gv",
+      "wdqid": "Q12175",
+      "wbqid": null
+    },
+    "gmh": {
+      "enlabel": "Middle High German",
+      "iso1": null,
+      "wikilang": "gmh",
+      "wdqid": "Q837985",
+      "wbqid": null
+    },
+    "gml": {
+      "enlabel": "Middle Low German",
+      "iso1": null,
+      "wikilang": "gml",
+      "wdqid": "Q505674",
+      "wbqid": null
+    },
+    "goh": {
+      "enlabel": "Old High German",
+      "iso1": null,
+      "wikilang": "goh",
+      "wdqid": "Q35218",
+      "wbqid": null
+    },
+    "gom": {
+      "enlabel": "Goan Konkani",
+      "iso1": null,
+      "wikilang": "gom",
+      "wdqid": "Q5575236",
+      "wbqid": null
+    },
+    "gor": {
+      "enlabel": "Gorontalo",
+      "iso1": null,
+      "wikilang": "gor",
+      "wdqid": "Q2501174",
+      "wbqid": null
+    },
+    "got": {
+      "enlabel": "Gothic",
+      "iso1": null,
+      "wikilang": "got",
+      "wdqid": "Q35722",
+      "wbqid": null
+    },
+    "gpe": {
+      "enlabel": "Ghanaian Pidgin English",
+      "iso1": null,
+      "wikilang": "gpe",
+      "wdqid": "Q5555465",
+      "wbqid": null
+    },
+    "grc": {
+      "enlabel": "Ancient Greek",
+      "iso1": null,
+      "wikilang": "grc",
+      "wdqid": "Q35497",
+      "wbqid": null
+    },
+    "grn": {
+      "enlabel": "Guarani",
+      "iso1": "gn",
+      "wikilang": "gn",
+      "wdqid": "Q35876",
+      "wbqid": null
+    },
+    "gsg": {
+      "enlabel": "German Sign Language",
+      "iso1": null,
+      "wikilang": "gsg",
+      "wdqid": "Q33282",
+      "wbqid": null
+    },
+    "gsw": {
+      "enlabel": "Alemannic",
+      "iso1": null,
+      "wikilang": "als",
+      "wdqid": "Q131339",
+      "wbqid": null
+    },
+    "guc": {
+      "enlabel": "Wayuu",
+      "iso1": null,
+      "wikilang": "guc",
+      "wdqid": "Q891085",
+      "wbqid": null
+    },
+    "guj": {
+      "enlabel": "Gujarati",
+      "iso1": "gu",
+      "wikilang": "gu",
+      "wdqid": "Q5137",
+      "wbqid": null
+    },
+    "guw": {
+      "enlabel": "Gun",
+      "iso1": null,
+      "wikilang": "guw",
+      "wdqid": "Q3111668",
+      "wbqid": null
+    },
+    "hai": {
+      "enlabel": "Haida",
+      "iso1": null,
+      "wikilang": "hai",
+      "wdqid": "Q33303",
+      "wbqid": null
+    },
+    "hak": {
+      "enlabel": "Hakka",
+      "iso1": null,
+      "wikilang": "hak",
+      "wdqid": "Q33375",
+      "wbqid": null
+    },
+    "hat": {
+      "enlabel": "Haitian Creole",
+      "iso1": "ht",
+      "wikilang": "ht",
+      "wdqid": "Q33491",
+      "wbqid": null
+    },
+    "hau": {
+      "enlabel": "Hausa",
+      "iso1": "ha",
+      "wikilang": "ha",
+      "wdqid": "Q56475",
+      "wbqid": null
+    },
+    "haw": {
+      "enlabel": "Hawaiian",
+      "iso1": null,
+      "wikilang": "haw",
+      "wdqid": "Q33569",
+      "wbqid": null
+    },
+    "hbo": {
+      "enlabel": "Biblical Hebrew",
+      "iso1": null,
+      "wikilang": "hbo",
+      "wdqid": "Q1982248",
+      "wbqid": null
+    },
+    "hbs": {
+      "enlabel": "Serbo-Croatian",
+      "iso1": "sh",
+      "wikilang": "sh",
+      "wdqid": "Q9301",
+      "wbqid": null
+    },
+    "heb": {
+      "enlabel": "Hebrew",
+      "iso1": "he",
+      "wikilang": "he",
+      "wdqid": "Q9288",
+      "wbqid": null
+    },
+    "her": {
+      "enlabel": "Herero",
+      "iso1": "hz",
+      "wikilang": "hz",
+      "wdqid": "Q33315",
+      "wbqid": null
+    },
+    "hif": {
+      "enlabel": "Fiji Hindi",
+      "iso1": null,
+      "wikilang": "hif",
+      "wdqid": "Q46728",
+      "wbqid": null
+    },
+    "hil": {
+      "enlabel": "Hiligaynon",
+      "iso1": null,
+      "wikilang": "hil",
+      "wdqid": "Q35978",
+      "wbqid": null
+    },
+    "hin": {
+      "enlabel": "Hindi",
+      "iso1": "hi",
+      "wikilang": "hi",
+      "wdqid": "Q1568",
+      "wbqid": null
+    },
+    "hmo": {
+      "enlabel": "Hiri Motu",
+      "iso1": "ho",
+      "wikilang": "ho",
+      "wdqid": "Q33617",
+      "wbqid": null
+    },
+    "hoc": {
+      "enlabel": "Ho",
+      "iso1": null,
+      "wikilang": "hoc",
+      "wdqid": "Q33270",
+      "wbqid": null
+    },
+    "hrv": {
+      "enlabel": "Croatian",
+      "iso1": "hr",
+      "wikilang": "hr",
+      "wdqid": "Q6654",
+      "wbqid": null
+    },
+    "hrx": {
+      "enlabel": "Hunsrik",
+      "iso1": null,
+      "wikilang": "hrx",
+      "wdqid": "Q304049",
+      "wbqid": null
+    },
+    "hsb": {
+      "enlabel": "Upper Sorbian",
+      "iso1": null,
+      "wikilang": "hsb",
+      "wdqid": "Q13248",
+      "wbqid": null
+    },
+    "hun": {
+      "enlabel": "Hungarian",
+      "iso1": "hu",
+      "wikilang": "hu",
+      "wdqid": "Q9067",
+      "wbqid": null
+    },
+    "hye": {
+      "enlabel": "Armenian",
+      "iso1": "hy",
+      "wikilang": "hy",
+      "wdqid": "Q8785",
+      "wbqid": null
+    },
+    "hyw": {
+      "enlabel": "Western Armenian",
+      "iso1": null,
+      "wikilang": "hyw",
+      "wdqid": "Q180945",
+      "wbqid": null
+    },
+    "ibo": {
+      "enlabel": "Igbo",
+      "iso1": "ig",
+      "wikilang": "ig",
+      "wdqid": "Q33578",
+      "wbqid": null
+    },
+    "ido": {
+      "enlabel": "Ido",
+      "iso1": "io",
+      "wikilang": "io",
+      "wdqid": "Q35224",
+      "wbqid": null
+    },
+    "iii": {
+      "enlabel": "Nuosu",
+      "iso1": "ii",
+      "wikilang": "ii",
+      "wdqid": "Q34235",
+      "wbqid": null
+    },
+    "iku": {
+      "enlabel": "Inuktitut",
+      "iso1": "iu",
+      "wikilang": "iu",
+      "wdqid": "Q29921",
+      "wbqid": null
+    },
+    "ile": {
+      "enlabel": "Interlingue",
+      "iso1": "ie",
+      "wikilang": "ie",
+      "wdqid": "Q35850",
+      "wbqid": null
+    },
+    "ilo": {
+      "enlabel": "Ilocano",
+      "iso1": null,
+      "wikilang": "ilo",
+      "wdqid": "Q35936",
+      "wbqid": null
+    },
+    "ina": {
+      "enlabel": "Interlingua",
+      "iso1": "ia",
+      "wikilang": "ia",
+      "wdqid": "Q35934",
+      "wbqid": null
+    },
+    "ind": {
+      "enlabel": "Indonesian",
+      "iso1": "id",
+      "wikilang": "id",
+      "wdqid": "Q9240",
+      "wbqid": null
+    },
+    "inh": {
+      "enlabel": "Ingush",
+      "iso1": null,
+      "wikilang": "inh",
+      "wdqid": "Q33509",
+      "wbqid": null
+    },
+    "ipk": {
+      "enlabel": "Inupiaq",
+      "iso1": "ik",
+      "wikilang": "ik",
+      "wdqid": "Q27183",
+      "wbqid": null
+    },
+    "isl": {
+      "enlabel": "Icelandic",
+      "iso1": "is",
+      "wikilang": "is",
+      "wdqid": "Q294",
+      "wbqid": null
+    },
+    "ita": {
+      "enlabel": "Italian",
+      "iso1": "it",
+      "wikilang": "it",
+      "wdqid": "Q652",
+      "wbqid": null
+    },
+    "jam": {
+      "enlabel": "Jamaican Patois",
+      "iso1": null,
+      "wikilang": "jam",
+      "wdqid": "Q35939",
+      "wbqid": null
+    },
+    "jas": {
+      "enlabel": "Javanese",
+      "iso1": "jv",
+      "wikilang": "jv",
+      "wdqid": "Q33549",
+      "wbqid": null
+    },
+    "jav": {
+      "enlabel": "Javanese",
+      "iso1": "jv",
+      "wikilang": "jv",
+      "wdqid": "Q33549",
+      "wbqid": null
+    },
+    "jax": {
+      "enlabel": "Jambi Malay",
+      "iso1": null,
+      "wikilang": "jax",
+      "wdqid": "Q3915769",
+      "wbqid": null
+    },
+    "jbo": {
+      "enlabel": "Lojban",
+      "iso1": null,
+      "wikilang": "jbo",
+      "wdqid": "Q36350",
+      "wbqid": null
+    },
+    "jpn": {
+      "enlabel": "Japanese",
+      "iso1": "ja",
+      "wikilang": "ja",
+      "wdqid": "Q5287",
+      "wbqid": null
+    },
+    "jut": {
+      "enlabel": "Jutlandic",
+      "iso1": null,
+      "wikilang": "jut",
+      "wdqid": "Q1340322",
+      "wbqid": null
+    },
+    "jvn": {
+      "enlabel": "Javanese",
+      "iso1": "jv",
+      "wikilang": "jv",
+      "wdqid": "Q33549",
+      "wbqid": null
+    },
+    "kaa": {
+      "enlabel": "Karakalpak",
+      "iso1": null,
+      "wikilang": "kaa",
+      "wdqid": "Q33541",
+      "wbqid": null
+    },
+    "kab": {
+      "enlabel": "Kabyle",
+      "iso1": null,
+      "wikilang": "kab",
+      "wdqid": "Q35853",
+      "wbqid": null
+    },
+    "kae": {
+      "enlabel": "Ketagalan",
+      "iso1": null,
+      "wikilang": "kae",
+      "wdqid": "Q2779411",
+      "wbqid": null
+    },
+    "kal": {
+      "enlabel": "Greenlandic",
+      "iso1": "kl",
+      "wikilang": "kl",
+      "wdqid": "Q25355",
+      "wbqid": null
+    },
+    "kan": {
+      "enlabel": "Kannada",
+      "iso1": "kn",
+      "wikilang": "kn",
+      "wdqid": "Q33673",
+      "wbqid": null
+    },
+    "kas": {
+      "enlabel": "Kashmiri",
+      "iso1": "ks",
+      "wikilang": "ks",
+      "wdqid": "Q33552",
+      "wbqid": null
+    },
+    "kat": {
+      "enlabel": "Georgian",
+      "iso1": "ka",
+      "wikilang": "ka",
+      "wdqid": "Q8108",
+      "wbqid": null
+    },
+    "kau": {
+      "enlabel": "Kanuri",
+      "iso1": "kr",
+      "wikilang": "kr",
+      "wdqid": "Q36094",
+      "wbqid": null
+    },
+    "kaz": {
+      "enlabel": "Kazakh",
+      "iso1": "kk",
+      "wikilang": "kk",
+      "wdqid": "Q9252",
+      "wbqid": null
+    },
+    "kbd": {
+      "enlabel": "Kabardian",
+      "iso1": null,
+      "wikilang": "kbd",
+      "wdqid": "Q33522",
+      "wbqid": null
+    },
+    "kbg": {
+      "enlabel": "Khamba",
+      "iso1": null,
+      "wikilang": "kbg",
+      "wdqid": "Q12952626",
+      "wbqid": null
+    },
+    "kbp": {
+      "enlabel": "Kabiye",
+      "iso1": null,
+      "wikilang": "kbp",
+      "wdqid": "Q35475",
+      "wbqid": null
+    },
+    "kcg": {
+      "enlabel": "Tyap",
+      "iso1": null,
+      "wikilang": "kcg",
+      "wdqid": "Q3912765",
+      "wbqid": null
+    },
+    "kea": {
+      "enlabel": "Cape Verdean Creole",
+      "iso1": null,
+      "wikilang": "kea",
+      "wdqid": "Q35963",
+      "wbqid": null
+    },
+    "kgp": {
+      "enlabel": "Kaingang",
+      "iso1": null,
+      "wikilang": "kgp",
+      "wdqid": "Q2665734",
+      "wbqid": null
+    },
+    "kha": {
+      "enlabel": "Khasi",
+      "iso1": null,
+      "wikilang": "kha",
+      "wdqid": "Q33584",
+      "wbqid": null
+    },
+    "khg": {
+      "enlabel": "Khams Tibetan",
+      "iso1": null,
+      "wikilang": "khg",
+      "wdqid": "Q56601",
+      "wbqid": null
+    },
+    "khm": {
+      "enlabel": "Khmer",
+      "iso1": "km",
+      "wikilang": "km",
+      "wdqid": "Q9205",
+      "wbqid": null
+    },
+    "khw": {
+      "enlabel": "Khowar",
+      "iso1": null,
+      "wikilang": "khw",
+      "wdqid": "Q938216",
+      "wbqid": null
+    },
+    "kik": {
+      "enlabel": "Gikuyu",
+      "iso1": "ki",
+      "wikilang": "ki",
+      "wdqid": "Q33587",
+      "wbqid": null
+    },
+    "kin": {
+      "enlabel": "Kinyarwanda",
+      "iso1": "rw",
+      "wikilang": "rw",
+      "wdqid": "Q33573",
+      "wbqid": null
+    },
+    "kir": {
+      "enlabel": "Kyrgyz",
+      "iso1": "ky",
+      "wikilang": "ky",
+      "wdqid": "Q9255",
+      "wbqid": null
+    },
+    "kiu": {
+      "enlabel": "Kirmanjki",
+      "iso1": null,
+      "wikilang": "kiu",
+      "wdqid": "Q6023868",
+      "wbqid": null
+    },
+    "kjg": {
+      "enlabel": "Khmu",
+      "iso1": null,
+      "wikilang": "kjg",
+      "wdqid": "Q33335",
+      "wbqid": null
+    },
+    "kjh": {
+      "enlabel": "Khakas",
+      "iso1": null,
+      "wikilang": "kjh",
+      "wdqid": "Q33575",
+      "wbqid": null
+    },
+    "kjp": {
+      "enlabel": "Eastern Pwo",
+      "iso1": null,
+      "wikilang": "kjp",
+      "wdqid": "Q5330390",
+      "wbqid": null
+    },
+    "kmr": {
+      "enlabel": "Kurmanji",
+      "iso1": null,
+      "wikilang": "ku",
+      "wdqid": "Q36163",
+      "wbqid": null
+    },
+    "koi": {
+      "enlabel": "Permyak",
+      "iso1": null,
+      "wikilang": "koi",
+      "wdqid": "Q56318",
+      "wbqid": null
+    },
+    "kom": {
+      "enlabel": "Komi",
+      "iso1": "kv",
+      "wikilang": "kv",
+      "wdqid": "Q36126",
+      "wbqid": null
+    },
+    "kon": {
+      "enlabel": "Kongo",
+      "iso1": "kg",
+      "wikilang": "kg",
+      "wdqid": "Q33702",
+      "wbqid": null
+    },
+    "kor": {
+      "enlabel": "Korean",
+      "iso1": "ko",
+      "wikilang": "ko",
+      "wdqid": "Q9176",
+      "wbqid": null
+    },
+    "koy": {
+      "enlabel": "Koyukon",
+      "iso1": null,
+      "wikilang": "koy",
+      "wdqid": "Q28304",
+      "wbqid": null
+    },
+    "krc": {
+      "enlabel": "Karachay-Balkar",
+      "iso1": null,
+      "wikilang": "krc",
+      "wdqid": "Q33714",
+      "wbqid": null
+    },
+    "kri": {
+      "enlabel": "Krio",
+      "iso1": null,
+      "wikilang": "kri",
+      "wdqid": "Q35744",
+      "wbqid": null
+    },
+    "krj": {
+      "enlabel": "Karay-a",
+      "iso1": null,
+      "wikilang": "krj",
+      "wdqid": "Q33720",
+      "wbqid": null
+    },
+    "krl": {
+      "enlabel": "Karelian",
+      "iso1": null,
+      "wikilang": "krl",
+      "wdqid": "Q33557",
+      "wbqid": null
+    },
+    "krx": {
+      "enlabel": "Karon",
+      "iso1": null,
+      "wikilang": "krx",
+      "wdqid": "Q35704",
+      "wbqid": null
+    },
+    "ksh": {
+      "enlabel": "K\u00f6lsch",
+      "iso1": null,
+      "wikilang": "ksh",
+      "wdqid": "Q4624",
+      "wbqid": null
+    },
+    "ksw": {
+      "enlabel": "S'gaw Karen",
+      "iso1": null,
+      "wikilang": "ksw",
+      "wdqid": "Q56410",
+      "wbqid": null
+    },
+    "kua": {
+      "enlabel": "Kwanyama",
+      "iso1": "kj",
+      "wikilang": "kj",
+      "wdqid": "Q1405077",
+      "wbqid": null
+    },
+    "kum": {
+      "enlabel": "Kumyk",
+      "iso1": null,
+      "wikilang": "kum",
+      "wdqid": "Q36209",
+      "wbqid": null
+    },
+    "kur": {
+      "enlabel": "Kurdish",
+      "iso1": "ku",
+      "wikilang": "ku",
+      "wdqid": "Q36368",
+      "wbqid": null
+    },
+    "kut": {
+      "enlabel": "Kutenai",
+      "iso1": null,
+      "wikilang": "kut",
+      "wdqid": "Q33434",
+      "wbqid": null
+    },
+    "kvr": {
+      "enlabel": "Kerinci",
+      "iso1": null,
+      "wikilang": "kvr",
+      "wdqid": "Q3195442",
+      "wbqid": null
+    },
+    "lad": {
+      "enlabel": "Judaeo-Spanish",
+      "iso1": null,
+      "wikilang": "lad",
+      "wdqid": "Q36196",
+      "wbqid": null
+    },
+    "lag": {
+      "enlabel": "Rangi",
+      "iso1": null,
+      "wikilang": "lag",
+      "wdqid": "Q584983",
+      "wbqid": null
+    },
+    "lao": {
+      "enlabel": "Lao",
+      "iso1": "lo",
+      "wikilang": "lo",
+      "wdqid": "Q9211",
+      "wbqid": null
+    },
+    "lat": {
+      "enlabel": "Latin",
+      "iso1": "la",
+      "wikilang": "la",
+      "wdqid": "Q397",
+      "wbqid": "Q225"
+    },
+    "lav": {
+      "enlabel": "Latvian",
+      "iso1": "lv",
+      "wikilang": "lv",
+      "wdqid": "Q9078",
+      "wbqid": null
+    },
+    "lbe": {
+      "enlabel": "Lak",
+      "iso1": null,
+      "wikilang": "lbe",
+      "wdqid": "Q36206",
+      "wbqid": null
+    },
+    "lez": {
+      "enlabel": "Lezgian",
+      "iso1": null,
+      "wikilang": "lez",
+      "wdqid": "Q31746",
+      "wbqid": null
+    },
+    "lfn": {
+      "enlabel": "Lingua Franca Nova",
+      "iso1": null,
+      "wikilang": "lfn",
+      "wdqid": "Q146803",
+      "wbqid": null
+    },
+    "lij": {
+      "enlabel": "Ligurian",
+      "iso1": null,
+      "wikilang": "lij",
+      "wdqid": "Q36106",
+      "wbqid": null
+    },
+    "lim": {
+      "enlabel": "Limburgish",
+      "iso1": "li",
+      "wikilang": "li",
+      "wdqid": "Q102172",
+      "wbqid": null
+    },
+    "lin": {
+      "enlabel": "Lingala",
+      "iso1": "ln",
+      "wikilang": "ln",
+      "wdqid": "Q36217",
+      "wbqid": null
+    },
+    "lit": {
+      "enlabel": "Lithuanian",
+      "iso1": "lt",
+      "wikilang": "lt",
+      "wdqid": "Q9083",
+      "wbqid": null
+    },
+    "liv": {
+      "enlabel": "Livonian",
+      "iso1": null,
+      "wikilang": "liv",
+      "wdqid": "Q33698",
+      "wbqid": null
+    },
+    "lki": {
+      "enlabel": "Laki",
+      "iso1": null,
+      "wikilang": "lki",
+      "wdqid": "Q56483",
+      "wbqid": null
+    },
+    "lkt": {
+      "enlabel": "Lakota",
+      "iso1": null,
+      "wikilang": "lkt",
+      "wdqid": "Q33537",
+      "wbqid": null
+    },
+    "lld": {
+      "enlabel": "Ladin",
+      "iso1": null,
+      "wikilang": "lld",
+      "wdqid": "Q36202",
+      "wbqid": null
+    },
+    "lmo": {
+      "enlabel": "Lombard",
+      "iso1": null,
+      "wikilang": "lmo",
+      "wdqid": "Q33754",
+      "wbqid": null
+    },
+    "loz": {
+      "enlabel": "Lozi",
+      "iso1": null,
+      "wikilang": "loz",
+      "wdqid": "Q33628",
+      "wbqid": null
+    },
+    "lrc": {
+      "enlabel": "Northern Luri",
+      "iso1": null,
+      "wikilang": "lrc",
+      "wdqid": "Q19933293",
+      "wbqid": null
+    },
+    "ltg": {
+      "enlabel": "Latgalian",
+      "iso1": null,
+      "wikilang": "ltg",
+      "wdqid": "Q36212",
+      "wbqid": null
+    },
+    "ltz": {
+      "enlabel": "Luxembourgish",
+      "iso1": "lb",
+      "wikilang": "lb",
+      "wdqid": "Q9051",
+      "wbqid": null
+    },
+    "lug": {
+      "enlabel": "Luganda",
+      "iso1": "lg",
+      "wikilang": "lg",
+      "wdqid": "Q33368",
+      "wbqid": null
+    },
+    "lus": {
+      "enlabel": "Mizo",
+      "iso1": null,
+      "wikilang": "lus",
+      "wdqid": "Q36147",
+      "wbqid": null
+    },
+    "luz": {
+      "enlabel": "Southern Luri",
+      "iso1": null,
+      "wikilang": "luz",
+      "wdqid": "Q12952748",
+      "wbqid": null
+    },
+    "lvk": {
+      "enlabel": "Lavukaleve",
+      "iso1": null,
+      "wikilang": "lvk",
+      "wdqid": "Q770547",
+      "wbqid": null
+    },
+    "lvs": {
+      "enlabel": "Latvian",
+      "iso1": "lv",
+      "wikilang": "lv",
+      "wdqid": "Q9078",
+      "wbqid": null
+    },
+    "lzh": {
+      "enlabel": "Classical Chinese",
+      "iso1": null,
+      "wikilang": "lzh",
+      "wdqid": "Q37041",
+      "wbqid": null
+    },
+    "lzz": {
+      "enlabel": "Laz",
+      "iso1": null,
+      "wikilang": "lzz",
+      "wdqid": "Q1160372",
+      "wbqid": null
+    },
+    "mad": {
+      "enlabel": "Madurese",
+      "iso1": null,
+      "wikilang": "mad",
+      "wdqid": "Q36213",
+      "wbqid": null
+    },
+    "mah": {
+      "enlabel": "Marshallese",
+      "iso1": "mh",
+      "wikilang": "mh",
+      "wdqid": "Q36280",
+      "wbqid": null
+    },
+    "mai": {
+      "enlabel": "Maithili",
+      "iso1": null,
+      "wikilang": "mai",
+      "wdqid": "Q36109",
+      "wbqid": null
+    },
+    "mal": {
+      "enlabel": "Malayalam",
+      "iso1": "ml",
+      "wikilang": "ml",
+      "wdqid": "Q36236",
+      "wbqid": null
+    },
+    "mar": {
+      "enlabel": "Marathi",
+      "iso1": "mr",
+      "wikilang": "mr",
+      "wdqid": "Q1571",
+      "wbqid": null
+    },
+    "mdf": {
+      "enlabel": "Moksha",
+      "iso1": null,
+      "wikilang": "mdf",
+      "wdqid": "Q13343",
+      "wbqid": null
+    },
+    "mfe": {
+      "enlabel": "Mauritian Creole",
+      "iso1": null,
+      "wikilang": "mfe",
+      "wdqid": "Q33661",
+      "wbqid": null
+    },
+    "mhr": {
+      "enlabel": "Meadow Mari",
+      "iso1": null,
+      "wikilang": "mhr",
+      "wdqid": "Q3906614",
+      "wbqid": null
+    },
+    "mic": {
+      "enlabel": "Mi'kmaq",
+      "iso1": null,
+      "wikilang": "mic",
+      "wdqid": "Q13321",
+      "wbqid": null
+    },
+    "min": {
+      "enlabel": "Minangkabau",
+      "iso1": null,
+      "wikilang": "min",
+      "wdqid": "Q13324",
+      "wbqid": null
+    },
+    "mkd": {
+      "enlabel": "Macedonian",
+      "iso1": "mk",
+      "wikilang": "mk",
+      "wdqid": "Q9296",
+      "wbqid": null
+    },
+    "mlg": {
+      "enlabel": "Malagasy",
+      "iso1": "mg",
+      "wikilang": "mg",
+      "wdqid": "Q7930",
+      "wbqid": null
+    },
+    "mlt": {
+      "enlabel": "Maltese",
+      "iso1": "mt",
+      "wikilang": "mt",
+      "wdqid": "Q9166",
+      "wbqid": null
+    },
+    "mnc": {
+      "enlabel": "Manchu",
+      "iso1": null,
+      "wikilang": "mnc",
+      "wdqid": "Q33638",
+      "wbqid": null
+    },
+    "mni": {
+      "enlabel": "Meitei",
+      "iso1": null,
+      "wikilang": "mni",
+      "wdqid": "Q33868",
+      "wbqid": null
+    },
+    "mnw": {
+      "enlabel": "Mon",
+      "iso1": null,
+      "wikilang": "mnw",
+      "wdqid": "Q13349",
+      "wbqid": null
+    },
+    "moe": {
+      "enlabel": "Innu-aimun",
+      "iso1": null,
+      "wikilang": "moe",
+      "wdqid": "Q13351",
+      "wbqid": null
+    },
+    "mon": {
+      "enlabel": "Mongolian",
+      "iso1": "mn",
+      "wikilang": "mn",
+      "wdqid": "Q9246",
+      "wbqid": null
+    },
+    "mrh": {
+      "enlabel": "Mara",
+      "iso1": null,
+      "wikilang": "mrh",
+      "wdqid": "Q4175893",
+      "wbqid": null
+    },
+    "mri": {
+      "enlabel": "M\u0101ori",
+      "iso1": "mi",
+      "wikilang": "mi",
+      "wdqid": "Q36451",
+      "wbqid": null
+    },
+    "mrj": {
+      "enlabel": "Hill Mari",
+      "iso1": null,
+      "wikilang": "mrj",
+      "wdqid": "Q1776032",
+      "wbqid": null
+    },
+    "msa": {
+      "enlabel": "Malay",
+      "iso1": "ms",
+      "wikilang": "ms",
+      "wdqid": "Q9237",
+      "wbqid": null
+    },
+    "mui": {
+      "enlabel": "Musi",
+      "iso1": null,
+      "wikilang": "mui",
+      "wdqid": "Q615660",
+      "wbqid": null
+    },
+    "mul": {
+      "enlabel": "multiple languages",
+      "iso1": null,
+      "wikilang": "mul",
+      "wdqid": "Q20923490",
+      "wbqid": null
+    },
+    "mus": {
+      "enlabel": "Muscogee",
+      "iso1": null,
+      "wikilang": "mus",
+      "wdqid": "Q523014",
+      "wbqid": null
+    },
+    "mwl": {
+      "enlabel": "Mirandese",
+      "iso1": null,
+      "wikilang": "mwl",
+      "wdqid": "Q13330",
+      "wbqid": null
+    },
+    "mwv": {
+      "enlabel": "Mentawai",
+      "iso1": null,
+      "wikilang": "mwv",
+      "wdqid": "Q13365",
+      "wbqid": null
+    },
+    "mya": {
+      "enlabel": "Burmese language",
+      "iso1": "my",
+      "wikilang": "my",
+      "wdqid": "Q9228",
+      "wbqid": null
+    },
+    "myv": {
+      "enlabel": "Erzya",
+      "iso1": null,
+      "wikilang": "myv",
+      "wdqid": "Q29952",
+      "wbqid": null
+    },
+    "mzn": {
+      "enlabel": "Mazanderani",
+      "iso1": null,
+      "wikilang": "mzn",
+      "wdqid": "Q13356",
+      "wbqid": null
+    },
+    "nan": {
+      "enlabel": "Southern Min",
+      "iso1": null,
+      "wikilang": "nan",
+      "wdqid": "Q36495",
+      "wbqid": null
+    },
+    "nap": {
+      "enlabel": "Neapolitan",
+      "iso1": null,
+      "wikilang": "nap",
+      "wdqid": "Q33845",
+      "wbqid": null
+    },
+    "nau": {
+      "enlabel": "Nauruan",
+      "iso1": "na",
+      "wikilang": "na",
+      "wdqid": "Q13307",
+      "wbqid": null
+    },
+    "nav": {
+      "enlabel": "Navajo",
+      "iso1": "nv",
+      "wikilang": "nv",
+      "wdqid": "Q13310",
+      "wbqid": null
+    },
+    "nbl": {
+      "enlabel": "Southern Ndebele",
+      "iso1": "nr",
+      "wikilang": "nr",
+      "wdqid": "Q36785",
+      "wbqid": null
+    },
+    "ndo": {
+      "enlabel": "Ndonga",
+      "iso1": "ng",
+      "wikilang": "ng",
+      "wdqid": "Q33900",
+      "wbqid": null
+    },
+    "nds": {
+      "enlabel": "Low German",
+      "iso1": null,
+      "wikilang": "nds",
+      "wdqid": "Q25433",
+      "wbqid": null
+    },
+    "nep": {
+      "enlabel": "Nepali",
+      "iso1": "ne",
+      "wikilang": "ne",
+      "wdqid": "Q33823",
+      "wbqid": null
+    },
+    "new": {
+      "enlabel": "Newar",
+      "iso1": null,
+      "wikilang": "new",
+      "wdqid": "Q33979",
+      "wbqid": null
+    },
+    "nia": {
+      "enlabel": "Nias",
+      "iso1": null,
+      "wikilang": "nia",
+      "wdqid": "Q2407831",
+      "wbqid": null
+    },
+    "niu": {
+      "enlabel": "Niuean",
+      "iso1": null,
+      "wikilang": "niu",
+      "wdqid": "Q33790",
+      "wbqid": null
+    },
+    "nld": {
+      "enlabel": "Dutch",
+      "iso1": "nl",
+      "wikilang": "nl",
+      "wdqid": "Q7411",
+      "wbqid": null
+    },
+    "nno": {
+      "enlabel": "Nynorsk",
+      "iso1": "nn",
+      "wikilang": "nn",
+      "wdqid": "Q25164",
+      "wbqid": null
+    },
+    "nob": {
+      "enlabel": "Bokm\u00e5l",
+      "iso1": "nb",
+      "wikilang": "nb",
+      "wdqid": "Q25167",
+      "wbqid": null
+    },
+    "nod": {
+      "enlabel": "Northern Thai",
+      "iso1": null,
+      "wikilang": "nod",
+      "wdqid": "Q565110",
+      "wbqid": null
+    },
+    "nog": {
+      "enlabel": "Nogai",
+      "iso1": null,
+      "wikilang": "nog",
+      "wdqid": "Q33871",
+      "wbqid": null
+    },
+    "non": {
+      "enlabel": "Old Norse",
+      "iso1": null,
+      "wikilang": "non",
+      "wdqid": "Q35505",
+      "wbqid": null
+    },
+    "nor": {
+      "enlabel": "Norwegian",
+      "iso1": "no",
+      "wikilang": "no",
+      "wdqid": "Q9043",
+      "wbqid": null
+    },
+    "nov": {
+      "enlabel": "Novial",
+      "iso1": null,
+      "wikilang": "nov",
+      "wdqid": "Q36738",
+      "wbqid": null
+    },
+    "nqo": {
+      "enlabel": "N'Ko",
+      "iso1": null,
+      "wikilang": "nqo",
+      "wdqid": "Q18546266",
+      "wbqid": null
+    },
+    "nrf": {
+      "enlabel": "Norman",
+      "iso1": null,
+      "wikilang": "nrm",
+      "wdqid": "Q33850",
+      "wbqid": null
+    },
+    "nsk": {
+      "enlabel": "Naskapi",
+      "iso1": null,
+      "wikilang": "nsk",
+      "wdqid": "Q1704302",
+      "wbqid": null
+    },
+    "nso": {
+      "enlabel": "Northern Sotho",
+      "iso1": null,
+      "wikilang": "nso",
+      "wdqid": "Q33890",
+      "wbqid": null
+    },
+    "nui": {
+      "enlabel": "Kombe",
+      "iso1": null,
+      "wikilang": "nui",
+      "wdqid": "Q36459",
+      "wbqid": null
+    },
+    "nxm": {
+      "enlabel": "Numidian",
+      "iso1": null,
+      "wikilang": "nxm",
+      "wdqid": "Q35761",
+      "wbqid": null
+    },
+    "nya": {
+      "enlabel": "Chewa",
+      "iso1": "ny",
+      "wikilang": "ny",
+      "wdqid": "Q33273",
+      "wbqid": null
+    },
+    "nys": {
+      "enlabel": "Noongar",
+      "iso1": null,
+      "wikilang": "nys",
+      "wdqid": "Q7049771",
+      "wbqid": null
+    },
+    "oci": {
+      "enlabel": "Occitan",
+      "iso1": "oc",
+      "wikilang": "oc",
+      "wdqid": "Q14185",
+      "wbqid": null
+    },
+    "oji": {
+      "enlabel": "Ojibwe",
+      "iso1": "oj",
+      "wikilang": "oj",
+      "wdqid": "Q33875",
+      "wbqid": null
+    },
+    "olo": {
+      "enlabel": "Livvi-Karelian",
+      "iso1": null,
+      "wikilang": "olo",
+      "wdqid": "Q36584",
+      "wbqid": null
+    },
+    "ood": {
+      "enlabel": "O'odham",
+      "iso1": null,
+      "wikilang": "ood",
+      "wdqid": "Q2393095",
+      "wbqid": null
+    },
+    "orm": {
+      "enlabel": "Oromo",
+      "iso1": "om",
+      "wikilang": "om",
+      "wdqid": "Q33864",
+      "wbqid": null
+    },
+    "ory": {
+      "enlabel": "Odia",
+      "iso1": "or",
+      "wikilang": "or",
+      "wdqid": "Q33810",
+      "wbqid": null
+    },
+    "osa": {
+      "enlabel": "Osage",
+      "iso1": null,
+      "wikilang": "osa",
+      "wdqid": "Q2600085",
+      "wbqid": null
+    },
+    "oss": {
+      "enlabel": "Ossetian",
+      "iso1": "os",
+      "wikilang": "os",
+      "wdqid": "Q33968",
+      "wbqid": null
+    },
+    "ota": {
+      "enlabel": "Ottoman Turkish",
+      "iso1": null,
+      "wikilang": "ota",
+      "wdqid": "Q36730",
+      "wbqid": null
+    },
+    "otk": {
+      "enlabel": "Old Turkic",
+      "iso1": null,
+      "wikilang": "otk",
+      "wdqid": "Q34988",
+      "wbqid": null
+    },
+    "ovd": {
+      "enlabel": "Elfdalian",
+      "iso1": null,
+      "wikilang": "ovd",
+      "wdqid": "Q254950",
+      "wbqid": null
+    },
+    "pag": {
+      "enlabel": "Pangasinan",
+      "iso1": null,
+      "wikilang": "pag",
+      "wdqid": "Q33879",
+      "wbqid": null
+    },
+    "pam": {
+      "enlabel": "Kapampangan",
+      "iso1": null,
+      "wikilang": "pam",
+      "wdqid": "Q36121",
+      "wbqid": null
+    },
+    "pap": {
+      "enlabel": "Papiamento",
+      "iso1": null,
+      "wikilang": "pap",
+      "wdqid": "Q33856",
+      "wbqid": null
+    },
+    "pcd": {
+      "enlabel": "Picard",
+      "iso1": null,
+      "wikilang": "pcd",
+      "wdqid": "Q34024",
+      "wbqid": null
+    },
+    "pdc": {
+      "enlabel": "Pennsylvania German",
+      "iso1": null,
+      "wikilang": "pdc",
+      "wdqid": "Q22711",
+      "wbqid": null
+    },
+    "pdt": {
+      "enlabel": "Plautdietsch",
+      "iso1": null,
+      "wikilang": "pdt",
+      "wdqid": "Q1751432",
+      "wbqid": null
+    },
+    "peo": {
+      "enlabel": "Old Persian",
+      "iso1": null,
+      "wikilang": "peo",
+      "wdqid": "Q35225",
+      "wbqid": null
+    },
+    "pfl": {
+      "enlabel": "Palatinate German",
+      "iso1": null,
+      "wikilang": "pfl",
+      "wdqid": "Q23014",
+      "wbqid": null
+    },
+    "phn": {
+      "enlabel": "Phoenician",
+      "iso1": null,
+      "wikilang": "xpu",
+      "wdqid": "Q36734",
+      "wbqid": null
+    },
+    "pih": {
+      "enlabel": "Pitkern",
+      "iso1": null,
+      "wikilang": "pih",
+      "wdqid": "Q36554",
+      "wbqid": null
+    },
+    "pis": {
+      "enlabel": "Pijin",
+      "iso1": null,
+      "wikilang": "pis",
+      "wdqid": "Q36699",
+      "wbqid": null
+    },
+    "pjt": {
+      "enlabel": "Pitjantjatjara",
+      "iso1": null,
+      "wikilang": "pjt",
+      "wdqid": "Q2982063",
+      "wbqid": null
+    },
+    "pko": {
+      "enlabel": "P\u00f6koot",
+      "iso1": null,
+      "wikilang": "pko",
+      "wdqid": "Q36323",
+      "wbqid": null
+    },
+    "pks": {
+      "enlabel": "Pakistan Sign Language",
+      "iso1": null,
+      "wikilang": "pks",
+      "wdqid": "Q22964057",
+      "wbqid": null
+    },
+    "pli": {
+      "enlabel": "Pali",
+      "iso1": "pi",
+      "wikilang": "pi",
+      "wdqid": "Q36727",
+      "wbqid": null
+    },
+    "pms": {
+      "enlabel": "Piedmontese",
+      "iso1": null,
+      "wikilang": "pms",
+      "wdqid": "Q15085",
+      "wbqid": null
+    },
+    "pmy": {
+      "enlabel": "Papuan Malay",
+      "iso1": null,
+      "wikilang": "pmy",
+      "wdqid": "Q12473446",
+      "wbqid": null
+    },
+    "pnt": {
+      "enlabel": "Pontic Greek",
+      "iso1": null,
+      "wikilang": "pnt",
+      "wdqid": "Q36748",
+      "wbqid": null
+    },
+    "pol": {
+      "enlabel": "Polish",
+      "iso1": "pl",
+      "wikilang": "pl",
+      "wdqid": "Q809",
+      "wbqid": null
+    },
+    "por": {
+      "enlabel": "Portuguese",
+      "iso1": "pt",
+      "wikilang": "pt",
+      "wdqid": "Q5146",
+      "wbqid": null
+    },
+    "ppu": {
+      "enlabel": "Papora-Hoanya",
+      "iso1": null,
+      "wikilang": "ppu",
+      "wdqid": "Q2094884",
+      "wbqid": null
+    },
+    "prg": {
+      "enlabel": "Old Prussian",
+      "iso1": null,
+      "wikilang": "prg",
+      "wdqid": "Q35501",
+      "wbqid": null
+    },
+    "prs": {
+      "enlabel": "Dari",
+      "iso1": null,
+      "wikilang": "fa-af",
+      "wdqid": "Q178440",
+      "wbqid": null
+    },
+    "pus": {
+      "enlabel": "Pashto",
+      "iso1": "ps",
+      "wikilang": "ps",
+      "wdqid": "Q58680",
+      "wbqid": null
+    },
+    "pwn": {
+      "enlabel": "Paiwan",
+      "iso1": null,
+      "wikilang": "pwn",
+      "wdqid": "Q715755",
+      "wbqid": null
+    },
+    "pyu": {
+      "enlabel": "Puyuma",
+      "iso1": null,
+      "wikilang": "pyu",
+      "wdqid": "Q716690",
+      "wbqid": null
+    },
+    "pzh": {
+      "enlabel": "Pazeh",
+      "iso1": null,
+      "wikilang": "uun",
+      "wdqid": "Q36435",
+      "wbqid": null
+    },
+    "quc": {
+      "enlabel": "K\u2019iche\u2019",
+      "iso1": null,
+      "wikilang": "quc",
+      "wdqid": "Q36494",
+      "wbqid": null
+    },
+    "que": {
+      "enlabel": "Quechua",
+      "iso1": "qu",
+      "wikilang": "qu",
+      "wdqid": "Q5218",
+      "wbqid": null
+    },
+    "qya": {
+      "enlabel": "Quenya",
+      "iso1": null,
+      "wikilang": "qya",
+      "wdqid": "Q56383",
+      "wbqid": null
+    },
+    "rar": {
+      "enlabel": "Cook Islands Maori",
+      "iso1": null,
+      "wikilang": "rar",
+      "wdqid": "Q36745",
+      "wbqid": null
+    },
+    "rcf": {
+      "enlabel": "R\u00e9union Creole",
+      "iso1": null,
+      "wikilang": "rcf",
+      "wdqid": "Q13198",
+      "wbqid": null
+    },
+    "rgn": {
+      "enlabel": "Romagnol",
+      "iso1": null,
+      "wikilang": "rgn",
+      "wdqid": "Q1641543",
+      "wbqid": null
+    },
+    "rif": {
+      "enlabel": "Tarifit",
+      "iso1": null,
+      "wikilang": "rif",
+      "wdqid": "Q34174",
+      "wbqid": null
+    },
+    "rki": {
+      "enlabel": "Rakhine",
+      "iso1": null,
+      "wikilang": "rki",
+      "wdqid": "Q3450749",
+      "wbqid": null
+    },
+    "rkt": {
+      "enlabel": "Rangpuri",
+      "iso1": null,
+      "wikilang": "rkt",
+      "wdqid": "Q3241618",
+      "wbqid": null
+    },
+    "rmc": {
+      "enlabel": "Carpathian Romani",
+      "iso1": null,
+      "wikilang": "rmc",
+      "wdqid": "Q5045611",
+      "wbqid": null
+    },
+    "rmf": {
+      "enlabel": "Finnish Kalo",
+      "iso1": null,
+      "wikilang": "rmf",
+      "wdqid": "Q2093214",
+      "wbqid": null
+    },
+    "roh": {
+      "enlabel": "Romansh",
+      "iso1": "rm",
+      "wikilang": "rm",
+      "wdqid": "Q13199",
+      "wbqid": null
+    },
+    "rom": {
+      "enlabel": "Romani",
+      "iso1": null,
+      "wikilang": "rmy",
+      "wdqid": "Q13201",
+      "wbqid": null
+    },
+    "ron": {
+      "enlabel": "Romanian",
+      "iso1": "ro",
+      "wikilang": "ro",
+      "wdqid": "Q7913",
+      "wbqid": null
+    },
+    "rue": {
+      "enlabel": "Rusyn",
+      "iso1": null,
+      "wikilang": "rue",
+      "wdqid": "Q26245",
+      "wbqid": null
+    },
+    "run": {
+      "enlabel": "Kirundi",
+      "iso1": "rn",
+      "wikilang": "rn",
+      "wdqid": "Q33583",
+      "wbqid": null
+    },
+    "rup": {
+      "enlabel": "Aromanian",
+      "iso1": null,
+      "wikilang": "rup",
+      "wdqid": "Q29316",
+      "wbqid": null
+    },
+    "ruq": {
+      "enlabel": "Megleno-Romanian",
+      "iso1": null,
+      "wikilang": "ruq",
+      "wdqid": "Q13358",
+      "wbqid": null
+    },
+    "rus": {
+      "enlabel": "Russian",
+      "iso1": "ru",
+      "wikilang": "ru",
+      "wdqid": "Q7737",
+      "wbqid": "Q277"
+    },
+    "rwr": {
+      "enlabel": "Marwari",
+      "iso1": null,
+      "wikilang": "rwr",
+      "wdqid": "Q65455884",
+      "wbqid": null
+    },
+    "ryu": {
+      "enlabel": "Okinawan",
+      "iso1": null,
+      "wikilang": "ryu",
+      "wdqid": "Q34233",
+      "wbqid": null
+    },
+    "sag": {
+      "enlabel": "Sango",
+      "iso1": "sg",
+      "wikilang": "sg",
+      "wdqid": "Q33954",
+      "wbqid": null
+    },
+    "sah": {
+      "enlabel": "Yakut",
+      "iso1": null,
+      "wikilang": "sah",
+      "wdqid": "Q34299",
+      "wbqid": null
+    },
+    "san": {
+      "enlabel": "Sanskrit",
+      "iso1": "sa",
+      "wikilang": "sa",
+      "wdqid": "Q11059",
+      "wbqid": null
+    },
+    "sat": {
+      "enlabel": "Santali",
+      "iso1": null,
+      "wikilang": "sat",
+      "wdqid": "Q33965",
+      "wbqid": null
+    },
+    "scn": {
+      "enlabel": "Sicilian",
+      "iso1": null,
+      "wikilang": "scn",
+      "wdqid": "Q33973",
+      "wbqid": null
+    },
+    "sco": {
+      "enlabel": "Scots",
+      "iso1": null,
+      "wikilang": "sco",
+      "wdqid": "Q14549",
+      "wbqid": null
+    },
+    "sdc": {
+      "enlabel": "Sassarese",
+      "iso1": null,
+      "wikilang": "sdc",
+      "wdqid": "Q845441",
+      "wbqid": null
+    },
+    "sdh": {
+      "enlabel": "Southern Kurdish",
+      "iso1": null,
+      "wikilang": "sdh",
+      "wdqid": "Q1496597",
+      "wbqid": null
+    },
+    "sei": {
+      "enlabel": "Seri",
+      "iso1": null,
+      "wikilang": "sei",
+      "wdqid": "Q36583",
+      "wbqid": null
+    },
+    "ses": {
+      "enlabel": "Koyraboro Senni",
+      "iso1": null,
+      "wikilang": "ses",
+      "wdqid": "Q35655",
+      "wbqid": null
+    },
+    "sgs": {
+      "enlabel": "Samogitian",
+      "iso1": null,
+      "wikilang": "bat-smg",
+      "wdqid": "Q213434",
+      "wbqid": null
+    },
+    "shi": {
+      "enlabel": "Shilha",
+      "iso1": null,
+      "wikilang": "shi",
+      "wdqid": "Q34152",
+      "wbqid": null
+    },
+    "shn": {
+      "enlabel": "Shan",
+      "iso1": null,
+      "wikilang": "shn",
+      "wdqid": "Q56482",
+      "wbqid": null
+    },
+    "shy": {
+      "enlabel": "Shawiya",
+      "iso1": null,
+      "wikilang": "shy",
+      "wdqid": "Q33274",
+      "wbqid": null
+    },
+    "sid": {
+      "enlabel": "Sidamo",
+      "iso1": null,
+      "wikilang": "sid",
+      "wdqid": "Q33786",
+      "wbqid": null
+    },
+    "sin": {
+      "enlabel": "Sinhala",
+      "iso1": "si",
+      "wikilang": "si",
+      "wdqid": "Q13267",
+      "wbqid": null
+    },
+    "sjd": {
+      "enlabel": "Kildin Sami",
+      "iso1": null,
+      "wikilang": "sjd",
+      "wdqid": "Q33656",
+      "wbqid": null
+    },
+    "sje": {
+      "enlabel": "Pite Sami",
+      "iso1": null,
+      "wikilang": "sje",
+      "wdqid": "Q56314",
+      "wbqid": null
+    },
+    "sjm": {
+      "enlabel": "Mapun",
+      "iso1": null,
+      "wikilang": "sjm",
+      "wdqid": "Q3287253",
+      "wbqid": null
+    },
+    "sjn": {
+      "enlabel": "Sindarin",
+      "iso1": null,
+      "wikilang": "sjn",
+      "wdqid": "Q56437",
+      "wbqid": null
+    },
+    "sjt": {
+      "enlabel": "Ter Sami",
+      "iso1": null,
+      "wikilang": "sjt",
+      "wdqid": "Q36656",
+      "wbqid": null
+    },
+    "sju": {
+      "enlabel": "Ume Sami",
+      "iso1": null,
+      "wikilang": "sju",
+      "wdqid": "Q56415",
+      "wbqid": null
+    },
+    "skr": {
+      "enlabel": "Saraiki",
+      "iso1": null,
+      "wikilang": "skr",
+      "wdqid": "Q33902",
+      "wbqid": null
+    },
+    "sli": {
+      "enlabel": "Silesian German",
+      "iso1": null,
+      "wikilang": "sli",
+      "wdqid": "Q152965",
+      "wbqid": null
+    },
+    "slk": {
+      "enlabel": "Slovak",
+      "iso1": "sk",
+      "wikilang": "sk",
+      "wdqid": "Q9058",
+      "wbqid": null
+    },
+    "slv": {
+      "enlabel": "Slovene",
+      "iso1": "sl",
+      "wikilang": "sl",
+      "wdqid": "Q9063",
+      "wbqid": null
+    },
+    "sma": {
+      "enlabel": "Southern Sami",
+      "iso1": null,
+      "wikilang": "sma",
+      "wdqid": "Q13293",
+      "wbqid": null
+    },
+    "sme": {
+      "enlabel": "Northern Sami",
+      "iso1": "se",
+      "wikilang": "se",
+      "wdqid": "Q33947",
+      "wbqid": null
+    },
+    "smj": {
+      "enlabel": "Lule Sami",
+      "iso1": null,
+      "wikilang": "smj",
+      "wdqid": "Q56322",
+      "wbqid": null
+    },
+    "smn": {
+      "enlabel": "Inari Sami",
+      "iso1": null,
+      "wikilang": "smn",
+      "wdqid": "Q33462",
+      "wbqid": null
+    },
+    "smo": {
+      "enlabel": "Samoan",
+      "iso1": "sm",
+      "wikilang": "sm",
+      "wdqid": "Q34011",
+      "wbqid": null
+    },
+    "sms": {
+      "enlabel": "Skolt Sami",
+      "iso1": null,
+      "wikilang": "sms",
+      "wdqid": "Q13271",
+      "wbqid": null
+    },
+    "sna": {
+      "enlabel": "Shona",
+      "iso1": "sn",
+      "wikilang": "sn",
+      "wdqid": "Q34004",
+      "wbqid": null
+    },
+    "snd": {
+      "enlabel": "Sindhi",
+      "iso1": "sd",
+      "wikilang": "sd",
+      "wdqid": "Q33997",
+      "wbqid": null
+    },
+    "som": {
+      "enlabel": "Somali",
+      "iso1": "so",
+      "wikilang": "so",
+      "wdqid": "Q13275",
+      "wbqid": null
+    },
+    "sot": {
+      "enlabel": "Sesotho",
+      "iso1": "st",
+      "wikilang": "st",
+      "wdqid": "Q34340",
+      "wbqid": null
+    },
+    "sou": {
+      "enlabel": "Southern Thai",
+      "iso1": null,
+      "wikilang": "sou",
+      "wdqid": "Q56508",
+      "wbqid": null
+    },
+    "spa": {
+      "enlabel": "Spanish",
+      "iso1": "es",
+      "wikilang": "es",
+      "wdqid": "Q1321",
+      "wbqid": "Q205"
+    },
+    "sqi": {
+      "enlabel": "Albanian",
+      "iso1": "sq",
+      "wikilang": "sq",
+      "wdqid": "Q8748",
+      "wbqid": null
+    },
+    "srd": {
+      "enlabel": "Sardinian",
+      "iso1": "sc",
+      "wikilang": "sc",
+      "wdqid": "Q33976",
+      "wbqid": null
+    },
+    "srn": {
+      "enlabel": "Sranan Tongo",
+      "iso1": null,
+      "wikilang": "srn",
+      "wdqid": "Q33989",
+      "wbqid": null
+    },
+    "srp": {
+      "enlabel": "Serbian",
+      "iso1": "sr",
+      "wikilang": "sr",
+      "wdqid": "Q9299",
+      "wbqid": null
+    },
+    "srq": {
+      "enlabel": "Sirion\u00f3",
+      "iso1": null,
+      "wikilang": "srq",
+      "wdqid": "Q3027953",
+      "wbqid": null
+    },
+    "ssf": {
+      "enlabel": "Thao",
+      "iso1": null,
+      "wikilang": "ssf",
+      "wdqid": "Q676492",
+      "wbqid": null
+    },
+    "ssw": {
+      "enlabel": "Swazi",
+      "iso1": "ss",
+      "wikilang": "ss",
+      "wdqid": "Q34014",
+      "wbqid": null
+    },
+    "sth": {
+      "enlabel": "Shelta",
+      "iso1": null,
+      "wikilang": "sth",
+      "wdqid": "Q36705",
+      "wbqid": null
+    },
+    "stq": {
+      "enlabel": "Saterland Frisian",
+      "iso1": null,
+      "wikilang": "stq",
+      "wdqid": "Q27154",
+      "wbqid": null
+    },
+    "sty": {
+      "enlabel": "Siberian Tatar",
+      "iso1": null,
+      "wikilang": "sty",
+      "wdqid": "Q4418344",
+      "wbqid": null
+    },
+    "sun": {
+      "enlabel": "Sundanese",
+      "iso1": "su",
+      "wikilang": "su",
+      "wdqid": "Q34002",
+      "wbqid": null
+    },
+    "swa": {
+      "enlabel": "Swahili",
+      "iso1": "sw",
+      "wikilang": "sw",
+      "wdqid": "Q7838",
+      "wbqid": null
+    },
+    "swe": {
+      "enlabel": "Swedish",
+      "iso1": "sv",
+      "wikilang": "sv",
+      "wdqid": "Q9027",
+      "wbqid": null
+    },
+    "sxr": {
+      "enlabel": "Saaroa",
+      "iso1": null,
+      "wikilang": "sxr",
+      "wdqid": "Q716599",
+      "wbqid": null
+    },
+    "syc": {
+      "enlabel": "Syriac",
+      "iso1": null,
+      "wikilang": "syc",
+      "wdqid": "Q33538",
+      "wbqid": null
+    },
+    "syl": {
+      "enlabel": "Sylheti",
+      "iso1": null,
+      "wikilang": "syl",
+      "wdqid": "Q2044560",
+      "wbqid": null
+    },
+    "szl": {
+      "enlabel": "Silesian",
+      "iso1": null,
+      "wikilang": "szl",
+      "wdqid": "Q30319",
+      "wbqid": null
+    },
+    "szy": {
+      "enlabel": "Sakizaya",
+      "iso1": null,
+      "wikilang": "szy",
+      "wdqid": "Q718269",
+      "wbqid": null
+    },
+    "tah": {
+      "enlabel": "Tahitian",
+      "iso1": "ty",
+      "wikilang": "ty",
+      "wdqid": "Q34128",
+      "wbqid": null
+    },
+    "tam": {
+      "enlabel": "Tamil",
+      "iso1": "ta",
+      "wikilang": "ta",
+      "wdqid": "Q5885",
+      "wbqid": null
+    },
+    "tat": {
+      "enlabel": "Tatar",
+      "iso1": "tt",
+      "wikilang": "tt",
+      "wdqid": "Q25285",
+      "wbqid": null
+    },
+    "tay": {
+      "enlabel": "Atayal",
+      "iso1": null,
+      "wikilang": "tay",
+      "wdqid": "Q715766",
+      "wbqid": null
+    },
+    "tce": {
+      "enlabel": "Southern Tutchone",
+      "iso1": null,
+      "wikilang": "tce",
+      "wdqid": "Q31091048",
+      "wbqid": null
+    },
+    "tcy": {
+      "enlabel": "Tulu",
+      "iso1": null,
+      "wikilang": "tcy",
+      "wdqid": "Q34251",
+      "wbqid": null
+    },
+    "tel": {
+      "enlabel": "Telugu",
+      "iso1": "te",
+      "wikilang": "te",
+      "wdqid": "Q8097",
+      "wbqid": null
+    },
+    "tet": {
+      "enlabel": "Tetum",
+      "iso1": null,
+      "wikilang": "tet",
+      "wdqid": "Q34125",
+      "wbqid": null
+    },
+    "tgk": {
+      "enlabel": "Tajik",
+      "iso1": "tg",
+      "wikilang": "tg",
+      "wdqid": "Q9260",
+      "wbqid": null
+    },
+    "tgl": {
+      "enlabel": "Tagalog",
+      "iso1": "tl",
+      "wikilang": "tl",
+      "wdqid": "Q34057",
+      "wbqid": null
+    },
+    "tha": {
+      "enlabel": "Thai",
+      "iso1": "th",
+      "wikilang": "th",
+      "wdqid": "Q9217",
+      "wbqid": null
+    },
+    "tir": {
+      "enlabel": "Tigrinya",
+      "iso1": "ti",
+      "wikilang": "ti",
+      "wdqid": "Q34124",
+      "wbqid": null
+    },
+    "tlh": {
+      "enlabel": "Klingon",
+      "iso1": null,
+      "wikilang": "tlh",
+      "wdqid": "Q10134",
+      "wbqid": null
+    },
+    "tli": {
+      "enlabel": "Tlingit",
+      "iso1": null,
+      "wikilang": "tli",
+      "wdqid": "Q27792",
+      "wbqid": null
+    },
+    "tly": {
+      "enlabel": "Talysh",
+      "iso1": null,
+      "wikilang": "tly",
+      "wdqid": "Q34318",
+      "wbqid": null
+    },
+    "tok": {
+      "enlabel": "Toki Pona",
+      "iso1": null,
+      "wikilang": "tok",
+      "wdqid": "Q36846",
+      "wbqid": null
+    },
+    "ton": {
+      "enlabel": "Tongan",
+      "iso1": "to",
+      "wikilang": "to",
+      "wdqid": "Q34094",
+      "wbqid": null
+    },
+    "tpi": {
+      "enlabel": "Tok Pisin",
+      "iso1": null,
+      "wikilang": "tpi",
+      "wdqid": "Q34159",
+      "wbqid": null
+    },
+    "tpw": {
+      "enlabel": "Tupi",
+      "iso1": null,
+      "wikilang": "tup",
+      "wdqid": "Q56944",
+      "wbqid": null
+    },
+    "tru": {
+      "enlabel": "Turoyo",
+      "iso1": null,
+      "wikilang": "tru",
+      "wdqid": "Q34040",
+      "wbqid": null
+    },
+    "trv": {
+      "enlabel": "Seediq",
+      "iso1": null,
+      "wikilang": "trv",
+      "wdqid": "Q716686",
+      "wbqid": null
+    },
+    "tsg": {
+      "enlabel": "Tausug",
+      "iso1": null,
+      "wikilang": "tsg",
+      "wdqid": "Q34142",
+      "wbqid": null
+    },
+    "tsk": {
+      "enlabel": "Tseku",
+      "iso1": null,
+      "wikilang": "tsk",
+      "wdqid": "Q11159532",
+      "wbqid": null
+    },
+    "tsn": {
+      "enlabel": "Tswana",
+      "iso1": "tn",
+      "wikilang": "tn",
+      "wdqid": "Q34137",
+      "wbqid": null
+    },
+    "tso": {
+      "enlabel": "Tsonga",
+      "iso1": "ts",
+      "wikilang": "ts",
+      "wdqid": "Q34327",
+      "wbqid": null
+    },
+    "tsu": {
+      "enlabel": "Tsou",
+      "iso1": null,
+      "wikilang": "tsu",
+      "wdqid": "Q716681",
+      "wbqid": null
+    },
+    "ttm": {
+      "enlabel": "Northern Tutchone",
+      "iso1": null,
+      "wikilang": "ttm",
+      "wdqid": "Q20822",
+      "wbqid": null
+    },
+    "tuk": {
+      "enlabel": "Turkmen",
+      "iso1": "tk",
+      "wikilang": "tk",
+      "wdqid": "Q9267",
+      "wbqid": null
+    },
+    "tum": {
+      "enlabel": "Tumbuka",
+      "iso1": null,
+      "wikilang": "tum",
+      "wdqid": "Q34138",
+      "wbqid": null
+    },
+    "tur": {
+      "enlabel": "Turkish",
+      "iso1": "tr",
+      "wikilang": "tr",
+      "wdqid": "Q256",
+      "wbqid": null
+    },
+    "tvl": {
+      "enlabel": "Tuvaluan",
+      "iso1": null,
+      "wikilang": "tvl",
+      "wdqid": "Q34055",
+      "wbqid": null
+    },
+    "tvn": {
+      "enlabel": "Tavoyan",
+      "iso1": null,
+      "wikilang": "tvn",
+      "wdqid": "Q7689158",
+      "wbqid": null
+    },
+    "tvx": {
+      "enlabel": "Taivoan",
+      "iso1": null,
+      "wikilang": "tvx",
+      "wdqid": "Q1975271",
+      "wbqid": null
+    },
+    "twi": {
+      "enlabel": "Twi",
+      "iso1": "tw",
+      "wikilang": "tw",
+      "wdqid": "Q36850",
+      "wbqid": null
+    },
+    "tyv": {
+      "enlabel": "Tuvan",
+      "iso1": null,
+      "wikilang": "tyv",
+      "wdqid": "Q34119",
+      "wbqid": null
+    },
+    "tzl": {
+      "enlabel": "Talossan",
+      "iso1": null,
+      "wikilang": "tzl",
+      "wdqid": "Q1063911",
+      "wbqid": null
+    },
+    "tzm": {
+      "enlabel": "Central Atlas Tamazight",
+      "iso1": null,
+      "wikilang": "tzm",
+      "wdqid": "Q49741",
+      "wbqid": null
+    },
+    "udm": {
+      "enlabel": "Udmurt",
+      "iso1": null,
+      "wikilang": "udm",
+      "wdqid": "Q13238",
+      "wbqid": null
+    },
+    "uig": {
+      "enlabel": "Uyghur",
+      "iso1": "ug",
+      "wikilang": "ug",
+      "wdqid": "Q13263",
+      "wbqid": null
+    },
+    "ukr": {
+      "enlabel": "Ukrainian",
+      "iso1": "uk",
+      "wikilang": "uk",
+      "wdqid": "Q8798",
+      "wbqid": null
+    },
+    "umu": {
+      "enlabel": "Munsee",
+      "iso1": null,
+      "wikilang": "umu",
+      "wdqid": "Q56547",
+      "wbqid": null
+    },
+    "und": {
+      "enlabel": "undetermined language",
+      "iso1": null,
+      "wikilang": "und",
+      "wdqid": "Q22282914",
+      "wbqid": null
+    },
+    "urd": {
+      "enlabel": "Urdu",
+      "iso1": "ur",
+      "wikilang": "ur",
+      "wdqid": "Q1617",
+      "wbqid": null
+    },
+    "uzb": {
+      "enlabel": "Uzbek",
+      "iso1": "uz",
+      "wikilang": "uz",
+      "wdqid": "Q9264",
+      "wbqid": null
+    },
+    "uzs": {
+      "enlabel": "Southern Uzbek",
+      "iso1": null,
+      "wikilang": "uzs",
+      "wdqid": "Q1066787",
+      "wbqid": null
+    },
+    "vec": {
+      "enlabel": "Venetian",
+      "iso1": null,
+      "wikilang": "vec",
+      "wdqid": "Q32724",
+      "wbqid": null
+    },
+    "ven": {
+      "enlabel": "Venda",
+      "iso1": "ve",
+      "wikilang": "ve",
+      "wdqid": "Q32704",
+      "wbqid": null
+    },
+    "vep": {
+      "enlabel": "Veps",
+      "iso1": null,
+      "wikilang": "vep",
+      "wdqid": "Q32747",
+      "wbqid": null
+    },
+    "vie": {
+      "enlabel": "Vietnamese",
+      "iso1": "vi",
+      "wikilang": "vi",
+      "wdqid": "Q9199",
+      "wbqid": null
+    },
+    "vls": {
+      "enlabel": "West Flemish",
+      "iso1": null,
+      "wikilang": "vls",
+      "wdqid": "Q100103",
+      "wbqid": null
+    },
+    "vmf": {
+      "enlabel": "Main-Franconian",
+      "iso1": null,
+      "wikilang": "vmf",
+      "wdqid": "Q497345",
+      "wbqid": null
+    },
+    "vol": {
+      "enlabel": "Volap\u00fck",
+      "iso1": "vo",
+      "wikilang": "vo",
+      "wdqid": "Q36986",
+      "wbqid": null
+    },
+    "vot": {
+      "enlabel": "Votic",
+      "iso1": null,
+      "wikilang": "vot",
+      "wdqid": "Q32858",
+      "wbqid": null
+    },
+    "vro": {
+      "enlabel": "V\u00f5ro",
+      "iso1": null,
+      "wikilang": "vro",
+      "wdqid": "Q32762",
+      "wbqid": null
+    },
+    "wal": {
+      "enlabel": "Wolaytta",
+      "iso1": null,
+      "wikilang": "wal",
+      "wdqid": "Q36943",
+      "wbqid": null
+    },
+    "war": {
+      "enlabel": "Waray",
+      "iso1": null,
+      "wikilang": "war",
+      "wdqid": "Q34279",
+      "wbqid": null
+    },
+    "wbl": {
+      "enlabel": "Wakhi",
+      "iso1": null,
+      "wikilang": "wbl",
+      "wdqid": "Q34208",
+      "wbqid": null
+    },
+    "wdt": {
+      "enlabel": "Wendat",
+      "iso1": null,
+      "wikilang": "wya",
+      "wdqid": "Q3567223",
+      "wbqid": null
+    },
+    "wln": {
+      "enlabel": "Walloon",
+      "iso1": "wa",
+      "wikilang": "wa",
+      "wdqid": "Q34219",
+      "wbqid": null
+    },
+    "wls": {
+      "enlabel": "Wallisian",
+      "iso1": null,
+      "wikilang": "wls",
+      "wdqid": "Q36979",
+      "wbqid": null
+    },
+    "wol": {
+      "enlabel": "Wolof",
+      "iso1": "wo",
+      "wikilang": "wo",
+      "wdqid": "Q34257",
+      "wbqid": null
+    },
+    "wuu": {
+      "enlabel": "Wu Language",
+      "iso1": null,
+      "wikilang": "wuu",
+      "wdqid": "Q34290",
+      "wbqid": null
+    },
+    "wym": {
+      "enlabel": "Vilamovian",
+      "iso1": null,
+      "wikilang": "wym",
+      "wdqid": "Q56485",
+      "wbqid": null
+    },
+    "xal": {
+      "enlabel": "Kalmyk",
+      "iso1": null,
+      "wikilang": "xal",
+      "wdqid": "Q33634",
+      "wbqid": null
+    },
+    "xho": {
+      "enlabel": "Xhosa",
+      "iso1": "xh",
+      "wikilang": "xh",
+      "wdqid": "Q13218",
+      "wbqid": null
+    },
+    "xmf": {
+      "enlabel": "Mingrelian",
+      "iso1": null,
+      "wikilang": "xmf",
+      "wdqid": "Q13359",
+      "wbqid": null
+    },
+    "xnb": {
+      "enlabel": "Kanakanavu",
+      "iso1": null,
+      "wikilang": "xnb",
+      "wdqid": "Q172244",
+      "wbqid": null
+    },
+    "xpu": {
+      "enlabel": "Punic",
+      "iso1": null,
+      "wikilang": "xpu",
+      "wdqid": "Q535958",
+      "wbqid": null
+    },
+    "xsy": {
+      "enlabel": "Saisiyat",
+      "iso1": null,
+      "wikilang": "xsy",
+      "wdqid": "Q716695",
+      "wbqid": null
+    },
+    "yai": {
+      "enlabel": "Yaghnobi",
+      "iso1": null,
+      "wikilang": "yai",
+      "wdqid": "Q34247",
+      "wbqid": null
+    },
+    "yap": {
+      "enlabel": "Yapese",
+      "iso1": null,
+      "wikilang": "yap",
+      "wdqid": "Q34029",
+      "wbqid": null
+    },
+    "yav": {
+      "enlabel": "Yangben",
+      "iso1": null,
+      "wikilang": "yav",
+      "wdqid": "Q12953315",
+      "wbqid": null
+    },
+    "ydg": {
+      "enlabel": "Yidgha",
+      "iso1": null,
+      "wikilang": "ydg",
+      "wdqid": "Q34179",
+      "wbqid": null
+    },
+    "yec": {
+      "enlabel": "Yenish",
+      "iso1": null,
+      "wikilang": "yec",
+      "wdqid": "Q1365342",
+      "wbqid": null
+    },
+    "yid": {
+      "enlabel": "Yiddish",
+      "iso1": "yi",
+      "wikilang": "yi",
+      "wdqid": "Q8641",
+      "wbqid": null
+    },
+    "yoi": {
+      "enlabel": "Yonaguni",
+      "iso1": null,
+      "wikilang": "yoi",
+      "wdqid": "Q34243",
+      "wbqid": null
+    },
+    "yor": {
+      "enlabel": "Yoruba",
+      "iso1": "yo",
+      "wikilang": "yo",
+      "wdqid": "Q34311",
+      "wbqid": null
+    },
+    "yrk": {
+      "enlabel": "Nenets",
+      "iso1": null,
+      "wikilang": "yrk",
+      "wdqid": "Q36452",
+      "wbqid": null
+    },
+    "yrl": {
+      "enlabel": "Nheengatu",
+      "iso1": null,
+      "wikilang": "yrl",
+      "wdqid": "Q34333",
+      "wbqid": null
+    },
+    "yue": {
+      "enlabel": "Yue Chinese",
+      "iso1": null,
+      "wikilang": "zh-yue",
+      "wdqid": "Q7033959",
+      "wbqid": null
+    },
+    "zea": {
+      "enlabel": "Zeelandic",
+      "iso1": null,
+      "wikilang": "zea",
+      "wdqid": "Q237409",
+      "wbqid": null
+    },
+    "zgh": {
+      "enlabel": "Standard Moroccan Berber",
+      "iso1": null,
+      "wikilang": "zgh",
+      "wdqid": "Q7598268",
+      "wbqid": null
+    },
+    "zha": {
+      "enlabel": "Zhuang",
+      "iso1": "za",
+      "wikilang": "za",
+      "wdqid": "Q13216",
+      "wbqid": null
+    },
+    "zho": {
+      "enlabel": "Chinese",
+      "iso1": "zh",
+      "wikilang": "zh",
+      "wdqid": "Q7850",
+      "wbqid": null
+    },
+    "zpu": {
+      "enlabel": "Yal\u00e1lag Zapotec",
+      "iso1": null,
+      "wikilang": "mis-x-Q8047534",
+      "wdqid": "Q8047534",
+      "wbqid": null
+    },
+    "zsm": {
+      "enlabel": "Malaysian Malay",
+      "iso1": null,
+      "wikilang": "ms-my",
+      "wdqid": "Q15065",
+      "wbqid": null
+    },
+    "zul": {
+      "enlabel": "Zulu",
+      "iso1": "zu",
+      "wikilang": "zu",
+      "wdqid": "Q10179",
+      "wbqid": null
+    },
+    "zun": {
+      "enlabel": "Zuni",
+      "iso1": null,
+      "wikilang": "zun",
+      "wdqid": "Q10188",
+      "wbqid": null
+    },
+    "zxx": {
+      "enlabel": "no linguistic content",
+      "iso1": null,
+      "wikilang": "zxx",
+      "wdqid": "Q22282939",
+      "wbqid": null
+    },
+    "zza": {
+      "enlabel": "Zazaki",
+      "iso1": null,
+      "wikilang": "diq",
+      "wdqid": "Q10199",
+      "wbqid": null
+    }
+  }
+}

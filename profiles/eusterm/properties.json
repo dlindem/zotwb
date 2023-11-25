@@ -1,0 +1,103 @@
+{
+  "filename": "properties.json",
+  "comment": "mapping keys are wikibase properties",
+  "mapping": {
+    "P1": {
+      "enlabel": "wikidata entity",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "http://www.wikidata.org/entity/$1"
+    },
+    "P2": {
+      "enlabel": "formatter URL",
+      "type": "String",
+      "wdprop": "P1630"
+    },
+    "P3": {
+      "enlabel": "part of",
+      "type": "WikibaseItem",
+      "wdprop": "P361"
+    },
+    "P4": {
+      "enlabel": "subclass of",
+      "type": "WikibaseItem",
+      "wdprop": "P279"
+    },
+    "P5": {
+      "enlabel": "instance of",
+      "type": "WikibaseItem",
+      "wdprop": "P31"
+    },
+    "P6": {
+      "enlabel": "inScheme",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P7": {
+      "enlabel": "wikipedia article",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P8": {
+      "enlabel": "Basque lexicalisation",
+      "type": "String",
+      "wdprop": null
+    },
+    "P10": {
+      "enlabel": "attestation context",
+      "type": "String",
+      "wdprop": null
+    },
+    "P11": {
+      "enlabel": "attested in document",
+      "type": "String",
+      "wdprop": null
+    },
+    "P12": {
+      "enlabel": "uses",
+      "type": "WikibaseItem",
+      "wdprop": "P1303"
+    },
+    "P13": {
+      "enlabel": "definition",
+      "type": "String",
+      "wdprop": null
+    },
+    "P15": {
+      "enlabel": "UZEI hiztegiko ID",
+      "type": "String",
+      "wdprop": null
+    },
+    "P18": {
+      "enlabel": "UZEI termino maila",
+      "type": "String",
+      "wdprop": null
+    },
+    "P26": {
+      "enlabel": "Fandom wiki ID",
+      "type": "ExternalId",
+      "wdprop": "P6262",
+      "formatter_url": "https://www.wikia.com/wiki/w:c:$1"
+    },
+    "P31": {
+      "enlabel": "field of work",
+      "type": "WikibaseItem",
+      "wdprop": "P101"
+    },
+    "P52": {
+      "enlabel": "not to be confused with",
+      "type": "WikibaseItem",
+      "wdprop": "P1889"
+    },
+    "P84": {
+      "enlabel": "formatter URI for RDF resource",
+      "type": "String",
+      "wdprop": "P1921"
+    },
+    "P85": {
+      "enlabel": "equivalent property",
+      "type": "Url",
+      "wdprop": "P1628"
+    }
+  }
+}
