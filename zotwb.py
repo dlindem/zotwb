@@ -197,7 +197,7 @@ def basic_config():
                         else:
                             classqid = None
                         zotwb_functions.import_wikidata_entity(
-                            configdata['mapping'][configitem]['wikidata'], wbid=configdata['mapping'][configitem]['wikibase'], classqid=classqid, config=configdata, properties=properties)
+                            configdata['mapping'][configitem]['wikidata'], wbid=configdata['mapping'][configitem]['wikibase'], process_labels=True, process_aliases=True, process_descriptions=True, classqid=classqid, config=configdata, properties=properties)
                     elif key.endswith('_create'):  # user has pressed 'create new'
                         configitem = key.replace('_create','')
                         if configitem.startswith("class") and configitem != "class_ontology_class":
@@ -568,16 +568,16 @@ def wikidata_import():
         return render_template("wikidata_import.html", wikibase_name=configdata['mapping']['wikibase_name'],
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                instanceof=configdata['mapping']['prop_instanceof']['wikibase'],
-                               message=message, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes)
+                               messages=messages, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes)
     if request.method == "POST":
         if request.form:
             action = zotwb_functions.batchimport_wikidata(request.form, config=configdata, properties=properties)
-            message = action['message']
+            messages = action['messages']
             msgcolor = action['msgcolor']
         return render_template("wikidata_import.html", wikibase_name=configdata['mapping']['wikibase_name'],
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                instanceof=configdata['mapping']['prop_instanceof']['wikibase'],
-                               message=message, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes)
+                               messages=messages, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes)
 
 
 if __name__ == '__main__':
