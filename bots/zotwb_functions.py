@@ -111,23 +111,24 @@ def batchimport_wikidata(form, config={}, properties={}):
             imports[import_entity] = wd_to_wb[import_entity] # existing entity
         else:
             imports[import_entity] = False # new wikibase entity to create
+    extra_statement = None
     if 'statement_prop' in form and 'statement_value' in form:
-        if form.get('statement_prop').strip() not in properties['mapping']:
-            return {'message': f"Bad value for 'statement property': {form.get('statement_prop')}.", 'msgcolor': 'background:orangered'}
-        elif properties['mapping'][form.get('statement_prop').strip()]['type'] != "WikibaseItem":
-            return {'message':f"Property {form.get('statement_prop')} is not of datatype 'WikibaseItem'.", 'msgcolor': 'background:orangered'}
-        elif not re.search('^Q[0-9]+$', form.get('statement_value').strip()):
-            return {'message':f"Bad value for 'statement value': {form.get('statement_value')}.", 'msgcolor': 'background:orangered'}
-        extra_statement = {'prop_nr': form.get('statement_prop').strip(), 'value':form.get('statement_value').strip()}
-    else:
-        extra_statement = None
+        if form.get('statement_prop').strip().startswith('P') and form.get('statement_value').startswith('Q'):
+            if form.get('statement_prop').strip() not in properties['mapping']:
+                return {'message': f"Bad value for 'statement property': {form.get('statement_prop')}.", 'msgcolor': 'background:orangered'}
+            elif properties['mapping'][form.get('statement_prop').strip()]['type'] != "WikibaseItem":
+                return {'message':f"Property {form.get('statement_prop')} is not of datatype 'WikibaseItem'.", 'msgcolor': 'background:orangered'}
+            elif not re.search('^Q[0-9]+$', form.get('statement_value').strip()):
+                return {'message':f"Bad value for 'statement value': {form.get('statement_value')}.", 'msgcolor': 'background:orangered'}
+            extra_statement = {'prop_nr': form.get('statement_prop').strip(), 'value':form.get('statement_value').strip()}
+    classqid = None
     if 'instance_of_statement' in form:
-        if not re.search('^Q[0-9]+$', form.get('instance_of_statement').strip()):
-            return {'message': f"Bad value for 'instance-of-statement value': {form.get('instance_of_statement')}.",
-                    'msgcolor': 'background:orangered'}
-        classqid = form.get('instance_of_statement').strip()
-    else:
-        classqid = None
+        if form.get('instance_of_statement').strip().startswith('Q'):
+            if not re.search('^Q[0-9]+$', form.get('instance_of_statement').strip()):
+                return {'message': f"Bad value for 'instance-of-statement value': {form.get('instance_of_statement')}.",
+                        'msgcolor': 'background:orangered'}
+            classqid = form.get('instance_of_statement').strip()
+
     if 'labels_check' in form:
         process_labels = True
     else:
@@ -160,7 +161,7 @@ def batchimport_wikidata(form, config={}, properties={}):
         if extra_statement:
             xwbi.itemwrite({'qid': wb_entity, 'statements':[{'prop_nr': extra_statement['prop_nr'], 'type':'WikibaseItem', 'value':extra_statement['value']}]})
 
-    return {'message': f"Successfully created or updated wb:{wb_entity} importing {wd_entity}.", 'msgcolor': 'background:limegreen'}
+    return {'message': f"Successfully created or updated <a href=\"{config['mapping']['wikibase_entity_ns']}{wb_entity}\" target=\"_blank\">wb:{wb_entity}</a> importing <a href=\"http://www.wikidata.org/entity/{wd_entity}\" target=\"_blank\">wd:{wd_entity}</a>.", 'msgcolor': 'background:limegreen'}
 
 
 
