@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> ZotWb Import from Wikidata to {{ wikibase_name }}</h1>
-{% if message %}<p style = "{{ msgcolor }}">{{ message }}<br>{% endif %}
+{% if message %}<p style = "{{ msgcolor }}">{{ message|safe }}<br>{% endif %}
    <p> <small>(Back to <a href="/">start page</a>)</small></p>
 <p>The function on this page allows you to import items and properties from Wikidata.</br>
 <small>This is currently limited to string-like values (labels, aliases and descriptions, and statements with datatypes string, url, externalid, Wikipedia sitelinks).</br>
