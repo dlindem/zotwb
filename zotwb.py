@@ -197,7 +197,7 @@ def basic_config():
                         else:
                             classqid = None
                         zotwb_functions.import_wikidata_entity(
-                            configdata['mapping'][configitem]['wikidata'], wbid=configdata['mapping'][configitem]['wikibase'], classqid=classqid)
+                            configdata['mapping'][configitem]['wikidata'], wbid=configdata['mapping'][configitem]['wikibase'], classqid=classqid, config=configdata, properties=properties)
                     elif key.endswith('_create'):  # user has pressed 'create new'
                         configitem = key.replace('_create','')
                         if configitem.startswith("class") and configitem != "class_ontology_class":
@@ -205,7 +205,7 @@ def basic_config():
                         else:
                             classqid = None
                         if 'wikidata' in configdata['mapping'][configitem]:
-                            newentity_id = zotwb_functions.import_wikidata_entity(configdata['mapping'][configitem]['wikidata'], wbid=False, classqid=classqid)
+                            newentity_id = zotwb_functions.import_wikidata_entity(configdata['mapping'][configitem]['wikidata'], wbid=False, classqid=classqid, config=configdata, properties=properties)
 
                         else:
                             if configitem.startswith("class"):
@@ -262,10 +262,10 @@ def map_zoterofield(itemtype):
                     if key.endswith('_redo'):  # user has pressed 'import from wikidata to known wikibase entity' button
                         fieldname = key.replace('_redo', '')
                         zotwb_functions.import_wikidata_entity(
-                            zotero_types_wd['mapping'][itemtype], wbid=zoteromapping['mapping'][itemtype]['bibtypeqid'], classqid=configdata['mapping']['class_bibitem_type']['wikibase'])
+                            zotero_types_wd['mapping'][itemtype], wbid=zoteromapping['mapping'][itemtype]['bibtypeqid'], classqid=configdata['mapping']['class_bibitem_type']['wikibase'], config=configdata, properties=properties)
                     elif key.endswith('_create'):  # user has pressed 'create new'
                         fieldname = key.replace('_create', '')
-                        newentity_id = zotwb_functions.import_wikidata_entity(zotero_types_wd['mapping'][itemtype], wbid=False, classqid=configdata['mapping']['class_bibitem_type']['wikibase'])
+                        newentity_id = zotwb_functions.import_wikidata_entity(zotero_types_wd['mapping'][itemtype], wbid=False, classqid=configdata['mapping']['class_bibitem_type']['wikibase'], config=configdata, properties=properties)
                         zoteromapping['mapping'][itemtype]['bibtypeqid'] = newentity_id
                     else: # user has manually chosen a bibtypeqid value
                         zoteromapping['mapping'][itemtype]['bibtypeqid'] = request.form.get(key)
@@ -277,7 +277,7 @@ def map_zoterofield(itemtype):
                         fieldname = command.replace('_redo', '')
                         zotwb_functions.import_wikidata_entity(
                             properties['mapping'][zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']]['wdprop'],
-                            wbid=zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop'])
+                            wbid=zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop'], config=configdata, properties=properties)
                         properties['mapping'][zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']] = {
                             "enlabel": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['name'],
                             "type": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype'],
@@ -289,7 +289,7 @@ def map_zoterofield(itemtype):
                         fieldname = command.replace('_create_from_wd', '')
                         newentity_id = zotwb_functions.import_wikidata_entity(
                             wikidata_suggestions[fieldname],
-                            wbid=False)
+                            wbid=False, config=configdata, properties=properties)
                         properties['mapping'][newentity_id] = {
                             "enlabel": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['name'],
                             "type": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype'],
@@ -571,7 +571,9 @@ def wikidata_import():
                                message=message, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes)
     if request.method == "POST":
         if request.form:
-            message = zotwb_functions.batchimport_wikidata(request.form)
+            action = zotwb_functions.batchimport_wikidata(request.form, config=configdata, properties=properties)
+            message = action['message']
+            msgcolor = action['msgcolor']
         return render_template("wikidata_import.html", wikibase_name=configdata['mapping']['wikibase_name'],
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                instanceof=configdata['mapping']['prop_instanceof']['wikibase'],
