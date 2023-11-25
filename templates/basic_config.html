@@ -14,7 +14,7 @@
 <h2>Credentials</h2>
 <p>Your Wikibase bot user name and password, and the Zotero API key are stored in <code>profiles/{{ profile }}/config_private.py</code>.</br>
 <small>That file is included in <code>.gitignore</code>, i.e., it is not uploaded if you share your ZotWb project using git.</br>
-After setting these three values, restart the app in the terminal, and check the log messages for whether your credentials are accepted.</small></p>
+After setting these values and the Wikibase URL, restart the app in the terminal, and check the log messages for whether your credentials are accepted.</small></p>
 <p>Your Wikibase bot user name:
 <form method="POST">
    &#129054; <input type="text" name="private_wb_bot_user" value="{{ wb_username }}" style="width: 300px;">
@@ -38,13 +38,16 @@ After setting these three values, restart the app in the terminal, and check the
 </p>
 <h2>URL and Name of your Wikibase</h2>
 <p>The <b>URL</b> of your Wikibase is <a href="{{ configdata['wikibase_url'] }}" target="_blank">{{ configdata['wikibase_url'] }}</a>.</br>
-<small>You can update that in your 'config_private.py' file in the app base folder, together with usernames and passwords for Wikibase and Zotero.</small></p>
+<small>Enter the URL of your Wikibase, without slash at the end, e.g. 'https://mybase.wikibase.cloud'.</small>
+<form method="POST">
+   &#129054; <input type="text" name="wikibase_url" value="{{ configdata['wikibase_url'] }}" style="width: 300px;">
+    <input type="submit" value="Update this">
+</form></p>
 <p>The <b>Name</b> of your Wikibase (e.g. 'Mybase', used, for example, as title of Zotero URI attachments):
 <form method="POST">
    &#129054; <input type="text" name="wikibase_name" value="{{ configdata['wikibase_name'] }}" style="width: 300px;">
     <input type="submit" value="Update this">
-</form>
-</p>
+</form></p>
 <p>The <b>Name</b> of your Zotero group (for use throughout this app):
 <form method="POST">
     &#129054; <input type="text" name="zotero_group_name" value="{{ configdata['zotero_group_name'] }}" style="width: 300px;">
