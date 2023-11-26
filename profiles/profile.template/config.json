@@ -129,14 +129,7 @@
       "comment": "Datatype ExternalId, Wikidata P212. Used for 10-digit-ISBN identifiers. Most conveniently with formatter URL \"https://worldcat.org/isbn/$1\".",
       "formatter_url": "https://worldcat.org/isbn/$1"
     },
-    "prop_journal": {
-      "wikibase": null,
-      "type": "WikibaseItem",
-      "wikidata": "P1433",
-      "name": "journal",
-      "comment": "Datatype item, for linking articles to their journals"
-    },
-    "prop_language": {
+      "prop_language": {
       "wikibase": null,
       "type": "WikibaseItem",
       "wikidata": "P407",
