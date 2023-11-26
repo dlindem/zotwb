@@ -32,7 +32,7 @@ ZotWb includes a fork of A. Delpeuch's [OpenRefine-Wikibase](https://openrefine-
 ZotWb works out of the box for [Wikibase Cloud](https://wikibase.cloud) instances. For self-hosted Wikibases (Docker or manual install), the configuration file `config.json` (profile folder) will have to be manually edited (Please contact us for allowing the necessary configurations by default in a forthcoming version). 
 
 # Installation steps
-* This tool is a python3 app. You need python3 installed.
+* ZotWb is a python3 Flask app. You need python3 installed.
 * Create a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/), and run all subsequent steps, and the tool itself, always inside that.
 * Clone this repository to a place of your choice, ideally the same project folder your virtual environment was created in.
 * The tool requires the installation of some python packages in your virtual environment. They are listed in 'requirements.txt'. the following packages; [install them in your virtual environment](https://realpython.com/python-virtual-environments-a-primer/#install-packages-into-it).
@@ -68,7 +68,7 @@ If ZotWb is running, point your browser to [http://127.0.0.1:5000/](http://127.0
 
 # Configuration of the tool
 
-The zotero-wikibase tool will guide you through the configuration process, which consists of the following steps:
+ZotWb will guide you through the configuration process, which consists of the following steps:
 
 * If you run ZotWb for the first time, the tool will ask you to create a profile. A profile is a set of configurations, including all necessary to access the Zotero group and the Wikibase instance you want to connect, and the definition of mappings (first and foremost, mappings between Zotero fields and Wikibase properties, but also between Wikibase and Wikidata.) You can define several profiles and switch between them.
 * The tool will ask you to enter basic parameters
