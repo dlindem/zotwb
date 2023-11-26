@@ -1,0 +1,776 @@
+{
+  "filename": "properties.json",
+  "comment": "mapping keys are wikibase properties",
+  "mapping": {
+    "P1": {
+      "enlabel": "wikidata entity",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "http://www.wikidata.org/entity/$1",
+      "formatter_uri": "http://www.wikidata.org/entity/$1"
+    },
+    "P2": {
+      "enlabel": "formatter URL",
+      "type": "String",
+      "wdprop": "P1630"
+    },
+    "P3": {
+      "enlabel": "formatter uri for rdf resource",
+      "type": "String",
+      "wdprop": "P1921"
+    },
+    "P4": {
+      "enlabel": "subclass of",
+      "type": "WikibaseItem",
+      "wdprop": "P279"
+    },
+    "P5": {
+      "enlabel": "instance of",
+      "type": "WikibaseItem",
+      "wdprop": "P31"
+    },
+    "P6": {
+      "enlabel": "described in LR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P7": {
+      "enlabel": "standard Basque lemma",
+      "type": "WikibaseLexeme",
+      "wdprop": null
+    },
+    "P8": {
+      "enlabel": "forma batua",
+      "type": "WikibaseForm",
+      "wdprop": null
+    },
+    "P9": {
+      "enlabel": "wikisource URL",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P10": {
+      "enlabel": "LexBib entity",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://lexbib.elex.is/entity/$1",
+      "formatter_uri": "https://lexbib.elex.is/entity/$1"
+    },
+    "P11": {
+      "enlabel": "title",
+      "type": "String",
+      "wdprop": "P1476"
+    },
+    "P12": {
+      "enlabel": "language",
+      "type": "WikibaseItem",
+      "wdprop": "P407",
+      "equivalents": [
+        "http://purl.org/dc/terms/language"
+      ]
+    },
+    "P13": {
+      "enlabel": "author",
+      "type": "WikibaseItem",
+      "wdprop": "P50"
+    },
+    "P14": {
+      "enlabel": "editor",
+      "type": "WikibaseItem",
+      "wdprop": "P98"
+    },
+    "P15": {
+      "enlabel": "publication place",
+      "type": "String",
+      "wdprop": null
+    },
+    "P16": {
+      "enlabel": "publication date",
+      "type": "Time",
+      "wdprop": "P577"
+    },
+    "P17": {
+      "enlabel": "Zotero item ID",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://zotero.org/groups/5165329/items/$1"
+    },
+    "P18": {
+      "enlabel": "DOI",
+      "type": "ExternalId",
+      "wdprop": "P356",
+      "formatter_url": "https://doi.org/$1"
+    },
+    "P19": {
+      "enlabel": "ISBN-13",
+      "type": "ExternalId",
+      "wdprop": "P212",
+      "formatter_url": "https://worldcat.org/isbn/$1"
+    },
+    "P20": {
+      "enlabel": "ISBN-10",
+      "type": "ExternalId",
+      "wdprop": "P957",
+      "formatter_url": "https://worldcat.org/isbn/$1"
+    },
+    "P21": {
+      "enlabel": "ISSN",
+      "type": "ExternalId",
+      "wdprop": "P236"
+    },
+    "P22": {
+      "enlabel": "volume",
+      "type": "String",
+      "wdprop": "P478"
+    },
+    "P23": {
+      "enlabel": "issue",
+      "type": "String",
+      "wdprop": "P433"
+    },
+    "P24": {
+      "enlabel": "page(s) or chapter",
+      "type": "String",
+      "wdprop": "P304"
+    },
+    "P25": {
+      "enlabel": "is review of",
+      "type": "WikibaseItem",
+      "wdprop": "P6977"
+    },
+    "P26": {
+      "enlabel": "reviewed in",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P27": {
+      "enlabel": "subject",
+      "type": "WikibaseItem",
+      "wdprop": "P921"
+    },
+    "P28": {
+      "enlabel": "part of",
+      "type": "WikibaseItem",
+      "wdprop": "P361"
+    },
+    "P29": {
+      "enlabel": "part of conference series",
+      "type": "WikibaseItem",
+      "wdprop": "P361"
+    },
+    "P30": {
+      "enlabel": "has part",
+      "type": "WikibaseItem",
+      "wdprop": "P527"
+    },
+    "P31": {
+      "enlabel": "ISO 639-3 code",
+      "type": "ExternalId",
+      "wdprop": "P220"
+    },
+    "P32": {
+      "enlabel": "series ordinal",
+      "type": "String",
+      "wdprop": "P1545"
+    },
+    "P33": {
+      "enlabel": "reserved (url)",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P34": {
+      "enlabel": "Publisher",
+      "type": "String",
+      "wdprop": "P123"
+    },
+    "P35": {
+      "enlabel": "event",
+      "type": "String",
+      "wdprop": "P5072"
+    },
+    "P36": {
+      "enlabel": "source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P37": {
+      "enlabel": "ORCID",
+      "type": "ExternalId",
+      "wdprop": "P496",
+      "formatter_url": "https://orcid.org/$1"
+    },
+    "P38": {
+      "enlabel": "given name source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P39": {
+      "enlabel": "family name source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P40": {
+      "enlabel": "wikimedia language code",
+      "type": "String",
+      "wdprop": "P424"
+    },
+    "P41": {
+      "enlabel": "official website",
+      "type": "Url",
+      "wdprop": "P856"
+    },
+    "P42": {
+      "enlabel": "country of origin",
+      "type": "WikibaseItem",
+      "wdprop": "P495"
+    },
+    "P43": {
+      "enlabel": "part of journal",
+      "type": "WikibaseItem",
+      "wdprop": "P1433"
+    },
+    "P44": {
+      "enlabel": "different from",
+      "type": "WikibaseItem",
+      "wdprop": "P1889"
+    },
+    "P45": {
+      "enlabel": "range",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P46": {
+      "enlabel": "VIAF ID",
+      "type": "ExternalId",
+      "wdprop": "P214",
+      "formatter_url": "https://viaf.org/viaf/$1/"
+    },
+    "P47": {
+      "enlabel": "date of birth",
+      "type": "Time",
+      "wdprop": "P569"
+    },
+    "P48": {
+      "enlabel": "date of death",
+      "type": "Time",
+      "wdprop": "P570"
+    },
+    "P49": {
+      "enlabel": "ISO 4 abbreviation",
+      "type": "ExternalId",
+      "wdprop": "P1160"
+    },
+    "P50": {
+      "enlabel": "has distribution",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P51": {
+      "enlabel": "object language",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P52": {
+      "enlabel": "media part",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P53": {
+      "enlabel": "distribution of",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P54": {
+      "enlabel": "is described by term",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P55": {
+      "enlabel": "OCLC",
+      "type": "ExternalId",
+      "wdprop": "P243",
+      "formatter_url": "https://worldcat.org/oclc/$1"
+    },
+    "P56": {
+      "enlabel": "is continued by LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P57": {
+      "enlabel": "Edition",
+      "type": "String",
+      "wdprop": "P393"
+    },
+    "P58": {
+      "enlabel": "country",
+      "type": "WikibaseItem",
+      "wdprop": "P17"
+    },
+    "P59": {
+      "enlabel": "Wikipedia article URL",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P60": {
+      "enlabel": "start date",
+      "type": "Time",
+      "wdprop": "P580"
+    },
+    "P61": {
+      "enlabel": "end date",
+      "type": "Time",
+      "wdprop": "P582"
+    },
+    "P62": {
+      "enlabel": "Zotero fulltext PDF",
+      "type": "ExternalId",
+      "wdprop": null
+    },
+    "P63": {
+      "enlabel": "Zotero fulltext TXT",
+      "type": "ExternalId",
+      "wdprop": null
+    },
+    "P64": {
+      "enlabel": "subject of",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P65": {
+      "enlabel": "skos:definition",
+      "type": "String",
+      "wdprop": null
+    },
+    "P66": {
+      "enlabel": "skos:note",
+      "type": "String",
+      "wdprop": null
+    },
+    "P67": {
+      "enlabel": "source",
+      "type": "WikibaseItem",
+      "wdprop": "P1343"
+    },
+    "P68": {
+      "enlabel": "source name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P69": {
+      "enlabel": "dictionary scope type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P70": {
+      "enlabel": "distribution type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P71": {
+      "enlabel": "mention count",
+      "type": "String",
+      "wdprop": null
+    },
+    "P72": {
+      "enlabel": "relative frequency",
+      "type": "String",
+      "wdprop": null
+    },
+    "P73": {
+      "enlabel": "inverse property",
+      "type": "WikibaseProperty",
+      "wdprop": "P1696"
+    },
+    "P74": {
+      "enlabel": "subproperty of",
+      "type": "WikibaseProperty",
+      "wdprop": "P1647"
+    },
+    "P75": {
+      "enlabel": "contains term",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P76": {
+      "enlabel": "short title",
+      "type": "String",
+      "wdprop": null
+    },
+    "P77": {
+      "enlabel": "ISO-639-1 language code",
+      "type": "ExternalId",
+      "wdprop": "P218"
+    },
+    "P78": {
+      "enlabel": "bibitem type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P79": {
+      "enlabel": "preferred given name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P80": {
+      "enlabel": "preferred family name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P81": {
+      "enlabel": "coordinate location",
+      "type": "GlobeCoordinate",
+      "wdprop": "P625"
+    },
+    "P82": {
+      "enlabel": "inception",
+      "type": "Time",
+      "wdprop": "P571"
+    },
+    "P83": {
+      "enlabel": "contains abstract in",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P84": {
+      "enlabel": "organizer",
+      "type": "WikibaseItem",
+      "wdprop": "P664"
+    },
+    "P85": {
+      "enlabel": "source URI",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P86": {
+      "enlabel": "access location",
+      "type": "Url",
+      "wdprop": "P953"
+    },
+    "P87": {
+      "enlabel": "download location",
+      "type": "Url",
+      "wdprop": "P953"
+    },
+    "P88": {
+      "enlabel": "linguality type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P89": {
+      "enlabel": "has realisation",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P90": {
+      "enlabel": "lexicographical process type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P91": {
+      "enlabel": "dictionary function type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P92": {
+      "enlabel": "dictionary access type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P93": {
+      "enlabel": "metalanguage",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P94": {
+      "enlabel": "LCR subclass",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P95": {
+      "enlabel": "is replaced with",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P96": {
+      "enlabel": "part of LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P97": {
+      "enlabel": "year of publication",
+      "type": "String",
+      "wdprop": null
+    },
+    "P98": {
+      "enlabel": "microstructure feature",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P99": {
+      "enlabel": "is version of",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P100": {
+      "enlabel": "target language",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P101": {
+      "enlabel": "replaces LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P102": {
+      "enlabel": "is similar to LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P103": {
+      "enlabel": "is related to LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P104": {
+      "enlabel": "is exact match with LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P105": {
+      "enlabel": "is part with LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P106": {
+      "enlabel": "is continuation of LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P107": {
+      "enlabel": "is converted version of LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P108": {
+      "enlabel": "has original source",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P109": {
+      "enlabel": "has part LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P110": {
+      "enlabel": "has version LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P111": {
+      "enlabel": "is combined with LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P112": {
+      "enlabel": "cites",
+      "type": "WikibaseItem",
+      "wdprop": "P2860"
+    },
+    "P113": {
+      "enlabel": "source language",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P114": {
+      "enlabel": "lemma type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P115": {
+      "enlabel": "dictionary text part",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P116": {
+      "enlabel": "resource creator",
+      "type": "WikibaseItem",
+      "wdprop": "P50"
+    },
+    "P117": {
+      "enlabel": "IPR holder",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P118": {
+      "enlabel": "LCR name",
+      "type": "Monolingualtext",
+      "wdprop": "P1476"
+    },
+    "P119": {
+      "enlabel": "LCR provider",
+      "type": "WikibaseItem",
+      "wdprop": "P123"
+    },
+    "P120": {
+      "enlabel": "cardinality",
+      "type": "String",
+      "wdprop": null
+    },
+    "P121": {
+      "enlabel": "number of entries",
+      "type": "String",
+      "wdprop": null
+    },
+    "P122": {
+      "enlabel": "author(s) literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P123": {
+      "enlabel": "publishing place(s) literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P124": {
+      "enlabel": "described on mlv wikipage",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://monumenta.wikibase.cloud/wiki/$1"
+    },
+    "P125": {
+      "enlabel": "rdf:type (OWL)",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P126": {
+      "enlabel": "skos:exactMatch (OWL)",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P127": {
+      "enlabel": "domain",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P128": {
+      "enlabel": "subPropertyOf (OWL)",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P129": {
+      "enlabel": "range expression (OWL)",
+      "type": "String",
+      "wdprop": null
+    },
+    "P130": {
+      "enlabel": "affiliation",
+      "type": "WikibaseItem",
+      "wdprop": "P108"
+    },
+    "P131": {
+      "enlabel": "contributor",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P132": {
+      "enlabel": "Inguma Wikibase ID",
+      "type": "ExternalId",
+      "wdprop": null
+    },
+    "P133": {
+      "enlabel": "pivot language",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P134": {
+      "enlabel": "is realisation of",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P135": {
+      "enlabel": "has outcome",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P136": {
+      "enlabel": "has converted version",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P137": {
+      "enlabel": "date of creation",
+      "type": "Time",
+      "wdprop": null
+    },
+    "P138": {
+      "enlabel": "translator",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P168": {
+      "enlabel": "free (string)",
+      "type": "String",
+      "wdprop": null
+    },
+    "P139": {
+      "enlabel": "title of containing item",
+      "type": "String",
+      "wdprop": null
+    },
+    "P142": {
+      "enlabel": "book series",
+      "type": "String",
+      "wdprop": null
+    },
+    "P144": {
+      "enlabel": "seriesNumber",
+      "type": "String",
+      "wdprop": null
+    },
+    "P145": {
+      "enlabel": "university",
+      "type": "String",
+      "wdprop": null
+    },
+    "P146": {
+      "enlabel": "seriesEditor",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P148": {
+      "enlabel": "token number",
+      "type": "String",
+      "wdprop": null
+    },
+    "P155": {
+      "enlabel": "subject sense",
+      "type": "WikibaseSense",
+      "wdprop": "P6072"
+    },
+    "P156": {
+      "enlabel": "subject form",
+      "type": "WikibaseForm",
+      "wdprop": "P5830"
+    },
+    "P157": {
+      "enlabel": "equivalent property",
+      "type": "Url",
+      "wdprop": "P1628"
+    },
+    "P159": {
+      "enlabel": "equivalent class",
+      "type": "Url",
+      "wdprop": "P1709"
+    },
+    "P164": {
+      "enlabel": "unused (string)",
+      "type": "String",
+      "wdprop": null
+    },
+    "P169": {
+      "enlabel": "Basque lexicography periodization type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    }
+  }
+}

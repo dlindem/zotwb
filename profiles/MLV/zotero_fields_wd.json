@@ -1,0 +1,13 @@
+{
+  "filename": "zotero_types_wd.json",
+  "comment": "This mapping (Zotero fiels to Wikidata) is used for suggesting mappings",
+  "mapping": {
+    "DOI": "P356",
+    "url": "P953",
+    "volume": "P478",
+    "issue": "P433",
+    "pages": "P304",
+    "numPages": "P1104",
+    "edition": "P393"
+  }
+}
