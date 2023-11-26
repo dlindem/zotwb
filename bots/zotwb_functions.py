@@ -1058,14 +1058,14 @@ def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unre
                     if isinstance(row['givenName'], str) and isinstance(row['lastName'], str):
                         newitem['aliases'].append(
                             {'lang': language, 'value': row['lastName'] + ', ' + row['givenName']})
-                # if isinstance(row['givenName'], str):
-                # 	newitem['statements'].append(
-                # 		{'type': 'String', 'prop_nr': config['mapping']['prop_pref_given_name']['wikibase'],
-                # 		 'value': row['givenName'].strip()})
-                # if isinstance(row['lastName'], str):
-                # 	newitem['statements'].append({'type': 'String',
-                # 								  'prop_nr': config['mapping']['prop_pref_family_name'][
-                # 									  'wikibase'], 'value': row['lastName'].strip()})
+                if isinstance(row['givenName'], str):
+                	newitem['statements'].append(
+                		{'type': 'String', 'prop_nr': config['mapping']['prop_pref_given_name']['wikibase'],
+                		 'value': row['givenName'].strip()})
+                if isinstance(row['lastName'], str):
+                	newitem['statements'].append({'type': 'String',
+                								  'prop_nr': config['mapping']['prop_pref_family_name'][
+                									  'wikibase'], 'value': row['lastName'].strip()})
                 newitemqid = xwbi.itemwrite(newitem)
                 newcreators[row['fullName_clusters']] = {'creatorqid': newitemqid,
                                                          'fullName_variants': [row['fullName']]}
