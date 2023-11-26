@@ -28,7 +28,8 @@ This section explains what is necessary to start using ZotWb:
 
 This very first version of ZotWb was developed and tested on Ubuntu 23.10 Linux, and python 3.11. If you are on a different platform, install a virtual linux machine, and work on that. 
 ZotWb includes a fork of A. Delpeuch's [OpenRefine-Wikibase](https://openrefine-wikibase.readthedocs.io/en/latest/index.html), which relies on the linux architecture and some linux packages.
-For self-hosted Wikibases (Docker or manual install), the configuration file `config.json` (profile folder) will have to be manually edited (Please contact us for allowing the necessary configurations by default in a forthcoming version). 
+
+ZotWb works out of the box for [Wikibase Cloud](https://wikibase.cloud) instances. For self-hosted Wikibases (Docker or manual install), the configuration file `config.json` (profile folder) will have to be manually edited (Please contact us for allowing the necessary configurations by default in a forthcoming version). 
 
 # Installation steps
 * This tool is a python3 app. You need python3 installed.
