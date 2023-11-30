@@ -145,7 +145,7 @@
       "type": "WikibaseItem",
       "wikidata": "P1433",
       "name": "published in",
-      "comment": "Datatype item, for linking publications to their container (a journal, for journal articles, a book, for books"
+      "comment": "Datatype item, for linking publications to their container (a journal, for journal articles, a book, for book sections"
     },
     "prop_wikidata_sitelinks": {
       "wikibase": null,
