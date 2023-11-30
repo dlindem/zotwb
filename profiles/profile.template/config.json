@@ -154,26 +154,6 @@
       "name": "Wikipedia page URL",
       "comment": "Datatype URL, for Wikipedia sitelinks from Wikidata"
     },
-    "prop_equivalentprop": {
-      "wikibase": null,
-      "type": "URL",
-      "comment": "Datatype URL, points to a URI describing an equivalent property. Use 'Wikidata Entity' for Wikidata matches.",
-      "wikidata": "P1628",
-      "name": "external equivalent property",
-      "exactmatches": [
-        "http://www.w3.org/2004/02/skos/core#exactMatch"
-      ]
-    },
-    "prop_equivalentclass": {
-      "wikibase": null,
-      "type": "URL",
-      "comment": "Datatype URL, points to a URI describing an equivalent class. Use 'Wikidata Entity' for Wikidata matches.",
-      "wikidata": "P1709",
-      "name": "external equivalent class",
-      "exactmatches": [
-        "http://www.w3.org/2004/02/skos/core#exactMatch"
-      ]
-    },
     "class_ontology_class": {
       "wikibase": null,
       "comment": "The class that groups all ontology classes.",
