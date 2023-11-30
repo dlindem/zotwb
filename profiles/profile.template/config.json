@@ -1,6 +1,6 @@
 {
   "filename": "config.json",
-  "comment": "This contains basic configurations for the zotero-wikibase tool.",
+  "comment": "This contains basic configurations for the ZotWb tool.",
   "mapping": {
     "wikibase_name": null,
     "wikibase_url": null,
@@ -196,7 +196,7 @@
       "wikidata": "Q5"
     },
     "identifier_patterns": {
-      "^OCLC: ([0-9]+)": "P55"
+      "OCLC: ([0-9]+)": "P55"
     },
     "zotero_group_id": null,
     "zotero_group_name": null,
