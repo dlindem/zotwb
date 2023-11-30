@@ -153,11 +153,19 @@ def zotero_export():
 def basic_config():
     with open(f"profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
         config_private = json.load(jsonfile)
+        starpwd = ""
+        if config_private['wb_bot_pwd']:
+            while len(starpwd) < len(config_private['wb_bot_pwd']):
+                starpwd += "*"
+        starkey = ""
+        if config_private['zotero_api_key']:
+            while len(starkey) < len(config_private['zotero_api_key']):
+                starkey += "*"
     configdata = botconfig.load_mapping('config')
     properties = botconfig.load_mapping('properties')
     if request.method == 'GET':
-        return render_template("basic_config.html", profile=profile, wb_username=config_private['wb_bot_user'], wb_password=config_private['wb_bot_pwd'],
-                               zotero_api_key=config_private['zotero_api_key'],
+        return render_template("basic_config.html", profile=profile, wb_username=config_private['wb_bot_user'], wb_password=starpwd,
+                               zotero_api_key=starkey,
                                configdata=configdata['mapping'], message = None, msgcolor = None)
 
     elif request.method == 'POST':
@@ -235,7 +243,7 @@ def basic_config():
             message = f"Successfully performed operation: '{command}'."
             msgcolor = "background:limegreen"
         botconfig.dump_mapping(configdata)
-        return render_template("basic_config.html", profile=profile, wb_username=config_private['wb_bot_user'], wb_password=config_private['wb_bot_pwd'], zotero_api_key=config_private['zotero_api_key'], configdata=configdata['mapping'], message=message, msgcolor=msgcolor)
+        return render_template("basic_config.html", profile=profile, wb_username=config_private['wb_bot_user'], wb_password=star_pwd, zotero_api_key=starkey, configdata=configdata['mapping'], message=message, msgcolor=msgcolor)
 
 @app.route('/zoterofields/<itemtype>', methods= ['GET', 'POST'])
 def map_zoterofield(itemtype):
@@ -562,7 +570,7 @@ def wikidata_import():
     properties = botconfig.load_mapping('properties')
     allowed_datatypes = ['ExternalId', 'String', 'Url']
     # zoteromapping = botconfig.load_mapping('zotero')
-    message = None
+    messages = []
     msgcolor = "background:limegreen"
     if request.method == 'GET':
         return render_template("wikidata_import.html", wikibase_name=configdata['mapping']['wikibase_name'],
