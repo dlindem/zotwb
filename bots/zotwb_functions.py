@@ -317,7 +317,7 @@ def check_export(zoterodata=[], zoteromapping={}):
         seen_creators = []
         fields_processed_before = ['itemType', 'creators', 'ISBN', 'extra']
         for fieldname in item['data']:
-            if item['data'][fieldname] != "" and fieldname not in fields_processed_before and itemtype + fieldname not in seen_fields and fieldname in zoteromapping['mapping'][itemtype]['fields']:
+            if (item['data'][fieldname] != "") and (fieldname not in fields_processed_before) and (itemtype + fieldname not in seen_fields) and (fieldname in zoteromapping['mapping'][itemtype]['fields']):
                 if zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'] == False:
                     print(f"Skipping {itemtype} > {fieldname} as marked for permanent omission.")
                 elif zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']:
@@ -342,7 +342,7 @@ def check_export(zoterodata=[], zoteromapping={}):
                 print(f"Will use existing mapping: {creatortype} > {zoteromapping['mapping'][itemtype]['creatorTypes'][creatortype]['wbprop']}")
                 seen_creators.append(itemtype + creatortype)
             else:
-                newmsg = f"<i>{itemtype}</i> creator type '<b>{fieldname}</b>': No mapping defined."
+                newmsg = f"<i>{itemtype}</i> creator type '<b>{creatortype}</b>': No mapping defined."
                 messages.append(newmsg+missing_mapping_message)
                 print(newmsg)
     if len(messages) == 0:
