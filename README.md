@@ -1,13 +1,17 @@
 # ZotWb
  **A python app for LODifying bibliographical data, involving Zotero, Wikibase, and Wikidata**
 
+This work is being supported by a [WMF Rapid Grant](https://meta.wikimedia.org/wiki/Grants:Programs/Wikimedia_Community_Fund/Rapid_Fund/Zotero_to_Wikibase_bibliographical_data_export_app_(ID:_22209513)).
+
 This tool exports records in a Zotero group library to a custom Wikibase, prepares datasets to be sent to OpenRefine, and feeds OpenRefine reconciliaton results back to the Wikibase. Wikidata is envolved in the entity reconciliation.
 
-The following are represented by default using 'item statements' (object properties), so that further steps for LOD-ification are not needed:
-* Bibliographical item type
-* Publication language
+It contains a range of functions for interaction with any Zotero group library and any Wikibase instance; some of them are potentially useful for any Zotero groups user (item batch edit, tag delete), and for any Wikibase user (Wikidata properties alignment, Import (cloning) of Wikidata entities).
 
-Creator names, or any 'string' (literal string value) property you specify are prepared for entity reconciliation using OpenRefine. Reconciliation results from Wikidata and/or from your own Wikibase (that makes sense if the entities you want to find already exist on your Wikibase) are accepted for re-feeding your Wikibase.
+**Zotero records are processed in the following way:**
+
+The Zotero item type (e.g. 'book section' or 'journal article') and the publication language are by default LODified (i.e., represented as ontology items, not literals). Missing or unmapped language values are fixed on the fly by the user.
+
+Creator names, or any 'string' property you specify are prepared for entity reconciliation using OpenRefine. Reconciliation results from Wikidata and/or from your own Wikibase (that makes sense if the entities you want to find already exist on your Wikibase) are accepted for re-feeding your Wikibase.
 
 Identifiers (the Zotero Item ID, ISBN, ISSN, OCLC, and what you specify that my occur in the EXTRA field) are normalized and linked using 'external-id' properties.
 
@@ -32,12 +36,12 @@ ZotWb includes a fork of A. Delpeuch's [OpenRefine-Wikibase](https://openrefine-
 ZotWb works out of the box for [Wikibase Cloud](https://wikibase.cloud) instances. For self-hosted Wikibases (Docker or manual install), the configuration file `config.json` (profile folder) will have to be manually edited (Please contact us for allowing the necessary configurations by default in a forthcoming version). 
 
 # Installation steps
-* ZotWb is a python3 Flask app. You need python3 installed.
+* ZotWb is a python3 Flask app. You need python3 installed, and the reconciliation engine needs the redis-server linux package.
 * Create a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/), and run all subsequent steps, and the tool itself, always inside that.
 * Clone this repository to a place of your choice, ideally the same project folder your virtual environment was created in.
 * The tool requires the installation of some python packages in your virtual environment. They are listed in 'requirements.txt'. the following packages; [install them in your virtual environment](https://realpython.com/python-virtual-environments-a-primer/#install-packages-into-it).
 
-On debian-based systems like Ubuntu, this looks as follows: 
+On debian-based systems like Ubuntu, commands that cover all this look as follows: 
 
 ```
 sudo apt install git redis-server python3 virtualenv libpython3-dev
@@ -66,6 +70,11 @@ You need to leave the terminal running. In the terminal, you can follow what Zot
 
 If ZotWb is running, point your browser to [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 
+If you prefer to install, create the virtual environment and run ZotWb inside an application like [PyCharm](https://www.jetbrains.com/pycharm/download/?section=linux), after opening the cloned project folder, it looks like that:
+
+![Pycharm_screenshot](static/pycharm.png "Pycharm screenshot")
+
+
 # Configuration of the tool
 
 ZotWb will guide you through the configuration process, which consists of the following steps:
@@ -84,3 +93,12 @@ ZotWb will guide you through the configuration process, which consists of the fo
     * You can specify existing properties to use, or create new properties along the process.
     * You are able to define a Zotero-to-Wikibase mapping for all Zotero item types at once, and, alternatively, to map fields differently according to the BibItem type. For example, you may want to have titles of books mapped to a different property than titles of television broadcasts.
 
+## Screenshots
+
+This is how the starting page looks for a profile that connects to [MLV Wikibase](https://monumenta.wikibase.cloud). Another Wikibase where this tool is used is [LexBib Wikibase](https://lexbib.elex.is).
+
+![Startpage_screenshot](static/startpage.png "Startpage Screenshot")
+
+This is how the Zotero export page looks like:
+
+![Exportpage_screenshot](static/exportpage.png "Exportpage Screenshot")
