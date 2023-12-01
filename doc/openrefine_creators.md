@@ -22,7 +22,7 @@ Deduplication using the [Clustering function](https://openrefine.org/docs/manual
     
 	Validation of name clusters includes selecting one of the names as the normalized name variant. 
 	
-	Within the column `fullName_clusters`, this preferred name variant will replace the various name forms previously found in the data. All rows in the resulting CSV having the same value in the `fullName_clusters` column will be treated as one when re-feeding the results to Wikibase. That is, in case that the corresponding person is found neither on Wikidata nor on your Wikibase, only one entity is created for the whole cluster. 
+	Within the column `fullName_clusters`, this preferred name variant will replace the various name forms previously found in the data, while leaving the other columns as they were. All rows in the resulting CSV having the same value in the `fullName_clusters` column will be treated as one when re-feeding the results to Wikibase. That is, in case that the corresponding person is found neither on Wikidata nor on your Wikibase, only one entity is created for the whole cluster. 
     
 	If the Wikibase item representing that person has to be created new, or if it still has no labels and no statements for `preferred given name` and `preferred family name`, those will be created using `givenName` and `lastName` values from the first row in the cluster; change the row order if necessary. 
 	
@@ -36,17 +36,17 @@ Deduplication using the [Clustering function](https://openrefine.org/docs/manual
 
 	For each reconciliation process (Wikidata and/or Wikibase), create a separate column based on `fullName_clusters` (or `fullName`) column using `edit column > Add column based on this column > value`.
 
-	REQUIRED COLUMN NAMES:
-	fullName_recon_Wikidata
-	fullName_recon_Wikibase
+    * You have to use the following naming for the newly crated columns (so that the tool finds them for re-feeding to Wikibase):
+	  * `fullName_recon_Wikidata`
+	  * `fullName_recon_Wikibase
     
 2. For the recon column(s), invoke the reconciliation process using `Reconcile > Start reconciling`. From the list of reconciliation services, pick the appropriate one, leading to your Wikibase or to Wikidata. If not already selected, select an entity type such as `human` (Q5) to restrict possible reconciliation targets. Be careful with the function `automatically match candidates with high confidence`; that is risky, since it is not at all unlikely that there exist several persons with the same or similar name on Wikidata, and only one (or none) of these is the one you want to link to.
     
 3. Validate reconciliation candidates. Approved reconciled person names are now linked to their corresponding person item in Wikibase/Wikidata. 
-4. Now create a new column containing the person item identifier from Wikibase/Wikidata using `Reconcile > Add entity identifiers column`
+4. When finished, create a new column containing the person item identifier from Wikibase/Wikidata using `Reconcile > Add entity identifiers column`
     
-    These columns will contain the Q-identifiers of the linked items. Specify the new column names as REQUIRED: 
+    These columns will contain the Q-identifiers of the linked items. Specify the new column names as follows (you have to use these column names): 
      * `Wikidata_Qid`
      * `Wikibase_Qid`
    
-5. Export as comma seperated value (csv) to your `data/creators_reconciled` folder (inside your profile folder) using `Export > comma separated values`
+5. Export as comma seperated value (csv) to your `data/creators_reconciled` folder (inside your profile folder) using `Export > comma separated values`. You can choose any file name; ZotWb will import the most recent file in that folder for import.

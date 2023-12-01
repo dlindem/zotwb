@@ -63,8 +63,8 @@ The zotero-wikibase tool will guide you through the configuration process, which
   * Some basic properties, and items describing ontology classes need to be defined. During the process, the tool will ask you whether you want to create new entities, or use entities already existing on your Wikibase.
     * Examples for basic entities: "Wikidata Entity", a property of datatype "ExternalId" which points to the equivalent entity on Wikidata, or "instance of" (equivalent to rdf:type and wd:P31).
     * Examples for ontology classes: "Language", "Creator Role", or "BibItem type". Instances of these classes will be linked to their class using the "instance of" property.
-* The mapping of Zotero creator types and Zotero data fields (one set of fields per BibItem type) is done when exporting data from Zotero, i.e., in the next step.
-  * When you export data from Zotero, the tool checks if all BibItem types and all fields containing data in the set of records you are exporting are already mapped to Wikibase properties.
-    * You can specify existing properties to use, or create new properties along the process.
-    * You are able to define a Zotero-to-Wikibase mapping for all Zotero item types at once, and, alternatively, to map fields differently according to the BibItem type. For example, you may want to have titles of books mapped to a different property than titles of television broadcasts.
+* The mapping of Zotero creator types and Zotero data fields (one set of fields per BibItem type) is done on pages allowing to run the configuration for all Zotero item types at once, or separately for each Zotero type. 
+  * When you export data from Zotero, the tool checks if all BibItem types and all fields containing data in the set of records you are exporting are already mapped to Wikibase properties, and notify you about missing mappings, so that you can fix this before uploading to Wikibase.
+  * You can specify existing properties to use, or create new properties along the process.
+  * You are able to define a Zotero-to-Wikibase mapping for all Zotero item types at once, and, alternatively, to map fields differently according to the BibItem type. For example, you may want to have titles of books mapped to a different property than titles of television broadcasts.
 
