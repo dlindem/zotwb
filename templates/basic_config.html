@@ -10,32 +10,28 @@
 (Back to <a href="./">start page</a>)
 <p>This page lets you configure your ZotWb <b>'{{ profile }}'</b> profile.
     Provide values for all fields on this page, beginning from the top.
-    </br><small>Edit the values manually. After editing a value, press ENTER, or the corresponding "Update this" button. Your input will be saved, and the page reloaded.</small></p>
+    </br><small>Edit the values manually. After editing a value, press ENTER, or the corresponding "Update" button. Your input will be saved, and the page reloaded.</small></p>
 <h2>Credentials</h2>
 <p>Your Wikibase bot user name and password, and the Zotero API key are stored in <code>profiles/{{ profile }}/config_private.py</code>.</br>
 <small>That file is included in <code>.gitignore</code>, i.e., it is not uploaded if you share your ZotWb project using git.</br>
 After setting these values and the Wikibase URL, restart the app in the terminal, and check the log messages for whether your credentials are accepted.</small></p>
-<p>Your Wikibase bot user name:
+
 <form method="POST">
-   &#129054; <input type="text" name="private_wb_bot_user" value="{{ wb_username }}" style="width: 300px;">
-    <input type="submit" value="Update this">
+    <p><input type="submit" value="Update credentials"></p>
+    <p>Your Wikibase bot user name:
+    &#129054; <input type="text" name="private_wb_bot_user" placeholder="{{ wb_username }}" style="width: 300px;">
+    <br><small>This user needs bot writing privileges on your Wikibase instance ("bot" box ticked on <code>wiki/Special:UserRights</code>).</small>
+    </p>
+    <p>Your Wikibase bot user password:
+    &#129054; <input type="text" name="private_wb_bot_pwd" placeholder="{{ wb_password }}" style="width: 300px;">
+    <br><small>This is the normal user password (and not the so-called 'bot bassword'.</small>
+    </p>
+    <p>Your Zotero API key:
+    &#129054; <input type="text" name="private_zotero_api_key" placeholder="{{ zotero_api_key }}" style="width: 300px;">
+    <br><small>A Zotero API key can be obtained <a href="https://www.zotero.org/settings/keys/new">here</a>.</br>Be sure to grant the key read and write access to the group library you want to export items from. The key consists of a single chain of characters.</small>
+    </p>
 </form>
-<small>This user needs bot writing privileges on your Wikibase instance ("bot" box ticked on <code>wiki/Special:UserRights</code>).</small>
-</p>
-<p>Your Wikibase bot user password:
-<form method="POST">
-   &#129054; <input type="text" name="private_wb_bot_pwd" placeholder="{{ wb_password }}" style="width: 300px;">
-    <input type="submit" value="Update this">
-</form>
-<small>This is the normal user password (and not the so-called 'bot bassword'.</small>
-</p>
-<p>Your Zotero API key:
-<form method="POST">
-   &#129054; <input type="text" name="private_zotero_api_key" placeholder={{ zotero_api_key }} style="width: 300px;">
-    <input type="submit" value="Update this">
-</form>
-<small>A Zotero API key can be obtained <a href="https://www.zotero.org/settings/keys/new">here</a>.</br>Be sure to grant the key read and write access to the group library you want to export items from. The key consists of a single chain of characters.</small>
-</p>
+
 <h2>URL and Name of your Wikibase</h2>
 <p>The <b>URL</b> of your Wikibase is <a href="{{ configdata['wikibase_url'] }}" target="_blank">{{ configdata['wikibase_url'] }}</a>.</br>
 <small>Enter the URL of your Wikibase, without slash at the end, e.g. 'https://mybase.wikibase.cloud'.</small>
@@ -95,9 +91,8 @@ For example, OCLC identifiers from <a href="https://worldcat.org"> target="_blan
 </form></li>
 {% endfor %}</ul>
 <h2>Basic properties and classes on your Wikibase</h2>
-<p>If you change the value manually, press the "Update this" button for saving.</br>
+<p>If you change a value manually, press the "Update this" button for saving your edit.</br>
     Otherwise use the "Create new" button to create a new property or class, and use that from now on.</br>
-    If the property is aligned to Wikidata, the Wikidata property will be imported.</br>
     Be careful creating new items, you might create duplicates.</br>
     You can also import labels and descriptions from Wikidata to the existing Wikibase entity proposed on the button.</p>
 {% for key in configdata %}
