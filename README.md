@@ -103,6 +103,6 @@ This is how the Zotero export page looks like:
 
 ![Exportpage_screenshot](static/exportpage.png "Exportpage Screenshot")
 
-This is how the Wikidata item import function looks like:
+This is how the Wikidata entity import function looks like:
 
 ![wdimport_screenshot](static/wdimportpage.png "WD import screenshot")
