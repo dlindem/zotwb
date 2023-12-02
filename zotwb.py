@@ -153,14 +153,14 @@ def zotero_export():
 def basic_config():
     with open(f"profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
         config_private = json.load(jsonfile)
-        starpwd = ""
-        if config_private['wb_bot_pwd']:
-            while len(starpwd) < len(config_private['wb_bot_pwd']):
-                starpwd += "*"
-        starkey = ""
-        if config_private['zotero_api_key']:
-            while len(starkey) < len(config_private['zotero_api_key']):
-                starkey += "*"
+    starpwd = ""
+    if config_private['wb_bot_pwd']:
+        while len(starpwd) < len(config_private['wb_bot_pwd']):
+            starpwd += "*"
+    starkey = ""
+    if config_private['zotero_api_key']:
+        while len(starkey) < len(config_private['zotero_api_key']):
+            starkey += "*"
     configdata = botconfig.load_mapping('config')
     properties = botconfig.load_mapping('properties')
     if request.method == 'GET':
@@ -170,9 +170,13 @@ def basic_config():
 
     elif request.method == 'POST':
         if request.form:
+
             regexpattern = None
             regexprop = None
             for key in request.form:
+                # print(f"Form key is {key}, value is {request.form.get(key)}")
+                if request.form.get(key) == '':
+                    continue
                 if key.startswith('private_'):
                     command = key.replace('private_', '')
                     config_private[command] = request.form.get(key)
@@ -243,7 +247,7 @@ def basic_config():
             message = f"Successfully performed operation: '{command}'."
             msgcolor = "background:limegreen"
         botconfig.dump_mapping(configdata)
-        return render_template("basic_config.html", profile=profile, wb_username=config_private['wb_bot_user'], wb_password=star_pwd, zotero_api_key=starkey, configdata=configdata['mapping'], message=message, msgcolor=msgcolor)
+        return render_template("basic_config.html", profile=profile, wb_username=config_private['wb_bot_user'], wb_password=starpwd, zotero_api_key=starkey, configdata=configdata['mapping'], message=message, msgcolor=msgcolor)
 
 @app.route('/zoterofields/<itemtype>', methods= ['GET', 'POST'])
 def map_zoterofield(itemtype):
