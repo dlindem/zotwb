@@ -3,6 +3,8 @@
  
 This work is being supported by a [WMF Rapid Grant](https://meta.wikimedia.org/wiki/Grants:Programs/Wikimedia_Community_Fund/Rapid_Fund/Zotero_to_Wikibase_bibliographical_data_export_app_(ID:_22209513)).
 
+See a short video demo [here](https://vimeo.com/890641063).
+
 This tool exports records in a Zotero group library to a custom Wikibase, prepares datasets to be sent to OpenRefine, and feeds OpenRefine reconciliaton results back to the Wikibase. Wikidata is envolved in the entity reconciliation.
 
 It contains a range of functions for interaction with any Zotero group library and any Wikibase instance; some of them are potentially useful for any Zotero groups user (item batch edit, tag delete), and for any Wikibase user (Wikidata properties alignment, Import (cloning) of Wikidata entities).
