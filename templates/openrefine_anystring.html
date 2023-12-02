@@ -1,11 +1,11 @@
 <!doctype html>
 <html>
 <head>
-<link href="static/favicon.ico" rel="shortcut icon"/>
+<link href="/static/favicon.ico" rel="shortcut icon"/>
     <title>String reconciliation - ZotWb</title>
 </head>
-<body>
-<h1><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> ZotWb Open Refine reconciliation of any string value</h1>
+<body style="background-color:#eceff1">
+<h1><img src="/static/zotwb_logo.png" alt="ZotWb logo" style="height:40px" /> ZotWb Open Refine reconciliation of any string value</h1>
 {% for message in messages %}<p style = "{{ msgcolor }}">{{ message|safe }}<br>{% endfor %}
 <p> <small>(Back to <a href="/">start page</a>)</small></p>
 <p>On this page, you can produce CSV for loading into Open Refine, and import reconciliation result CSV produced in Open Refine back to Wikibase.<br>String values are exported, and the linked items are imported back.</p>
