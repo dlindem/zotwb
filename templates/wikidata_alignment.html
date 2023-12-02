@@ -8,9 +8,11 @@
 <h1><img src="/static/zotwb_logo.png" alt="ZotWb logo" style="height:40px" /> ZotWb Wikibase-Wikidata mapping configuration</h1>
 {% if message %}<p style = "{{ msgcolor }}">{{ message }}<br>{% endif %}
    <p> <small>(Back to <a href="/">start page</a>)</small></p>
-Prefix 'wb:' your <a href="{{ wikibase_url }}" target="_blank">{{ wikibase_name }} Wikibase</a>. Prefix 'wd:' <a href="https://www.wikidata.org" target="_blank">Wikidata</a>'.</br>
-Update the mapping of your own and Wikidata properties. Datatype has to be the same.</br>
-Have there been changes in the properties on your Wikibase not caused by this tool? <small> 'mapping/properties.json' was last modified on {{ propcachedate }}.</small></br>
+Prefix 'wb:' <a href="{{ wikibase_url }}" target="_blank">{{ wikibase_name }} Wikibase</a>.<br>Prefix 'wd:' <a href="https://www.wikidata.org" target="_blank">Wikidata</a>.</br>
+</p><p>
+Update the mapping of your own and Wikidata properties. Datatype has to be the same.<br>
+Have there been changes in the properties on your Wikibase not caused by this tool? <br><small> 'mapping/properties.json' was last modified on {{ propcachedate }}.</small></br>
+</p><p>
 <form style="display: inline;" method="POST">
     <button name="update_cache" type="submit">Update mapping file</button>
 </form> to update 'mappings/properties.json' with a SPARQL query for {{ wikibase_name }} properties.</br>
