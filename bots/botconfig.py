@@ -1,12 +1,16 @@
 import json
 import os
-# botpath = os.path.realpath('bots')
+
 # load active profile
 with open("profiles.json", 'r', encoding='utf-8') as file:
     profile = json.load(file)['last_profile']
+    if profile == '':
+        print('profiles.json file is broken: No entry for "last profile". Will fall back to null template.')
+        profile = "profile.template"
 
 # check if config_private exists for this profile
 if not os.path.exists(f"profiles/{profile}/config_private.json"):
+    print(f"config_private.json file is missing for profile named '{profile}': Will fall back to null template.")
     with open(f"profiles/{profile}/config_private.json", 'w', encoding='utf-8') as file:
         json.dump({"wb_bot_user": None, "wb_bot_pwd": None, "zotero_api_key": None}, file)
 
