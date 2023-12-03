@@ -15,7 +15,7 @@ The profile active at the moment is named <b>{{ profile }}</b></p>
 <ul>{% for prof in other_profiles %}
 <li>
 <form style="display: inline;" method="POST">
-<b>{{ prof }}</b> &#10145; <button style="display: inline;" name="{{ prof }}" type="submit">Load this profile</button>
+<b>{{ prof }}</b> &#10145; <button style="display: inline;" name="activate_{{ prof }}" type="submit">Load this profile</button>
 </form></li>
 {% endfor %}</ul>
 {% endif %}
