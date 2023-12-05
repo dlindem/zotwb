@@ -102,7 +102,7 @@ def batchimport_wikidata(form, config={}, properties={}):
     wd_to_wb = {}
     for row in bindings:
         wd_to_wb[row['wd_entity']['value'].replace('http://www.wikidata.org/entity/','')] = row['wb_entity']['value'].replace(config['mapping']['wikibase_entity_ns'],'')
-    import_entities = re.findall(r'Q[0-9]+', form.get('qids'))
+    import_entities = re.findall(r'[QP][0-9]+', form.get('qids'))
     if not import_entities:
         return {'messages':["No entities to import."], 'msgcolor': 'background:orangered'}
     imports = {}
@@ -195,16 +195,15 @@ def import_wikidata_entity(wdid, wbid=False, process_labels=True, process_aliase
         wb_existing_entity = xwbi.wbi.property.get(entity_id=wbid)
 
     # process labels
+    existing_preflabel = None
     if process_labels:
         for lang in languages_to_consider:
             if wbid:
                 existing_preflabel = wb_existing_entity.labels.get(lang)
-            else:
-                existing_preflabel = None
             if lang in importentityjson['labels']:
                 print(importentityjson['labels'][lang]['value'])
                 if existing_preflabel and len(existing_preflabel) > 0:
-                    if importentityjson['labels'][lang]['value'] != existing_preflabel:
+                    if importentityjson['labels'][lang]['value'].lower() != existing_preflabel.lower():
                         wbentityjson['aliases'].append({'lang': lang, 'value': importentityjson['labels'][lang]['value']})
                 else:
                     wbentityjson['labels'].append({'lang': lang, 'value': importentityjson['labels'][lang]['value']})
@@ -212,16 +211,18 @@ def import_wikidata_entity(wdid, wbid=False, process_labels=True, process_aliase
     if process_aliases:
         for lang in languages_to_consider:
             if wbid:
-                existing_aliases = wb_existing_entity.aliases.get(lang)
+                raw_aliases = wb_existing_entity.aliases.get(lang)
+                for alias in raw_aliases:
+                    existing_aliases.append(alias.lower())
                 if not existing_aliases:
                     existing_aliases = []
-                for alias in existing_aliases:
+                for alias in raw_aliases:
                     wbentityjson['aliases'].append({'lang': lang, 'value': alias.value})
             else:
                 existing_aliases = []
             if lang in importentityjson['aliases']:
                 for entry in importentityjson['aliases'][lang]:
-                    if entry['value'] not in existing_aliases:
+                    if entry['value'].lower() not in existing_aliases and entry['value'].lower() != existing_preflabel:
                         wbentityjson['aliases'].append({'lang': lang, 'value': entry['value']})
     # process descriptions
     if process_descriptions:
