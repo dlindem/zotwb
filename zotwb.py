@@ -66,6 +66,7 @@ def change_profile():
                         json.dump({'last_profile':profile,'profiles_list':[profiles['last_profile']]+other_profiles}, file, indent=2)
                     messages.append(message + ' Quit and restart ZotWb and go to <a href="/">ZotWb start page</a>.')
                     msgcolor="background:limegreen"
+
             return render_template("change_profile.html", other_profiles=other_profiles, profile=profiles['last_profile'],
                                messages=messages, msgcolor=msgcolor)
 
@@ -217,7 +218,7 @@ def basic_config():
                         else:
                             classqid = None
                         if 'wikidata' in configdata['mapping'][configitem]:
-                            newentity_id = zotwb_functions.import_wikidata_entity(configdata['mapping'][configitem]['wikidata'], wbid=False, classqid=classqid, config=configdata, properties=properties)
+                            newentity_id = zotwb_functions.import_wikidata_entity(configdata['mapping'][configitem]['wikidata'], wbid=False, classqid=classqid, config=configdata, properties=properties)['id']
 
                         else:
                             if configitem.startswith("class"):
@@ -277,7 +278,7 @@ def map_zoterofield(itemtype):
                             zotero_types_wd['mapping'][itemtype], wbid=zoteromapping['mapping'][itemtype]['bibtypeqid'], classqid=configdata['mapping']['class_bibitem_type']['wikibase'], config=configdata, properties=properties)
                     elif key.endswith('_create'):  # user has pressed 'create new'
                         fieldname = key.replace('_create', '')
-                        newentity_id = zotwb_functions.import_wikidata_entity(zotero_types_wd['mapping'][itemtype], wbid=False, classqid=configdata['mapping']['class_bibitem_type']['wikibase'], config=configdata, properties=properties)
+                        newentity_id = zotwb_functions.import_wikidata_entity(zotero_types_wd['mapping'][itemtype], wbid=False, classqid=configdata['mapping']['class_bibitem_type']['wikibase'], config=configdata, properties=properties)['id']
                         zoteromapping['mapping'][itemtype]['bibtypeqid'] = newentity_id
                     else: # user has manually chosen a bibtypeqid value
                         zoteromapping['mapping'][itemtype]['bibtypeqid'] = request.form.get(key)
@@ -301,7 +302,7 @@ def map_zoterofield(itemtype):
                         fieldname = command.replace('_create_from_wd', '')
                         newentity_id = zotwb_functions.import_wikidata_entity(
                             wikidata_suggestions[fieldname],
-                            wbid=False, config=configdata, properties=properties)
+                            wbid=False, config=configdata, properties=properties)['id']
                         properties['mapping'][newentity_id] = {
                             "enlabel": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['name'],
                             "type": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype'],
@@ -568,11 +569,14 @@ def little_helpers():
                                datafields=datafields, batchlen=batchlen,
                                messages=messages, msgcolor=msgcolor)
 
+
 @app.route('/wikidata_import', methods= ['GET', 'POST'])
 def wikidata_import():
+    imported_stubs = None
     configdata = botconfig.load_mapping('config')
     properties = botconfig.load_mapping('properties')
-    allowed_datatypes = ['ExternalId', 'String', 'Url']
+    allowed_datatypes = ['ExternalId', 'String', 'Url', 'WikibaseItem']
+
     # zoteromapping = botconfig.load_mapping('zotero')
     messages = []
     msgcolor = "background:limegreen"
@@ -580,16 +584,22 @@ def wikidata_import():
         return render_template("wikidata_import.html", wikibase_name=configdata['mapping']['wikibase_name'],
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                instanceof=configdata['mapping']['prop_instanceof']['wikibase'],
-                               messages=messages, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes)
+                               messages=messages, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes,
+                               imported_stubs=imported_stubs)
     if request.method == "POST":
         if request.form:
             action = zotwb_functions.batchimport_wikidata(request.form, config=configdata, properties=properties)
             messages = action['messages']
             msgcolor = action['msgcolor']
+            print(str(action['imported_stubs']))
+            imported_stubs = ', '.join(action['imported_stubs'])
+            print(f"Imported as stubs because an imported item pointed to it in an item statement: {imported_stubs}")
         return render_template("wikidata_import.html", wikibase_name=configdata['mapping']['wikibase_name'],
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                instanceof=configdata['mapping']['prop_instanceof']['wikibase'],
-                               messages=messages, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes)
+                               messages=messages, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes,
+                               imported_stubs=imported_stubs)
+
 
 
 if __name__ == '__main__':
