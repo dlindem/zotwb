@@ -163,6 +163,7 @@ def batchimport_wikidata(form, config={}, properties={}):
                                            config=config, properties=properties)
         imported_stubs += import_action['imported_stubs']
         wb_entity = import_action['id']
+        wd_to_wb[wd_entity] = wb_entity
         if extra_statement:
             xwbi.itemwrite({'qid': wb_entity, 'statements':[{'prop_nr': extra_statement['prop_nr'], 'type':'WikibaseItem', 'value':extra_statement['value']}]})
         messages.append(f"Successfully created or updated <a href=\"{config['mapping']['wikibase_entity_ns']}{wb_entity}\" target=\"_blank\">wb:{wb_entity}</a> importing <a href=\"http://www.wikidata.org/entity/{wd_entity}\" target=\"_blank\">wd:{wd_entity}</a>.")
