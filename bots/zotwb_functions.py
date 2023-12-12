@@ -203,14 +203,14 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
     if process_labels:
         for lang in languages_to_consider:
             if wbid:
-                existing_preflabel = wb_existing_entity.labels.get(lang)
+                existing_preflabel = str(wb_existing_entity.labels.get(lang))
             if lang in importentityjson['labels']:
-                print(importentityjson['labels'][lang]['value'])
+                importlabel = importentityjson['labels'][lang]['value']
                 if existing_preflabel and len(existing_preflabel) > 0:
-                    if importentityjson['labels'][lang]['value'].lower() != existing_preflabel.lower():
-                        wbentityjson['aliases'].append({'lang': lang, 'value': importentityjson['labels'][lang]['value']})
+                    if importlabel.lower() != existing_preflabel.lower():
+                        wbentityjson['aliases'].append({'lang': lang, 'value': importlabel})
                 else:
-                    wbentityjson['labels'].append({'lang': lang, 'value': importentityjson['labels'][lang]['value']})
+                    wbentityjson['labels'].append({'lang': lang, 'value': importlabel})
     # process aliases
     if process_aliases:
         for lang in languages_to_consider:
