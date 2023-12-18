@@ -106,12 +106,6 @@ def batchimport_wikidata(form, config={}, properties={}):
     import_entities = re.findall(r'[QP][0-9]+', form.get('qids'))
     if not import_entities:
         return {'messages':["No entities to import."], 'msgcolor': 'background:orangered'}
-    imports = {}
-    for import_entity in import_entities:
-        if import_entity in wd_to_wb:
-            imports[import_entity] = wd_to_wb[import_entity] # existing entity
-        else:
-            imports[import_entity] = False # new wikibase entity to create
     extra_statement = None
     if 'statement_prop' in form and 'statement_value' in form:
         if form.get('statement_prop').strip().startswith('P') and form.get('statement_value').startswith('Q'):
@@ -151,9 +145,17 @@ def batchimport_wikidata(form, config={}, properties={}):
         if re.search(r'P[0-9]', key):
             wbprops_to_import.append(key)
 
+    seen_wd_entities=[]
     messages = []
-    for wd_entity in imports:
-        import_action = import_wikidata_entity(wd_entity, wd_to_wb=wd_to_wb, wbid=imports[wd_entity],
+    for wd_entity in import_entities:
+        if wd_entity in seen_wd_entities:
+            print(f"Skipped importing wd:{wd_entity} - has been imported before in this run.")
+            continue
+        if wd_entity in wd_to_wb:
+            wb_entity = wd_to_wb[wd_entity]  # existing entity
+        else:
+            wb_entity = False  # new wikibase entity to create
+        import_action = import_wikidata_entity(wd_entity, wd_to_wb=wd_to_wb, wbid=wb_entity,
                                            process_labels=process_labels,
                                            process_aliases=process_aliases,
                                            process_descriptions=process_descriptions,
@@ -161,9 +163,11 @@ def batchimport_wikidata(form, config={}, properties={}):
                                            wbprops_to_import=wbprops_to_import,
                                            classqid=classqid,
                                            config=config, properties=properties)
+        seen_wd_entities.append(wd_entity)
         imported_stubs += import_action['imported_stubs']
         wb_entity = import_action['id']
-        wd_to_wb[wd_entity] = wb_entity
+        wd_to_wb = import_action['wd_to_wb']
+        print(f"Successfully imported wd:{wd_entity} to wb:{wb_entity}.")
         if extra_statement:
             xwbi.itemwrite({'qid': wb_entity, 'statements':[{'prop_nr': extra_statement['prop_nr'], 'type':'WikibaseItem', 'value':extra_statement['value']}]})
         messages.append(f"Successfully created or updated <a href=\"{config['mapping']['wikibase_entity_ns']}{wb_entity}\" target=\"_blank\">wb:{wb_entity}</a> importing <a href=\"http://www.wikidata.org/entity/{wd_entity}\" target=\"_blank\">wd:{wd_entity}</a>.")
@@ -172,6 +176,8 @@ def batchimport_wikidata(form, config={}, properties={}):
 
 
 def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, process_aliases=True, process_descriptions=True, process_sitelinks=False, wbprops_to_import=[], classqid=None, config=None, properties=None):
+    if wdid in wd_to_wb:
+        wbid=wd_to_wb[wdid]
     imported_stubs = []
     if not config:
         config = botconfig.load_mapping('config')
@@ -247,6 +253,7 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
                         import_action = import_wikidata_entity(claimval['id'], wbid=False)  # property target object to be imported without statements
                         targetqid = import_action['id']
                         imported_stubs.append(claimval['id'])
+                        wd_to_wb[claimval['id']] = targetqid
                     else:
                         targetqid = wd_to_wb[claimval['id']]
                         print('Will re-use existing item as property value: wd:' + claimval[
@@ -274,7 +281,7 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
         result = xwbi.itemwrite(wbentityjson, entitytype="Property", datatype=importentityjson['datatype'])
     else:
         result = xwbi.itemwrite(wbentityjson, entitytype="Item")
-    return {'id':result, 'imported_stubs': imported_stubs}
+    return {'id':result, 'imported_stubs': imported_stubs, 'wd_to_wb':wd_to_wb}
 
 def write_property(prop_object):
     while True:
