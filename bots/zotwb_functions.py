@@ -246,7 +246,7 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
             for claim in importentityjson['claims'][wdprop]:
                 claimval = claim['mainsnak']['datavalue']['value']
                 if properties['mapping'][wbprop]['type'] == "WikibaseItem":
-                    if claimval['id'] not in wd_to_wb:
+                    if claimval['id'] and claimval['id'] not in wd_to_wb:
                         print(
                             'Will create a new item for ' + wdprop + ' (' + wbprop + ') object property value: ' +
                             claimval['id'])
@@ -256,8 +256,7 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
                         wd_to_wb[claimval['id']] = targetqid
                     else:
                         targetqid = wd_to_wb[claimval['id']]
-                        print('Will re-use existing item as property value: wd:' + claimval[
-                            'id'] + ' > wb:' + targetqid)
+                        print('Will re-use existing item as property value: wd:' + claimval['id'] + ' > wb:' + targetqid)
                     statement = {'prop_nr': wbprop, 'type': 'WikibaseItem', 'value': targetqid}
                 else:
                     statement = {'prop_nr': wbprop, 'type': properties['mapping'][wbprop]['type'], 'value': claimval,
@@ -281,6 +280,7 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
         result = xwbi.itemwrite(wbentityjson, entitytype="Property", datatype=importentityjson['datatype'])
     else:
         result = xwbi.itemwrite(wbentityjson, entitytype="Item")
+    wd_to_wb[wdid] = result
     return {'id':result, 'imported_stubs': imported_stubs, 'wd_to_wb':wd_to_wb}
 
 def write_property(prop_object):
