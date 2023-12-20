@@ -56,8 +56,8 @@ def rewrite_properties_mapping():
 
     query = """select ?order ?prop ?propLabel ?datatype ?wikidata_prop ?formatter_url ?formatter_uri (group_concat(str(?equiv)) as ?equivs) 
     where {  ?prop rdf:type <http://wikiba.se/ontology#Property> ;
-             wikibase:propertyType ?dtype ;
-             rdfs:label ?propLabel . filter (lang(?propLabel)="en")
+             wikibase:propertyType ?dtype .
+             optional {?prop rdfs:label ?propLabel . filter (lang(?propLabel)="en")}
              bind (strafter(str(?dtype),"http://wikiba.se/ontology#") as ?datatype)
       OPTIONAL {?prop xdp:""" + config['mapping']['prop_wikidata_entity']['wikibase'] + """ ?wikidata_prop.} """
     if config['mapping']['prop_formatterurl']['wikibase']:
@@ -75,8 +75,12 @@ def rewrite_properties_mapping():
     count = 0
     for item in bindings:
         prop_nr = item['prop']['value'].replace(config['mapping']['wikibase_entity_ns'], "")
+        if 'propLabel' in item:
+            enlabel = item['propLabel']['value']
+        else:
+            enlabel = prop_nr
         properties['mapping'][prop_nr] = {
-            'enlabel': item['propLabel']['value'],
+            'enlabel': enlabel,
             'type': item['datatype']['value'],
             'wdprop': item['wikidata_prop']['value'] if 'wikidata_prop' in item else None
         }
@@ -216,6 +220,7 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
                 if existing_preflabel and len(existing_preflabel) > 0:
                     if importlabel.lower() != existing_preflabel.lower():
                         wbentityjson['aliases'].append({'lang': lang, 'value': importlabel})
+                        # wikidata label becomes wikibase alias if different to existing wikibase label
                 else:
                     wbentityjson['labels'].append({'lang': lang, 'value': importlabel})
     # process aliases
@@ -246,7 +251,9 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
             for claim in importentityjson['claims'][wdprop]:
                 claimval = claim['mainsnak']['datavalue']['value']
                 if properties['mapping'][wbprop]['type'] == "WikibaseItem":
-                    if claimval['id'] and claimval['id'] not in wd_to_wb:
+                    if not claimval['id']:
+                        continue
+                    if claimval['id'] not in wd_to_wb:
                         print(
                             'Will create a new item for ' + wdprop + ' (' + wbprop + ') object property value: ' +
                             claimval['id'])
@@ -256,7 +263,7 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
                         wd_to_wb[claimval['id']] = targetqid
                     else:
                         targetqid = wd_to_wb[claimval['id']]
-                        print('Will re-use existing item as property value: wd:' + claimval['id'] + ' > wb:' + targetqid)
+                        print(f"Will re-use existing item as property value: wd:{claimval['id']} > wb:{targetqid}")
                     statement = {'prop_nr': wbprop, 'type': 'WikibaseItem', 'value': targetqid}
                 else:
                     statement = {'prop_nr': wbprop, 'type': properties['mapping'][wbprop]['type'], 'value': claimval,

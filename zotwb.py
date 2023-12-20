@@ -395,10 +395,20 @@ def wikidata_alignment():
                 message = f"Operation sucessful. Operation name was '{key}'."
                 msgcolor = "background:limegreen"
                 if key == "update_cache":
-
                     zotwb_functions.rewrite_properties_mapping()
                     properties = botconfig.load_mapping('properties')
                     message = f"Properties data cache update sucessful."
+                elif key.startswith("redo_"):
+                    wbprop = key.replace("redo_","")
+                    wdprop = properties['mapping'][wbprop]['wdprop']
+                    zotwb_functions.import_wikidata_entity(wdprop,
+                        wbid=wbprop, process_labels=True, process_aliases=True,
+                        process_descriptions=True, config=configdata, properties=properties)
+                elif key.startswith("map_"):
+                    wbprop = key.replace("redo_", "")
+                    wdprop = request.form.get(key)
+                    properties['mapping'][wbprop]['wdprop'] = wdprop
+                    botconfig.dump_mapping('properties')
             return render_template("wikidata_alignment.html", wikibase_url=configdata['mapping']['wikibase_url'],
                                    wikibase_name=configdata['mapping']['wikibase_name'],
                                    wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
