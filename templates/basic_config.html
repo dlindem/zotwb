@@ -109,7 +109,7 @@ For example, OCLC identifiers from <a href="https://worldcat.org"> target="_blan
     <button name= {{ key + '_create' }} type="submit">&#10071; Create new &#10071;</button>
 </form>{% if configdata[key]['wikidata'] and configdata[key]['wikibase'] %} or
 <form style="display: inline;" method="POST">
-    <button name= {{ key + '_redo' }} type="submit">Import wd:{{ configdata[key]['wikidata'] }} to wb:{{ configdata[key]['wikibase'] }}</button>
+    <button name= {{ key + '_redo' }} value="{{ configdata[key]['wikidata'] }}" type="submit">Import wd:{{ configdata[key]['wikidata'] }} to wb:{{ configdata[key]['wikibase'] }}</button>
 </form>
 <small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ configdata[key]['wikidata'] }}" target="_blank">{{ configdata[key]['wikidata'] }}</a></small>{% endif %}
 {% if configdata[key]['type'] %} <small><i>Property datatype: {{ configdata[key]['type'] }}</i></small>{% endif %}
