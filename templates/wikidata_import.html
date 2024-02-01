@@ -9,22 +9,21 @@
 {% for message in messages %}<p style = "{{ msgcolor }}">{{ message|safe }}<p>{% endfor %}
    <p> <small>(Back to <a href="/">start page</a>)</small></p>
 <p>The function on this page allows you to import items and properties from Wikidata.</br>
-<small>This is currently limited to string-like values (labels, aliases and descriptions, and statements with datatypes string, url, externalid, Wikipedia sitelinks).</br>
+<small>This is currently limited to WikibaseItem as value, and string-like values (labels, aliases and descriptions, and statements with datatypes string, url, externalid, Wikipedia sitelinks).</br>
     The execution takes time, because the Wikibase-Wikidata mapping caché is updated; follow the process in the terminal.<br/>
 Labels, aliases and descriptions are imported in the languages specified on the basic configuration page.<br/>
 You can import values of properties aligned to Wikidata (see Wikidata alignment page).<br/>
 Existing labels and statements will not be replaced (wikidata's are added); existing descriptions will be overwritten.</small></p>
 <p>
+{% if imported_stubs %}
+<p style="background:limegreen">Now you can recursively create and/or import statements describing the items that have been just created as stubs (new items with a wikidata link only), because they were property values of item statements in the previous run, and hadn't existed before on your Wikibase. The newly imported Wikidata items are the following:</p>
+{% endif %}
 <form method="POST">
      <button type="submit"><b>Submit</b></button>
     </br></br>
     <label for="content">Wikidata ID to import</label>
         <br>
-        <textarea name="qids"
-                  placeholder="Q- or P- ids separated by space, commma or newline"
-                  rows="6"
-                  cols="90"
-                  >{{ request.form['content'] }}</textarea>
+        <textarea name="qids" placeholder="Q- or P- ids separated by space, commma or newline" rows="6" cols="90">{% if imported_stubs %}{{ imported_stubs }}{% endif %}</textarea>
         <br><br>
         <input type="checkbox" name="labels_check" value="check"/> Import labels
     <br>
