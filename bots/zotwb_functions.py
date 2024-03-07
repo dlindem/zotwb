@@ -52,6 +52,7 @@ def build_depconfig(configdata):
 
 def rewrite_properties_mapping():
     properties = botconfig.load_mapping('properties')
+    properties['mapping'] = {}
     config = botconfig.load_mapping('config')
 
     query = """select ?order ?prop ?propLabel ?datatype ?wikidata_prop ?formatter_url ?formatter_uri (group_concat(str(?equiv)) as ?equivs) 
@@ -70,7 +71,7 @@ def rewrite_properties_mapping():
     query += '} group by ?order ?prop ?propLabel ?datatype ?wikidata_prop ?formatter_url ?formatter_uri ?equivs order by ?order'
 
     print("Waiting for SPARQL...")
-    bindings = xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config['mapping']['wikibase_sparql_prefixes'])['results']['bindings']
+    bindings = xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config['mapping']['wikibase_sparql_prefixes'], endpoint=config['mapping']['wikibase_sparql_endpoint'])['results']['bindings']
     print('Found ' + str(len(bindings)) + ' results to process.\n')
     count = 0
     for item in bindings:

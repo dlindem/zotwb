@@ -812,7 +812,7 @@
       "iso1": "de",
       "wikilang": "de",
       "wdqid": "Q188",
-      "wbqid": "Q214"
+      "wbqid": null
     },
     "din": {
       "enlabel": "Dinka",
@@ -903,7 +903,7 @@
       "iso1": "en",
       "wikilang": "en",
       "wdqid": "Q1860",
-      "wbqid": "Q208"
+      "wbqid": null
     },
     "enm": {
       "enlabel": "Middle English",
@@ -945,7 +945,7 @@
       "iso1": "eu",
       "wikilang": "eu",
       "wdqid": "Q8752",
-      "wbqid": "Q207"
+      "wbqid": null
     },
     "ewe": {
       "enlabel": "Ewe",
@@ -1029,7 +1029,7 @@
       "iso1": "fr",
       "wikilang": "fr",
       "wdqid": "Q150",
-      "wbqid": "Q206"
+      "wbqid": null
     },
     "frc": {
       "enlabel": "Louisiana French",
@@ -1890,7 +1890,7 @@
       "iso1": "la",
       "wikilang": "la",
       "wdqid": "Q397",
-      "wbqid": "Q225"
+      "wbqid": null
     },
     "lav": {
       "enlabel": "Latvian",
@@ -2856,7 +2856,7 @@
       "iso1": "ru",
       "wikilang": "ru",
       "wdqid": "Q7737",
-      "wbqid": "Q277"
+      "wbqid": null
     },
     "rwr": {
       "enlabel": "Marwari",
@@ -3136,7 +3136,7 @@
       "iso1": "es",
       "wikilang": "es",
       "wdqid": "Q1321",
-      "wbqid": "Q205"
+      "wbqid": null
     },
     "sqi": {
       "enlabel": "Albanian",
