@@ -7,6 +7,8 @@ from datetime import datetime
 try:
     with open('profiles.json', 'r', encoding='utf-8') as file:
         profile = json.load(file)['last_profile']
+        if profile == "":
+            profile = "profile.template"
 except OSError:
     profile = "profile.template"
     with open('profiles.json', 'w', encoding='utf-8') as file:
@@ -77,10 +79,17 @@ def zotero_export():
     configdata = botconfig.load_mapping('config')
     zoteromapping = botconfig.load_mapping('zotero')
     language_literals = botconfig.load_mapping('language-literals')
-    with open(f"profiles/{profile}/data/zoteroexport.json", 'r', encoding='utf-8') as jsonfile:
-        zoterodata = json.load(jsonfile)
-        zotero_check_messages = zotwb_functions.check_export(zoterodata=zoterodata, zoteromapping=zoteromapping)
-        language_check_messages = zotwb_functions.check_language(zoterodata=zoterodata)
+    if os.path.isfile(f"profiles/{profile}/data/zoteroexport.json"):
+        with open(f"profiles/{profile}/data/zoteroexport.json", 'r', encoding='utf-8') as jsonfile:
+            zoterodata = json.load(jsonfile)
+        zotero_when = datetime.utcfromtimestamp(os.path.getmtime(
+                                   f"profiles/{profile}/data/zoteroexport.json")).strftime(
+            '%Y-%m-%d at %H:%M:%S UTC')
+    else:
+        zoterodata = []
+        zotero_when = None
+    zotero_check_messages = zotwb_functions.check_export(zoterodata=zoterodata, zoteromapping=zoteromapping)
+    language_check_messages = zotwb_functions.check_language(zoterodata=zoterodata)
     if request.method == 'GET':
 
         return render_template("zotero_export.html", wikibase_url=configdata['mapping']['wikibase_url'],
@@ -92,9 +101,7 @@ def zotero_export():
                                zotero_check_messages=zotero_check_messages,
                                language_check_messages=language_check_messages,
                                zotero_len=str(len(zoterodata)),
-                               zotero_when=datetime.utcfromtimestamp(os.path.getmtime(
-                                   f"profiles/{profile}/data/zoteroexport.json")).strftime(
-            '%Y-%m-%d at %H:%M:%S UTC'),
+                               zotero_when=zotero_when,
                                export_tag=configdata['mapping']['zotero_export_tag'],
                                onwiki_tag=configdata['mapping']['zotero_on_wikibase_tag'],
                                messages=[]
@@ -139,9 +146,7 @@ def zotero_export():
                                zotero_check_messages=zotero_check_messages,
                                language_check_messages=language_check_messages,
                                zotero_len=str(len(zoterodata)),
-                               zotero_when=datetime.utcfromtimestamp(os.path.getmtime(
-                                   f"profiles/{profile}/data/zoteroexport.json")).strftime(
-                                '%Y-%m-%d at %H:%M:%S UTC'),
+                               zotero_when=zotero_when,
                                export_tag=configdata['mapping']['zotero_export_tag'],
                                onwiki_tag=configdata['mapping']['zotero_on_wikibase_tag'],
                                messages=messages, msgcolor=msgcolor
@@ -175,7 +180,7 @@ def basic_config():
             regexpattern = None
             regexprop = None
             for key in request.form:
-                # print(f"Form key is {key}, value is {request.form.get(key)}")
+                print(f"Form key is {key}, value is {request.form.get(key)}")
                 if request.form.get(key) == '':
                     continue
                 command = key
@@ -214,6 +219,7 @@ def basic_config():
                             configdata['mapping'][configitem]['wikidata'], wbid=configdata['mapping'][configitem]['wikibase'], process_labels=True, process_aliases=True, process_descriptions=True, classqid=classqid, config=configdata, properties=properties)
                     elif key.endswith('_create'):  # user has pressed 'create new'
                         configitem = key.replace('_create','')
+                        command = key
                         if configitem.startswith("class") and configitem != "class_ontology_class":
                             classqid = configdata['mapping']['class_ontology_class']['wikibase']
                         else:
@@ -223,11 +229,18 @@ def basic_config():
 
                         else:
                             if configitem.startswith("class"):
-                                newitemdata = {'qid':False, 'labels':[{'lang':'en', 'value':configdata['mapping'][configitem]['name']}],
-                                                'statements':[]}
+
                                 if classqid:
-                                    newitemdata['statements'].append({'type':'WikibaseItem','prop_nr':configdata['mapping']['prop_instanceof']['wikibase'],'value':classqid})
-                                    newentity_id = zotwb_functions.xwbi.itemwrite(newitemdata)
+                                    newitemdata = {'qid': False, 'labels': [
+                                        {'lang': 'en', 'value': configdata['mapping'][configitem]['name']}],
+                                                   'statements': [{'type':'WikibaseItem','prop_nr':configdata['mapping']['prop_instanceof']['wikibase'],'value':classqid}]}
+
+                                else:
+                                    newitemdata = {'qid': False, 'labels': [
+                                        {'lang': 'en', 'value': f"{configdata['mapping']['wikibase_name']} Ontology Class"}],
+                                                   'statements': []}
+
+                                newentity_id = zotwb_functions.xwbi.itemwrite(newitemdata)
                             elif configitem.startswith("prop"):
                                 newprop = zotwb_functions.xwbi.wbi.property.new(datatype=zotwb_functions.botconfig.datatypes_mapping[configdata['mapping'][configitem]['type']])
                                 newprop.labels.set('en', configdata['mapping'][configitem]['name'])
@@ -302,19 +315,19 @@ def map_zoterofield(itemtype):
                     elif key.endswith('_create_from_wd'):  # user has pressed 'create new'
                         fieldname = command.replace('_create_from_wd', '')
                         newentity_id = zotwb_functions.import_wikidata_entity(
-                            wikidata_suggestions[fieldname],
+                            wikidata_suggestions['mapping'][fieldname],
                             wbid=False, config=configdata, properties=properties)['id']
                         properties['mapping'][newentity_id] = {
                             "enlabel": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['name'],
                             "type": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype'],
-                            "wdprop": wikidata_suggestions[fieldname]
+                            "wdprop": wikidata_suggestions['mapping'][fieldname]
                         }
                         botconfig.dump_mapping(properties)
                         zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop'] = newentity_id
                         messages = [
-                            f"Successfully imported wd:{wikidata_suggestions[fieldname]} to the newly created wb:{newentity_id}."]
+                            f"Successfully imported wd:{wikidata_suggestions['mapping'][fieldname]} to the newly created wb:{newentity_id}."]
                         if itemtype == "all_types":
-                            propagation = zotwb_functions.propagate_mapping(fieldtype=fieldtype, fieldname=fieldname,
+                            propagation = zotwb_functions.propagate_mapping(zoteromapping=zoteromapping, fieldtype=fieldtype, fieldname=fieldname,
                                                                             wbprop=newentity_id)
                             zoteromapping['mapping'] = propagation['mapping']
                             messages += propagation['messages']
@@ -610,6 +623,249 @@ def wikidata_import():
                                instanceof=configdata['mapping']['prop_instanceof']['wikibase'],
                                messages=messages, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes,
                                imported_stubs=imported_stubs)
+
+@app.route('/eusterm', methods= ['GET', 'POST'])
+def eusterm():
+    from bots import eusterm_functions
+    schemeqid = None
+    configdata = botconfig.load_mapping('config')
+    messages = []
+    msgcolor = "background:limegreen"
+    if request.method == 'GET':
+        return render_template("eusterm.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                               schemeqid=schemeqid,
+                               messages=messages, msgcolor=msgcolor,)
+    if request.method == "POST":
+        if request.form:
+            if "p13_to_eudef" in request.form:
+                action = eusterm_functions.p13_to_eudef(config=configdata, schemeqid=request.form.get("p13_to_eudef"))
+            elif "p8_to_eulabel" in request.form:
+                action = eusterm_functions.p8_to_eulabel(config=configdata, schemeqid=request.form.get("p8_to_eulabel"))
+            elif 'merge_same_wikidata' in request.form:
+                action = eusterm_functions.merge_wd_duplicates(config=configdata, schemeqid=request.form.get("merge_same_wikidata"))
+            messages = action['messages']
+            msgcolor = action['msgcolor']
+        return render_template("eusterm.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                               schemeqid=schemeqid,
+                               messages=messages, msgcolor=msgcolor)
+
+@app.route('/mlv', methods= ['GET', 'POST'])
+def mlv():
+    from bots import mlv_functions
+    configdata = botconfig.load_mapping('config')
+    messages = []
+    msgcolor = "background:limegreen"
+    lemma_lid = mlv_functions.load_lemma_lid()
+    if request.method == 'GET':
+        return render_template("mlv.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                               messages=messages, msgcolor=msgcolor)
+    if request.method == "POST":
+        if request.form:
+            if "split_token_qid" in request.form:
+                token_qid = request.form.get("split_token_qid")
+                token_data = mlv_functions.get_token_details(token_qid=token_qid)
+                return render_template("mlv_token_split.html", token_qid=token_qid, token_data=token_data,
+                                       wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                               messages=messages, msgcolor=msgcolor)
+            if "token_split_at_position" in request.form:
+                code = request.form.get("token_split_at_position").split("_")
+                token_qid = code[0]
+                split_position = int(code[1])
+                action = mlv_functions.split_token(token_qid=token_qid, split_position=split_position)
+                messages = action['messages']
+                return render_template("mlv.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                                       wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                                       messages=messages, msgcolor=msgcolor)
+
+            if "irakurri_doc_qid" in request.form:
+                doc_qid = request.form.get("irakurri_doc_qid")
+                ikuspegi = request.form.get("ikuspegi")
+                start_prg = int(request.form.get("start_prg"))
+                try:
+                    end_prg = int(request.form.get("end_prg"))+1
+                except:
+                    end_prg = 0
+                if request.form.get("metodo") == "sparql":
+                    messages += mlv_functions.sparql_doc(doc_qid=doc_qid)['messages']
+
+            elif "ikuspegia_aldatu" in request.form:
+                code_re = re.search(r'^(^Q\d+)_s(\d+)_e(\d+)_([a-z]+)$', request.form.get('ikuspegia_aldatu'))
+                doc_qid = code_re.group(1)
+                start_prg = int(code_re.group(2))
+                end_prg = int(code_re.group(3))
+                ikuspegi = code_re.group(4)
+
+            elif "lematizatu" in request.form:
+                ikuspegi = "lematizatu"
+                code_re = re.search(r'^(^Q\d+)_s(\d+)_e(\d+)$', request.form.get("lematizatu"))
+                doc_qid = code_re.group(1)
+                start_prg = int(code_re.group(2))
+                end_prg = int(code_re.group(3))
+                for key in request.form:
+                    if key.startswith("lema_lotu") and request.form.get(key):
+                        token_qid = key.replace('lema_lotu_','')
+                        lemma = request.form.get(key)
+
+                        if lemma in lemma_lid:
+                            lid = lemma_lid[lemma]
+                            lemma_link_action = mlv_functions.link_token_to_lexeme(token_qid=token_qid, lemma=lemma, lid=lid)
+                            messages += lemma_link_action['messages']
+                        else:
+                            messages.append(f"Lema hau ez dago lemategian: {lemma}")
+                            msgcolor = "background:orangered"
+
+
+            action = mlv_functions.load_text(docqid=doc_qid, start_prg=start_prg, end_prg=end_prg)
+            # messages += action['messages']
+            docdata = action['docdata']
+            spandata = action['spandata']
+            return render_template("mlv_testua_irakurri.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid, lexicon=lemma_lid,
+                               docdata=docdata, spandata=spandata, ikuspegi=ikuspegi, start_prg=start_prg, end_prg=end_prg,
+                               messages=messages, msgcolor=msgcolor)
+
+
+@app.route('/mlv/andanak/<code>', methods= ['GET', 'POST'])
+def mlv_andanak(code):
+    from bots import mlv_functions
+    configdata = botconfig.load_mapping('config')
+    docdata = None
+    spandata = None
+    messages = []
+    msgcolor = ""
+    doc_qid = re.search(r'Q\d+',code).group(0)
+    start_prg = int(re.search(r'_p(\d+)',code).group(1))
+    span_start = int(re.search(r'_s(\d+)',code).group(1))
+    span_end = int(re.search(r'_e(\d+)',code).group(1))
+    start_selected = False
+    end_selected = False
+    span_len = None
+    # span_exclude = [] # TODO
+
+    if not request.form:
+        action = mlv_functions.load_text(docqid=doc_qid, start_prg=start_prg, end_prg=start_prg + 1,
+                                         span_start=span_start, span_end=span_end)
+        docdata = action['docdata']
+        spandata = action['spandata']
+        messages = action['messages']
+        msgcolor = action['msgcolor']
+    else:
+        for key in request.form:
+            print(f"{key}: {request.form.get(key)}")
+            if key.startswith("span_start_"):
+                span_start = int(key.replace("span_start_",""))
+                start_selected = True
+                action = mlv_functions.load_text(docqid=doc_qid, start_prg=start_prg, end_prg=start_prg + 1,
+                                                 span_start=span_start, span_end=span_end)
+                docdata = action['docdata']
+                spandata = action['spandata']
+                messages = action['messages']
+                msgcolor = action['msgcolor']
+            if key.startswith("span_end_"):
+                span_code = key.replace("span_end_","")
+                span_start = int(span_code.split("-")[0])
+                span_end = int(span_code.split("-")[1])
+                start_selected = True
+                end_selected = True
+                span_len = list(range(span_end-span_start+2))
+                action = mlv_functions.load_text(docqid=doc_qid, start_prg=start_prg, end_prg=start_prg + 1,
+                                                 span_start=span_start, span_end=span_end)
+                docdata = action['docdata']
+                spandata = action['spandata']
+                messages = action['messages']
+                msgcolor = action['msgcolor']
+            if key == "span_sortu":
+                action = mlv_functions.create_span(form=request.form.to_dict())
+                messages = action['messages']
+                msgcolor = action['msgcolor']
+
+    return render_template("mlv_token_andanak.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                           wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid, start_prg=start_prg,
+                                  docdata=docdata, spandata=spandata, ikuspegi=request.form.get("ikuspegi"),
+                           span_start=span_start, span_end=span_end, start_selected=start_selected, end_selected=end_selected, span_len=span_len,
+                                  messages=messages, msgcolor=msgcolor)
+
+citations = {}
+@app.route('/inguma/get_grobid', methods= ['GET', 'POST'])
+def get_grobid():
+    configdata = botconfig.load_mapping('config')
+    from bots import inguma_functions
+    global citations
+    citations = botconfig.load_mapping('citations')
+    doc_qids = []
+    for file in os.listdir('/media/david/FATdisk/GROBID'):
+        print(file)
+        if str(file).endswith('.tei.xml'):
+            doc_qids.append(re.search('Q\d+', file).group(0))
+    if request.form:
+        if request.form.get("get_grobid") == "action":
+            for doc_qid in doc_qids:
+                citations = inguma_functions.get_biblstruct(citations=citations, doc_qid=doc_qid)
+                print(str(citations))
+            botconfig.dump_mapping(citations)
+    cit_cache = {}
+    for doc_qid in doc_qids:
+        if doc_qid in citations['mapping']:
+            statuscounts = {}
+            for citation in citations['mapping'][doc_qid]:
+                if citations['mapping'][doc_qid][citation]['status'] not in statuscounts:
+                    statuscounts[citations['mapping'][doc_qid][citation]['status']] = 1
+                else:
+                    statuscounts[citations['mapping'][doc_qid][citation]['status']] += 1
+
+            cit_cache[doc_qid] = str(statuscounts)[1:-1]
+        else:
+            cit_cache[doc_qid] = "new"
+    return render_template("inguma_get_grobid.html", wikibase_name=configdata['mapping']['wikibase_name'], wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qids=doc_qids, cit_cache=cit_cache)
+
+
+@app.route('/inguma/list_citations/<doc_qid>', methods= ['GET', 'POST'])
+def list_citations(doc_qid):
+    configdata = botconfig.load_mapping('config')
+    global citations
+    cit_cache = citations['mapping'][doc_qid]
+
+    return render_template("inguma_list_citations.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                           wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid,
+                           cit_cache=cit_cache)
+
+alex_results = None
+@app.route('/inguma/openalex/<code>', methods= ['GET', 'POST'])
+def openalex(code):
+    from bots import inguma_functions
+    global alex_results
+    global citations
+    code_re = re.search(r'(Q\d+)_(.*)', code)
+    doc_qid = code_re.group(1)
+    cit_id = code_re.group(2)
+    configdata = botconfig.load_mapping('config')
+
+    cit_cache = citations['mapping'][doc_qid][cit_id]
+    bibentry = inguma_functions.get_xml(cit_cache['biblStruct'])
+    if request.method == 'GET':
+        alex_results = inguma_functions.get_openalex(bibentry=bibentry)
+        message = f"Got OpenAlex results for {doc_qid}, {cit_id}."
+
+    elif request.method == 'POST':
+        for key in request.form:
+            if key.startswith("lotu_"):
+                code_re = re.search(r'lotu_(W.*)', key)
+                target_id = code_re.group(1)
+                target_qid = inguma_functions.lotu_alex(source_doc=doc_qid, target_alexid=target_id, alex_results=alex_results)
+                citations['mapping'][doc_qid][cit_id]['status'] = "openalex"
+                citations['mapping'][doc_qid][cit_id]['target_wikibase'] = target_qid
+                botconfig.dump_mapping(citations)
+                message = f'Lotura egina: {doc_qid} dokumentuak <a href="{configdata["mapping"]["wikibase_entity_ns"]}{target_qid}" target="_blank">{target_qid}</a> aipatzen du.'
+
+    return render_template("inguma_openalex.html", wikibase_name=configdata['mapping']['wikibase_name'], wikibase_url=configdata['mapping']['wikibase_url'],
+                           wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid, cit_id=cit_id,
+                           cit_cache=cit_cache, alex_results=alex_results, message=message)
+
+
 
 
 
