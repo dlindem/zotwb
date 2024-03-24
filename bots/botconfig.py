@@ -42,5 +42,5 @@ datatypes_mapping = {
     'String': 'string',
     #   'TabularData' : 'tabular-data',
     'Time': 'time',
-    'Url': 'url'
+    'URL': 'url'
 }
