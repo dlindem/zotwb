@@ -459,6 +459,9 @@ def batchedit_literal(fieldname="", literal=None, exact_length=None, replace_val
     print(f"Zotero batch edit operation successful.")
     return {'messages': messages, 'msgcolor': 'background:limegreen', 'data': newdata}
 
+def get_library_tags():
+    return zoterobot.pyzot.tags()
+
 def remove_tag(tag=None):
     rawitems = zoterobot.pyzot.items(tag=tag)
     print(f"Now batch editing {str(len(rawitems))}: Removing tag '{tag}'...wait...")

@@ -27,9 +27,19 @@
 {% endif %}
 
 <h3>Remove tags from Zotero items</h3>
-<p>Specify a Zotero tag to remove from max. 100 items.</br><small>For deleting the tag from more items, repeat the operation.</small></p>
-<form method="POST"><input name="specify_remove_tag" type="text" style="width: 100px;" />
-    <input type="submit" value="Remove tag from items"/></form>
+<p>Specify Zotero tags to remove from max. 100 items.</br><small>For deleting the selected tags from more items, repeat the operation.</small></p>
+<form method="POST"><p><input type="submit" value="Remove selected tags from items"/></p>
+{% for tag in library_tags %}
+    <div class="container"> <input type="checkbox"
+            name="specify_remove_tag_{{ tag }}"
+            id="specify_remove_tag_{{ tag }}"
+          role="switch">
+    <label for="specify_remove_tag_{{ tag }}" class="toggle">
+        {{ tag }}
+    </label>
+    </div>
+{% endfor %}
+</form>
 
 <h2>Functions for {{ wikibase_name }} Wikibase</h2>
 <h3>DOI Wikidata lookup</h3>
@@ -43,7 +53,8 @@
     <button name= {{ 'issn_lookup' }} type="submit">Do ISSN lookup</button>
 </form></p>
 <h3>Link chapters to their containers</h3>
-<p>Try to link book chapters and conference papers with a ISBN statement to their container item (a book); that works if the container item appears with the same ISBN as the chapter.</p>
+<p>Try to link book chapters and conference papers with a ISBN statement to their container item (a book); that works if the container item appears with the same ISBN as the chapter.<br/>
+<small>Sections will be linked to their containers using the "published in" property defined in basic configuration: <b>{{ chapterlinkprop }}</b></small></p>
 <form style="display: inline;" method="POST">
     <button name= {{ 'link_chapters' }} type="submit">Do chapter linking</button>
 </form></p>

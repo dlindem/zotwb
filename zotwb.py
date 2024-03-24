@@ -552,46 +552,44 @@ def little_helpers():
     zoterodata = None
     batchlen = 0
     msgcolor = "background:limegreen"
-    if request.method == 'GET':
-        return render_template("little_helpers.html", wikibase_name=configdata['mapping']['wikibase_name'],
+    library_tags = zotwb_functions.get_library_tags()
+
+    if request.form:
+        for key in request.form:
+            if key == "specify_batch_tag":
+                batch_tag = request.form.get(key)
+                action = zotwb_functions.geteditbatch(tag=batch_tag)
+                datafields = action['datafields']
+                batchlen = str(len(action['batchitems']))
+            elif key.startswith("specify_remove_tag_"):
+                remove_tag = key.replace("specify_remove_tag_","")
+                print(f"Will remove '{remove_tag}' tag from library...")
+                action = zotwb_functions.remove_tag(tag=remove_tag)
+            elif key.startswith("batchedit_"):
+                commandre = re.search(r'batchedit_([^_]+)_([^_]+)_(.*)', key)
+                tag_command = commandre.group(1)
+                tag = commandre.group(3)
+                fieldname = commandre.group(2)
+                with open(f"profiles/{profile}/data/zoteroeditbatch.json", 'r', encoding='utf-8') as jsonfile:
+                    zoterodata = json.load(jsonfile)
+                if tag_command == "leavetag":
+                    remove_tag = None
+                elif tag_command == "removetag":
+                    remove_tag = tag
+                action = zotwb_functions.batchedit_literal(fieldname=fieldname, literal=None, replace_value=request.form.get(key), zoterodata=zoterodata, remove_tag=remove_tag)
+            elif key == "doi_lookup":
+                action = zotwb_functions.lookup_doi()
+            elif key == "issn_lookup":
+                action = zotwb_functions.lookup_issn()
+            elif key == "link_chapters":
+                action = zotwb_functions.link_chapters()
+            messages += action['messages']
+            msgcolor = action['msgcolor']
+    return render_template("little_helpers.html", wikibase_name=configdata['mapping']['wikibase_name'],
                                zoterogrp_name=configdata['mapping']['zotero_group_name'], batch_tag=batch_tag,
-                               datafields=datafields, batchlen=batchlen,
+                               datafields=datafields, batchlen=batchlen, library_tags=library_tags, chapterlinkprop = configdata['mapping']['prop_published_in']['wikibase'],
                                messages=messages, msgcolor=msgcolor)
-    if request.method == "POST":
-        if request.form:
-            for key in request.form:
-                if key == "specify_batch_tag":
-                    batch_tag = request.form.get(key)
-                    action = zotwb_functions.geteditbatch(tag=batch_tag)
-                    datafields = action['datafields']
-                    batchlen = str(len(action['batchitems']))
-                elif key == "specify_remove_tag":
-                    remove_tag = request.form.get(key)
-                    action = zotwb_functions.remove_tag(tag=remove_tag)
-                elif key.startswith("batchedit_"):
-                    commandre = re.search(r'batchedit_([^_]+)_([^_]+)_(.*)', key)
-                    tag_command = commandre.group(1)
-                    tag = commandre.group(3)
-                    fieldname = commandre.group(2)
-                    with open(f"profiles/{profile}/data/zoteroeditbatch.json", 'r', encoding='utf-8') as jsonfile:
-                        zoterodata = json.load(jsonfile)
-                    if tag_command == "leavetag":
-                        remove_tag = None
-                    elif tag_command == "removetag":
-                        remove_tag = tag
-                    action = zotwb_functions.batchedit_literal(fieldname=fieldname, literal=None, replace_value=request.form.get(key), zoterodata=zoterodata, remove_tag=remove_tag)
-                elif key == "doi_lookup":
-                    action = zotwb_functions.lookup_doi()
-                elif key == "issn_lookup":
-                    action = zotwb_functions.lookup_issn()
-                elif key == "link_chapters":
-                    action = zotwb_functions.link_chapters()
-                messages = action['messages']
-                msgcolor = action['msgcolor']
-        return render_template("little_helpers.html", wikibase_name=configdata['mapping']['wikibase_name'],
-                               zoterogrp_name=configdata['mapping']['zotero_group_name'], batch_tag=batch_tag,
-                               datafields=datafields, batchlen=batchlen,
-                               messages=messages, msgcolor=msgcolor)
+
 
 
 @app.route('/wikidata_import', methods= ['GET', 'POST'])
