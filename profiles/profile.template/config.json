@@ -1,6 +1,6 @@
 {
   "filename": "config.json",
-  "comment": "This contains basic configurations for the ZotWb tool.",
+  "comment": "This contains basic configurations for the zotero-wikibase tool.",
   "mapping": {
     "wikibase_name": null,
     "wikibase_url": null,
@@ -145,7 +145,7 @@
       "type": "WikibaseItem",
       "wikidata": "P1433",
       "name": "published in",
-      "comment": "Datatype item, for linking publications to their container (a journal, for journal articles, a book, for book sections"
+      "comment": "Datatype item, for linking publications to their container (a journal, for journal articles, a book, for books"
     },
     "prop_wikidata_sitelinks": {
       "wikibase": null,
@@ -154,40 +154,67 @@
       "name": "Wikipedia page URL",
       "comment": "Datatype URL, for Wikipedia sitelinks from Wikidata"
     },
+    "prop_equivalentprop": {
+      "wikibase": null,
+      "type": "URL",
+      "comment": "Datatype URL, points to a URI describing an equivalent property. Use 'Wikidata Entity' for Wikidata matches.",
+      "wikidata": "P1628",
+      "name": "external equivalent property",
+      "exactmatches": [
+        "http://www.w3.org/2004/02/skos/core#exactMatch"
+      ]
+    },
+    "prop_equivalentclass": {
+      "wikibase": null,
+      "type": "URL",
+      "comment": "Datatype URL, points to a URI describing an equivalent class. Use 'Wikidata Entity' for Wikidata matches.",
+      "wikidata": "P1709",
+      "name": "external equivalent class",
+      "exactmatches": [
+        "http://www.w3.org/2004/02/skos/core#exactMatch"
+      ]
+    },
     "class_ontology_class": {
       "wikibase": null,
       "comment": "The class that groups all ontology classes.",
-      "name": "Ontology Class"
+      "name": "Ontology Class",
+      "wikidata": null
     },
     "class_bibitem": {
       "wikibase": null,
       "comment": "The class that groups bibliographical records.",
-      "name": "BibItem"
+      "name": "BibItem",
+      "wikidata": null
     },
     "class_bibitem_type": {
       "wikibase": null,
       "comment": "The class that groups bibliographical item types (journal article, book, etc.)",
-      "name": "BibItem Type"
+      "name": "BibItem Type",
+      "wikidata": null
     },
     "class_creator_role": {
       "wikibase": null,
       "comment": "The class that groups creator role properties (e.g. author, translator).",
-      "name": "Creator Role"
+      "name": "Creator Role",
+      "wikidata": null
     },
     "class_journal": {
       "wikibase": null,
       "comment": "The class that groups periodical publications.",
-      "name": "Journal"
+      "name": "Journal",
+      "wikidata": null
     },
     "class_language": {
       "wikibase": null,
       "comment": "The class that groups natural languages.",
-      "name": "Language"
+      "name": "Language",
+      "wikidata": null
     },
     "class_organization": {
       "wikibase": null,
       "comment": "The class that groups organizations (can be creators, publishers,...).",
-      "name": "Organization"
+      "name": "Organization",
+      "wikidata": null
     },
     "class_person": {
       "wikibase": null,
@@ -196,7 +223,7 @@
       "wikidata": "Q5"
     },
     "identifier_patterns": {
-      "OCLC: ([0-9]+)": "P55"
+
     },
     "zotero_group_id": null,
     "zotero_group_name": null,
