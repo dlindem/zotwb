@@ -678,6 +678,16 @@ def wikibase_upload(data=[], onlynew=False):
                 if child['data']['contentType'] == "" and child['data']['url'].startswith(config['mapping']['wikibase_entity_ns']):
                     qid = child['data']['url'].replace(config['mapping']['wikibase_entity_ns'], "")
                     print('Found link attachment: This item is linked to ' + config['mapping']['wikibase_entity_ns'] + qid)
+                if child['data']['contentType'] == "":
+                    # print('Found link attachment: This item is linked to ' + child['data']['url'])
+                    url_re = re.search(r'(https?://[^/]+)/entity/(Q\d+)', child['data']['url'])
+                    if url_re:
+                        other_wb_url = url_re.group(1)
+                        if other_wb_url in config['mapping']['other_wb_externalid']:
+                            other_wb_prop = config['mapping']['other_wb_externalid'][other_wb_url]
+                            other_wb_qid = url_re.group(2)
+                            statements.append({'type': 'externalid', 'prop_nr': other_wb_prop, 'value': other_wb_qid})
+                            print(f"Found link attachment: This item is linked to {other_wb_url} {other_wb_qid}, have linked it using {other_wb_prop}")
         else:
             children = []
         if qid and onlynew == True:

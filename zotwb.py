@@ -327,7 +327,7 @@ def map_zoterofield(itemtype):
                         messages = [
                             f"Successfully imported wd:{wikidata_suggestions['mapping'][fieldname]} to the newly created wb:{newentity_id}."]
                         if itemtype == "all_types":
-                            propagation = zotwb_functions.propagate_mapping(zoteromapping=zoteromapping, fieldtype=fieldtype, fieldname=fieldname,
+                            propagation = zotwb_functions.propagate_mapping(zoteromapping=zoteromapping['mapping'], fieldtype=fieldtype, fieldname=fieldname,
                                                                             wbprop=newentity_id)
                             zoteromapping['mapping'] = propagation['mapping']
                             messages += propagation['messages']
@@ -358,7 +358,7 @@ def map_zoterofield(itemtype):
                         messages = [
                             f"Successfully created {newentity_id} with datatype {zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype']}."]
                         if itemtype == "all_types":
-                            propagation = zotwb_functions.propagate_mapping(fieldtype=fieldtype, fieldname=fieldname, wbprop=newentity_id)
+                            propagation = zotwb_functions.propagate_mapping(zoteromapping=zoteromapping['mapping'], fieldtype=fieldtype, fieldname=fieldname, wbprop=newentity_id)
                             zoteromapping['mapping'] = propagation['mapping']
                             messages += propagation['messages']
                             messages.append(f"...Successfully created and propagated property {newentity_id} for {fieldname} to all item types.")

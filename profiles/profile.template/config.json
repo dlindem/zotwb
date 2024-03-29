@@ -129,7 +129,7 @@
       "comment": "Datatype ExternalId, Wikidata P212. Used for 10-digit-ISBN identifiers. Most conveniently with formatter URL \"https://worldcat.org/isbn/$1\".",
       "formatter_url": "https://worldcat.org/isbn/$1"
     },
-      "prop_language": {
+    "prop_language": {
       "wikibase": null,
       "type": "WikibaseItem",
       "wikidata": "P407",
@@ -223,7 +223,8 @@
       "wikidata": "Q5"
     },
     "identifier_patterns": {
-
+    },
+    "other_wb_externalid": {
     },
     "zotero_group_id": null,
     "zotero_group_name": null,
