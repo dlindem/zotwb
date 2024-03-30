@@ -116,9 +116,9 @@
     "prop_isbn_10": {
       "wikibase": null,
       "type": "ExternalId",
-      "wikidata": "P967",
+      "wikidata": "P957",
       "name": "ISBN-10",
-      "comment": "Datatype ExternalId, Wikidata P967. Used for 10-digit-ISBN identifiers. Most conveniently with formatter URL \"https://worldcat.org/isbn/$1\".",
+      "comment": "Datatype ExternalId, Wikidata P957. Used for 10-digit-ISBN identifiers. Most conveniently with formatter URL \"https://worldcat.org/isbn/$1\".",
       "formatter_url": "https://worldcat.org/isbn/$1"
     },
     "prop_isbn_13": {
