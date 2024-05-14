@@ -3,10 +3,14 @@ from wikibaseintegrator import wbi_login, WikibaseIntegrator
 from wikibaseintegrator.datatypes.string import String
 from wikibaseintegrator.datatypes.externalid import ExternalID
 from wikibaseintegrator.datatypes.item import Item
+from wikibaseintegrator.datatypes.lexeme import Lexeme
 from wikibaseintegrator.datatypes.monolingualtext import MonolingualText
 from wikibaseintegrator.datatypes.time import Time
 from wikibaseintegrator.datatypes.globecoordinate import GlobeCoordinate
 from wikibaseintegrator.datatypes.url import URL
+from wikibaseintegrator.models import Reference, References, Form, Sense
+from wikibaseintegrator.models.qualifiers import Qualifiers
+from wikibaseintegrator.models.claims import Claims
 from wikibaseintegrator import wbi_helpers
 from wikibaseintegrator.wbi_enums import ActionIfExists, WikibaseSnakType
 from bots import botconfig
@@ -16,7 +20,9 @@ from wikibaseintegrator.wbi_config import config as wbi_config
 
 # load active profile
 with open(f"profiles.json", 'r', encoding='utf-8') as file:
-    profile = json.load(file)['last_profile']
+	profile = json.load(file)['last_profile']
+	if profile == "":
+		profile = "profile.template"
 with open(f"profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
 	config_private = json.load(jsonfile)
 config = botconfig.load_mapping('config')
@@ -37,11 +43,12 @@ try:
 	wbi_config['DEFAULT_LANGUAGE'] = 'en' # config['mapping']['wikibase_default_language']
 	wbi_config['DEFAULT_LEXEME_LANGUAGE'] = "Q207" # This is for Lexemes. Value None raises error.
 	wd_user_agent = config['mapping']['wikibase_site'] + ", User " + config_private['wb_bot_user']
-except Exception:
+except Exception as ex:
 	if profile == "profile.template":
 		print("Profile configuration not completed. Cannot configure wikibase bot.")
 	else:
 		print(f"{profile}: Profile configuration could not be done due to missing values in config.json file in profile folder.")
+		print(str(ex))
 
 if config_private['wb_bot_user'] and config_private['wb_bot_pwd']:
 	try:
@@ -93,6 +100,8 @@ def packstatements(statements, wbitem=None, qualifiers=False, references=False):
 			packed_statement = Item(value=statement['value'], prop_nr=statement['prop_nr'],qualifiers=packed_qualifiers,references=packed_references)
 		elif statement['type'].lower() == "externalid":
 			packed_statement = ExternalID(value=statement['value'],prop_nr=statement['prop_nr'],qualifiers=packed_qualifiers,references=packed_references)
+		elif statement['type'].lower() == "lexeme":
+			packed_statement = Lexeme(value=statement['value'],prop_nr=statement['prop_nr'],qualifiers=packed_qualifiers,references=packed_references)
 		elif statement['type'].lower() == "time":
 			if 'value' not in statement:
 				statement['value'] = statement['time']
@@ -117,6 +126,7 @@ def packstatements(statements, wbitem=None, qualifiers=False, references=False):
 	return wbitem
 
 def itemwrite(itemdata, clear=False, entitytype='Item', datatype=None):
+	global wbi
 	if itemdata['qid'] == False:
 		if entitytype == "Item":
 			xwbitem = wbi.item.new()

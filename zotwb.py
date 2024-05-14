@@ -436,10 +436,20 @@ def openrefine_creators():
     get_recon = zotwb_functions.get_recon_pd(folder=f"profiles/{profile}/data/creators_reconciled/")
     recon_df = get_recon['data']
     recon_df.set_index('creatorstatement')
-    recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
-    recon_wb = str(len(recon_df.dropna(subset=['Wikibase_Qid'])))
+    if "Wikidata_Qid" in recon_df.columns:
+        recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
+    else:
+        recon_wd = "0"
+    if "Wikibase_Qid" in recon_df.columns:
+        recon_wb = str(len(recon_df.dropna(subset=['Wikibase_Qid'])))
+    else:
+        recon_wb = "0"
     recon_all = str(len(recon_df))
-    recon_unrecon = str(len(recon_df.loc[~recon_df.index.isin(recon_df.dropna(subset=['Wikibase_Qid', 'Wikidata_Qid']).index)]))
+    if "Wikibase_Qid" in recon_df.columns and "Wikidata_Qid" in recon_df.columns:
+        recon_unrecon = str(len(recon_df.loc[~recon_df.index.isin(recon_df.dropna(subset=['Wikibase_Qid', 'Wikidata_Qid']).index)]))
+    elif "Wikidata_Qid" in recon_df.columns:
+        recon_unrecon = str(len(recon_df)-int(recon_wd))
+
     if request.method == 'GET':
 
         return render_template("openrefine_creators.html", wikibase_name=configdata['mapping']['wikibase_name'],
@@ -455,10 +465,19 @@ def openrefine_creators():
                     get_recon = zotwb_functions.get_recon_pd(folder=f"profiles/{profile}/data/creators_reconciled/")
                     recon_df = get_recon['data']
                     recon_df.set_index('creatorstatement')
-                    recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
-                    recon_wb = str(len(recon_df.dropna(subset=['Wikibase_Qid'])))
+                    if "Wikidata_Qid" in recon_df.columns:
+                        recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
+                    else:
+                        recon_wd = "0"
+                    if "Wikibase_Qid" in recon_df.columns:
+                        recon_wb = str(len(recon_df.dropna(subset=['Wikibase_Qid'])))
+                    else:
+                        recon_wb = "0"
                     recon_all = str(len(recon_df))
-                    recon_unrecon = str(len(recon_df.loc[~recon_df.index.isin(recon_df.dropna(subset=['Wikibase_Qid', 'Wikidata_Qid']).index)]))
+                    if "Wikibase_Qid" in recon_df.columns and "Wikidata_Qid" in recon_df.columns:
+                        recon_unrecon = str(len(recon_df.loc[~recon_df.index.isin(recon_df.dropna(subset=['Wikibase_Qid', 'Wikidata_Qid']).index)]))
+                    else:
+                        recon_unrecon = "0"
 
                 if key == "import_reconciled_wikidata":
                     messages = zotwb_functions.import_creators(data=recon_df, infile=get_recon['filename'], wikidata=True)

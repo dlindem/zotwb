@@ -348,7 +348,7 @@ def check_export(zoterodata=[], zoteromapping={}):
         # check data fields
         seen_fields = []
         seen_creators = []
-        fields_processed_before = ['itemType', 'creators', 'ISBN', 'extra']
+        fields_processed_before = ['itemType', 'creators', 'ISBN', 'extra', 'language']
         for fieldname in item['data']:
             if (item['data'][fieldname] != "") and (fieldname not in fields_processed_before) and (itemtype + fieldname not in seen_fields) and (fieldname in zoteromapping['mapping'][itemtype]['fields']):
                 if zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'] == False:
@@ -666,6 +666,7 @@ def wikibase_upload(data=[], onlynew=False):
         # fields with special meaning / special procedure
         ## Zotero ID and Fulltext PDF attachment(s)
         attqualis = []
+
         if item['meta']['numChildren'] > 0:
             children = zoterobot.getchildren(item['data']['key'])
             for child in children:
@@ -686,7 +687,7 @@ def wikibase_upload(data=[], onlynew=False):
                         if other_wb_url in config['mapping']['other_wb_externalid']:
                             other_wb_prop = config['mapping']['other_wb_externalid'][other_wb_url]
                             other_wb_qid = url_re.group(2)
-                            statements.append({'type': 'externalid', 'prop_nr': other_wb_prop, 'value': other_wb_qid})
+                            statements.append({'type': 'externalid', 'prop_nr':other_wb_prop, 'value':other_wb_qid})
                             print(f"Found link attachment: This item is linked to {other_wb_url} {other_wb_qid}, have linked it using {other_wb_prop}")
         else:
             children = []
@@ -923,12 +924,14 @@ def wikibase_upload(data=[], onlynew=False):
                                 if claim.mainsnak.datavalue['value'] == item['data'][fieldname].strip(): # same literal already on wikibase, skip writing this (in order to preserve any qualifiers of the existing statement)
                                     skip = True
                     if not skip:
-                        statements.append({
+                        stat= {
                             'prop_nr': wbprop,
                             'type': dtype,
                             'value': item['data'][fieldname].strip(),
                             'action': 'replace'
-                        })
+                        }
+                        statements.append(stat)
+                        print(stat)
                 # elif dtype == "WikibaseItem": # this will produce an 'unknown value' statement with 'source literal' qualifier
                 #     statements.append({
                 #         'prop_nr': zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'],
@@ -1009,6 +1012,9 @@ def export_creators(folder=""):
 
 def get_recon_pd(folder=""):
     list_of_files = glob.glob(folder + '*.csv')  # * means all if need specific format then *.csv
+    if len(list_of_files) == 0:
+        return{'data': pandas.DataFrame(columns=["bibItem","creatorstatement","listpos","givenName","lastName","fullName","fullName_clusters","fullName_recon_Wikidata","Wikidata_Qid","fullName_recon_Wikibase","Wikibase_Qid","creatoritem"]), 'filename':'no file'}
+
     infile = max(list_of_files, key=os.path.getctime)
     print(f"Will get reconciled data from {infile}...")
     return {'data':pandas.read_csv(infile),'filename':infile}
@@ -1165,7 +1171,7 @@ def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unre
                 print(f"No new name variant found for {creatorqid}.")
 
             time.sleep(1)
-    message = f"Successfully processed import CSV, modality was <b>{jobdesc}</b>.</br><a href=\"./openrefine\">Refresh this page</a> to see what is left for upload."
+    message = f"Successfully processed import CSV, modality was <b>{jobdesc}</b>.</br><a href=\"./openrefine_creators\">Refresh this page</a> to see what is left for upload."
     print(message)
     messages.append(message)
     return messages

@@ -10,6 +10,7 @@
 <p> <small>(Back to <a href="/">start page</a>)</small></p>
 <p>On this page, you can produce CSV for loading into Open Refine, and import reconciliation result CSV produced in Open Refine back to {{ wikibase_name }}.</p>
 <h2>Export creator literals (unreconciled creator data)</h2>
+<p><small>Note that the creator role property has to be an instance of your creator role class.</small></p>
 <p><form style="display: inline;" method="POST">
     <button name="export_unreconciled_creators" type="submit">Produce CSV</button>
 </form> to save a CSV containing unreconciled creator literals to <code><b>profiles/{{ profile }}/data/creators_unreconciled</b></code> folder.</br><small>Start Open Refine and create a new project using that file.</small></p>

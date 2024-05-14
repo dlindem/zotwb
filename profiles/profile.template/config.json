@@ -113,12 +113,26 @@
       "name": "family name source literal",
       "comment": "A datatype String property, used as qualifier in creator statements."
     },
+    "prop_pref_given_name": {
+      "wikibase": "P51",
+      "type": "String",
+      "wikidata": null,
+      "name": "preferred given name",
+      "comment": "A datatype String property, used as property on items describing creators."
+    },
+    "prop_pref_family_name": {
+      "wikibase": "P52",
+      "type": "String",
+      "wikidata": null,
+      "name": "preferred family or last name",
+      "comment": "A datatype String property, used as property on items describing creators."
+    },
     "prop_isbn_10": {
       "wikibase": null,
       "type": "ExternalId",
-      "wikidata": "P957",
+      "wikidata": "P967",
       "name": "ISBN-10",
-      "comment": "Datatype ExternalId, Wikidata P957. Used for 10-digit-ISBN identifiers. Most conveniently with formatter URL \"https://worldcat.org/isbn/$1\".",
+      "comment": "Datatype ExternalId, Wikidata P967. Used for 10-digit-ISBN identifiers. Most conveniently with formatter URL \"https://worldcat.org/isbn/$1\".",
       "formatter_url": "https://worldcat.org/isbn/$1"
     },
     "prop_isbn_13": {
@@ -128,6 +142,14 @@
       "name": "ISBN-13",
       "comment": "Datatype ExternalId, Wikidata P212. Used for 10-digit-ISBN identifiers. Most conveniently with formatter URL \"https://worldcat.org/isbn/$1\".",
       "formatter_url": "https://worldcat.org/isbn/$1"
+    },
+     "prop_oclc": {
+      "wikibase": null,
+      "type": "ExternalId",
+      "wikidata": "P243",
+      "name": "OCLC",
+      "comment": "Datatype ExternalId, Wikidata P243. Identifier for a bibliographic record in OCLC WorldCat. Most conveniently with formatter URL \" https://www.worldcat.org/oclc/$1\".",
+      "formatter_url": "https://worldcat.org/oclc/$1"
     },
     "prop_language": {
       "wikibase": null,
@@ -145,7 +167,7 @@
       "type": "WikibaseItem",
       "wikidata": "P1433",
       "name": "published in",
-      "comment": "Datatype item, for linking publications to their container (a journal, for journal articles, a book, for books"
+      "comment": "Datatype item, for linking publications to their container (a journal, for journal articles, a book, for book sections)."
     },
     "prop_wikidata_sitelinks": {
       "wikibase": null,
