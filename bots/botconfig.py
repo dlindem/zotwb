@@ -3,7 +3,9 @@ import os
 
 # load active profile
 with open("profiles.json", 'r', encoding='utf-8') as file:
-    profile = json.load(file)['last_profile']
+    # print(file.read())
+    filejson = json.load(file)
+    profile = filejson["last_profile"]
     if profile == '':
         print('profiles.json file is broken: No entry for "last profile". Will fall back to null template.')
         profile = "profile.template"

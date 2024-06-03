@@ -50,19 +50,21 @@ except Exception as ex:
 		print(f"{profile}: Profile configuration could not be done due to missing values in config.json file in profile folder.")
 		print(str(ex))
 
-if config_private['wb_bot_user'] and config_private['wb_bot_pwd']:
-	try:
-		login_instance = wbi_login.Login(user=config_private['wb_bot_user'], password=config_private['wb_bot_pwd'])
-		wbi = WikibaseIntegrator(login=login_instance)
-		print('**** Wikibase bot username and password accepted, xwbi can be loaded. ****')
-	except Exception as ex:
-		if 'Incorrect username or password entered' in str(ex):
-			print('**** Wikibase bot username or password not accepted, xwbi cannot be loaded. ****')
-		else:
-			raise
-else:
-	print('Wikibase bot is not configured, cannot be loaded.')
-
+def wbi_do_login():
+	if config_private['wb_bot_user'] and config_private['wb_bot_pwd']:
+		try:
+			login_instance = wbi_login.Login(user=config_private['wb_bot_user'], password=config_private['wb_bot_pwd'])
+			wbi = WikibaseIntegrator(login=login_instance)
+			print('**** Wikibase bot username and password accepted, xwbi can be loaded. ****')
+			return wbi
+		except Exception as ex:
+			if 'Incorrect username or password entered' in str(ex):
+				print('**** Wikibase bot username or password not accepted, xwbi cannot be loaded. ****')
+			else:
+				raise
+	else:
+		print('Wikibase bot is not configured, cannot be loaded.')
+wbi = wbi_do_login()
 
 
 # functions for interaction with wbi
@@ -185,13 +187,23 @@ def itemwrite(itemdata, clear=False, entitytype='Item', datatype=None):
 			print(ex)
 			if "wikibase-validator-label-with-description-conflict" in str(ex):
 				print('\nFound an ambiguous item label: same description conflict.')
+			elif "already has label" in str(ex):
+				regex = re.search(r'(Q[0-9]+)\]\] already has label', str(ex))
+				if regex:
+					qid = regex.group(1)
+					input(f"Error: Item {qid} has the same label and the same description... On ENTER we use that in order to avoid duplicate creation.")
+					return qid
+			elif "Invalid CSRF token." in str(ex):
+				print("TRY TO GET NEW TOKEN and re-do the operation with the new login instance")
+				wbi = wbi_do_login()
+				return itemwrite(itemdata, clear=clear, entitytype=entitytype, datatype=datatype)
+			else:
+				print("Unexpected error while writing to wikibase. Item data was:")
+				print(str(xwbitem.get_json()))
 			presskey = input('Enter 0 for skipping and continue without writing statements, else retry writing.')
 			if presskey == "0":
-				d = True
+				print("Item write operation skipped.")
 				return False
-			# 	xwbitem.descriptions.set(language="eu", value="Beste pertsona bat")
-
-
 	return xwbitem.id
 
 def importitem(wdqid, wbqid=False, process_claims=True, classqid=None):

@@ -5,6 +5,8 @@ from pyzotero import zotero
 # load active profile
 with open(f"profiles.json", 'r', encoding='utf-8') as file:
     profile = json.load(file)['last_profile']
+    if profile == "":
+        profile = "profile.template"
 
 config = botconfig.load_mapping("config")
 
@@ -25,7 +27,7 @@ def getzotitem(zotitemid):
 
 
 def getexport(tag=config['mapping']['zotero_export_tag'], save_to_file=False, file="zoteroexport.json"):
-    rawitems = pyzot.items(tag=tag)
+    rawitems = pyzot.everything(pyzot.items(tag=tag))
     exportitems = []
     for rawitem in rawitems:
         regex = re.search(rf"{config['mapping']['wikibase_entity_ns']}(Q[0-9]+)", rawitem['data']['extra'])
