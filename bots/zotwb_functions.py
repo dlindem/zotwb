@@ -176,6 +176,7 @@ def batchimport_wikidata(form, config={}, properties={}):
         if extra_statement:
             xwbi.itemwrite({'qid': wb_entity, 'statements':[{'prop_nr': extra_statement['prop_nr'], 'type':'WikibaseItem', 'value':extra_statement['value']}]})
         messages.append(f"Successfully created or updated <a href=\"{config['mapping']['wikibase_entity_ns']}{wb_entity}\" target=\"_blank\">wb:{wb_entity}</a> importing <a href=\"http://www.wikidata.org/entity/{wd_entity}\" target=\"_blank\">wd:{wd_entity}</a>.")
+        time.sleep(1)
     return {'messages': messages, 'msgcolor': 'background:limegreen', 'imported_stubs':imported_stubs}
 
 
@@ -218,7 +219,7 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
                 existing_preflabel = str(wb_existing_entity.labels.get(lang))
             if lang in importentityjson['labels']:
                 importlabel = importentityjson['labels'][lang]['value']
-                if existing_preflabel and len(existing_preflabel) > 0:
+                if existing_preflabel and len(existing_preflabel) > 1:
                     if importlabel.lower() != existing_preflabel.lower():
                         wbentityjson['aliases'].append({'lang': lang, 'value': importlabel})
                         # wikidata label becomes wikibase alias if different to existing wikibase label
@@ -305,6 +306,7 @@ def write_property(prop_object):
 
 def propagate_mapping(zoteromapping={}, fieldtype="", fieldname="", wbprop=""):
     messages=[]
+    print(f"Will propagate {fieldtype} {fieldname} {wbprop}")
     for itemtype in zoteromapping:
         if fieldname in zoteromapping[itemtype][fieldtype]:
             if zoteromapping[itemtype][fieldtype][fieldname]['wbprop'] != wbprop:
@@ -575,6 +577,7 @@ def lookup_issn():
         message = f"Success [{str(count)}]: <a href=\"{checkurl}\" target=\"_blank\">{checkurl}</a>."
         print(message)
         messages.append(message)
+        time.sleep(0.2)
     print('Finished ISSN reconciliation.')
     return {'messages':messages, 'msgcolor':'background:limegreen'}
 
