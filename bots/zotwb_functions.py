@@ -212,9 +212,10 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
         wb_existing_entity = xwbi.wbi.property.get(entity_id=wbid)
 
     # process labels
-    existing_preflabel = None
+
     if process_labels:
         for lang in languages_to_consider:
+            existing_preflabel = None
             if wbid:
                 existing_preflabel = str(wb_existing_entity.labels.get(lang))
             if lang in importentityjson['labels']:
@@ -660,12 +661,14 @@ def wikibase_upload(data=[], onlynew=False):
         qid = item['wikibase_entity'] # is False if zotero getexport function has not found an item URI in this wb entity namespace in 'extra'
         # instance of and bibItem type
         itemtype = item['data']['itemType']
+        wikilang = "en"  # language for labels and monolingualtext fields: fall back to "en" if not specified in ## language
         statements = [
             {'type': 'WikibaseItem', 'prop_nr': config['mapping']['prop_instanceof']['wikibase'],
              'value': config['mapping']['class_bibitem']['wikibase']},
              {'type': 'WikibaseItem', 'prop_nr': config['mapping']['prop_itemtype']['wikibase'],
               'value': zoteromapping['mapping'][itemtype]['bibtypeqid']}
         ]
+
         # fields with special meaning / special procedure
         ## Zotero ID and Fulltext PDF attachment(s)
         attqualis = []
@@ -701,9 +704,14 @@ def wikibase_upload(data=[], onlynew=False):
             continue
         elif qid and not onlynew:
             existing_item = xwbi.wbi.item.get(entity_id=qid)
+
+        # date mofified; example: "dateModified": "2024-06-14T12:42:14Z"
+        datestring = f"+{item['data']['dateModified'][:10]}T00:00:00Z"
+        references = [{'prop_nr': config['mapping']['prop_reference_date']['wikibase'], 'type': 'Time',
+             'value': datestring, 'precision': 11}]
         statements.append({'prop_nr': config['mapping']['prop_zotero_item']['wikibase'], 'type': 'ExternalId',
                            'value': item['data']['key'],
-                           'qualifiers': attqualis, 'action':'replace'})
+                           'qualifiers': attqualis, 'references':references, 'action':'replace'})
 
         ## archiveLocation (special for items stemming from LexBib) TODO - delete for generic tool
         if 'archiveLocation' in item['data']:
@@ -715,12 +723,6 @@ def wikibase_upload(data=[], onlynew=False):
                                    'value': item['data']['archiveLocation'].replace("http://lexbib.elex.is/entity/", "")})
             item['data']['archiveLocation'] = ""
 
-        ## title to labels
-        if 'title' in item['data']:
-            labels = []
-            for lang in config['mapping']['wikibase_label_languages']:
-                labels.append({'lang': lang, 'value': item['data']['title']})
-
         ## language
         if 'language' in item['data']:
             langval = item['data']['language']
@@ -728,19 +730,22 @@ def wikibase_upload(data=[], onlynew=False):
             if len(langval) == 2:  # should be a ISO-639-1 code
                 if langval.lower() in iso1mapping['mapping']:
                     langval = iso1mapping['mapping'][langval.lower()]
+                    wikilang = iso3mapping['mapping'][langval]['wikilang']
                     languageqid = iso3mapping['mapping'][langval]['wbqid']
-                    print('Language field: Found two-digit language code, mapped to ' +
-                          iso3mapping['mapping'][langval.lower()]['enlabel'], languageqid)
+                    # print('Language field: Found two-digit language code, mapped to ' +
+                          # iso3mapping['mapping'][langval.lower()]['enlabel'], languageqid)
             elif len(langval) == 3:  # should be a ISO-639-3 code
                 if langval.lower() in iso3mapping['mapping']:
                     languageqid = iso3mapping['mapping'][langval.lower()]['wbqid']
-                    print('Language field: Found three-digit language code, mapped to ' +
-                          iso3mapping['mapping'][langval.lower()]['enlabel'], languageqid)
+                    wikilang = iso3mapping['mapping'][langval]['wikilang']
+                    # print('Language field: Found three-digit language code, mapped to ' +
+                         #  iso3mapping['mapping'][langval.lower()]['enlabel'], languageqid)
             if languageqid == False:  # Can't identify language using ISO 639-1 or 639-3
                 if langval in language_literals['mapping']:
                     languageqid = iso3mapping['mapping'][language_literals['mapping'][langval]]['wbqid']
-                    print('Language field: Found stored language literal, mapped to ' +
-                          iso3mapping['mapping'][language_literals['mapping'][langval]]['enlabel'])
+                    wikilang = iso3mapping['mapping'][language_literals['mapping'][langval]]['wikilang']
+                    # print('Language field: Found stored language literal, mapped to ' +
+                         #  iso3mapping['mapping'][language_literals['mapping'][langval]]['enlabel'])
                 elif len(langval) > 1:  # if there is a string that could be useful
                     print(f"Could not match the field content '{langval}' to any language.")
                     choice = None
@@ -766,6 +771,15 @@ def wikibase_upload(data=[], onlynew=False):
                 statements.append(
                     {'prop_nr': config['mapping']['prop_language']['wikibase'], 'type': 'WikibaseItem',
                      'value': languageqid, 'action':'replace'})
+
+        ## title to labels
+        if 'title' in item['data']:
+            labels = []
+            # for lang in config['mapping']['wikibase_label_languages']:
+                # labels.append({'lang': lang, 'value': item['data']['title']})
+            labels.append({'lang': wikilang, 'value': item['data']['title']})
+            if wikilang != "en":
+                labels.append({'lang': 'en', 'value': item['data']['title']})
 
         ## date (write parsedDate not date to prop foreseen for date in this itemtype)
         pubyear = ""
@@ -944,6 +958,25 @@ def wikibase_upload(data=[], onlynew=False):
                 #         'qualifiers': [{'type': 'String', 'prop_nr': config['mapping']['prop_source_literal']['wikibase'],
                 #                         'value': item['data'][fieldname].strip()}]
                 #     })
+                elif dtype == "Monolingualtext":
+                    if qid and existing_item:
+                        if wbprop in existing_item.claims:
+                            for claim in existing_item.claims.get(wbprop):
+                                print(claim.mainsnak.datavalue['value'])
+                                if claim.mainsnak.datavalue['value']['text'] == item['data'][fieldname].strip(): # same literal already on wikibase, skip writing this (in order to preserve any qualifiers of the existing statement)
+                                    skip = True
+                    if not skip:
+                        stat= {
+                            'prop_nr': wbprop,
+                            'type': dtype,
+                            'value': item['data'][fieldname].strip(),
+                            'lang': wikilang,
+                            'action': 'replace'
+                        }
+                        statements.append(stat)
+                        print(stat)
+
+
                 else:
                     print(f"Datatype '{dtype}' is currently not implemented. No statement will be written.")
                 # TODO: datatype date fields other than pubdate

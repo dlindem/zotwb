@@ -99,6 +99,13 @@
       "name": "source literal",
       "comment": "A datatype String property, used as qualifier, e.g. in creator statements."
     },
+    "prop_reference_date": {
+      "wikibase": "P56",
+      "type": "Time",
+      "wikidata": "P813",
+      "name": "reference access date",
+      "comment": "Datatype Time, Wikidata P813, used in references, e.g. for the Zotero item ID statement."
+    },
     "prop_given_name_source_literal": {
       "wikibase": null,
       "type": "String",
@@ -130,7 +137,7 @@
     "prop_isbn_10": {
       "wikibase": null,
       "type": "ExternalId",
-      "wikidata": "P967",
+      "wikidata": "P957",
       "name": "ISBN-10",
       "comment": "Datatype ExternalId, Wikidata P967. Used for 10-digit-ISBN identifiers. Most conveniently with formatter URL \"https://worldcat.org/isbn/$1\".",
       "formatter_url": "https://worldcat.org/isbn/$1"
